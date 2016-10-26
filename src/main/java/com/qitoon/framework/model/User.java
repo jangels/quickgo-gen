@@ -1,9 +1,11 @@
 package com.qitoon.framework.model;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String id;
     private String nickname;
     private Date createtime;
@@ -12,6 +14,14 @@ public class User {
     private String type;
     private String avatar;
     private String status;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNickname() {
         return nickname;
@@ -69,6 +79,15 @@ public class User {
         this.status = status;
     }
 
+    public interface Type{
+        String USER="USER";
+        String ADMIN="ADMIN";
+    }
+    public interface Status{
+        String VALID="VALID";
+        String INVALID="INVALID";
+        String PENDING="PENDING";
+    }
     @Override
     public String toString() {
         return "User{" +

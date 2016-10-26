@@ -1,26 +1,53 @@
 package com.qitoon.framework.service;
 
+import com.qitoon.framework.dao.FindPasswordMapper;
 import com.qitoon.framework.dao.UserMapper;
+import com.qitoon.framework.face.IUserService;
+import com.qitoon.framework.model.FindPassword;
 import com.qitoon.framework.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by zl on 2015/8/27.
- */
+
 
 @Service
-public class UserService {
+public class UserService implements IUserService {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private FindPasswordMapper findPasswordMapper;
 
     public List<User> getUserInfo(){
         List<User> user = userMapper.findUserInfo();
-        //User user=null;
         return user;
+    }
+
+    @Override
+    public boolean checkEmail(String email){
+        return userMapper.countEmail(email)>1?false:true;
+    }
+
+    @Override
+    public int create(User user){
+        return userMapper.insert(user);
+    }
+
+    @Override
+    public List<User> getAllUserByUserId(String userId){
+        return userMapper.getAllProjectByUserId(userId);
+    }
+
+    @Override
+    public int findPassword(FindPassword findPassword) {
+        return findPasswordMapper.insert(findPassword);
+    }
+
+    @Override
+    public int updatePwd(User user) {
+        return userMapper.updateById(user);
     }
 
 }
