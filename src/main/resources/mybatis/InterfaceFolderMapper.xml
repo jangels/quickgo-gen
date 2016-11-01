@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qitoon.framework.dao.InterfaceFolderMapper">
+ 
+  <select id="getFoldersByProjectId" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.lang.String">
+    SELECT * FROM interface_folder WHERE projectId=#{projectId} ORDER BY createTime ASC
+  </select>
+
+<select id="getFoldersByModuleIds" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.util.ArrayList">
+    SELECT * FROM    INTERFACE_FOLDER
+     WHERE moduleId IN
+        <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    ORDER BY createTime ASC
+  </select>
+
+  <select id="selectById" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.lang.String">
+    select * from interface_folder  where id=#{id};
+  </select>
+  <insert id="insert" parameterType="com.qitoon.framework.model.InterfaceFolder">
+    INSERT INTO interface_folder(
+        id,
+        name,
+        moduleId,
+        projectId,
+        createTime
+		) VALUES (
+        #{id},
+        #{name},
+        #{moduleId},
+        #{projectId},
+        #{createTime}
+		)
+  </insert>
+
+  <delete id="deleteById"  parameterType="java.lang.String">
+    DELETE FROM interface_folder where id = #{id}
+  </delete>
+
+<update id="updateById" parameterType="com.qitoon.framework.model.InterfaceFolder">
+    UPDATE interface_folder
+    <set>
+        <if test="id!=null">
+            id = #{id},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="moduleId!=null">
+            moduleId = #{moduleId},
+        </if>
+        <if test="projectId!=null">
+            projectId = #{projectId},
+        </if>
+        <if test="createTime!=null">
+            createTime = #{createTime}
+        </if>
+    </set>
+    WHERE id = #{id}
+</update>
+</mapper>

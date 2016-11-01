@@ -8,6 +8,7 @@ import com.qitoon.framework.param._HashMap;
 import com.qitoon.framework.utils.AssertUtils;
 import com.qitoon.framework.utils.MemoryUtils;
 import com.qitoon.framework.utils.Validate;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,17 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author huangjie
- * @since  2016-10-23
+ * on  2016-10-23
  */
 @RestController
 public class LoginController {
     @Autowired
     private ILoginService loginService;
-
+    private static Logger logger = Logger.getLogger(LoginController.class);
     @RequestMapping("/login")
-    public Object login(@RequestParam String email, @RequestParam String password) {
-//        String email = parameter.getParamString().get("email");
-//        String password = parameter.getParamString().get("password");
+    public Object login(@RequestParam("email") String  email, @RequestParam("password")String password) {
         AssertUtils.notNull(email, "用户名为空");
         AssertUtils.notNull(password, "密码为空");
         password = Validate.password(password);
@@ -36,8 +35,8 @@ public class LoginController {
         }
         String token = MemoryUtils.token();
         MemoryUtils.putUser(token, user);
-//        parameter.getRequest().getSession().setAttribute("user",user);
-        return new _HashMap<>().add("token", token).add("user", user);
+//        return new _HashMap<>().add("user",user).add("token",token).add("code", Result.OK);
+        return Result.returnInfo(new _HashMap<>().add("user",user).add("token",token));
     }
 
 

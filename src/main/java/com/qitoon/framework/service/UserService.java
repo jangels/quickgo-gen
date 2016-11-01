@@ -27,12 +27,17 @@ public class UserService implements IUserService {
 
     @Override
     public boolean checkEmail(String email){
-        return userMapper.countEmail(email)>1?false:true;
+        return userMapper.countEmail(email)>0?false:true;
     }
 
     @Override
     public int create(User user){
         return userMapper.insert(user);
+    }
+
+    @Override
+    public String getUserIdByEmail(String email) {
+        return userMapper.getUserIdByEmail(email);
     }
 
     @Override

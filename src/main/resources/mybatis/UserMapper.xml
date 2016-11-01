@@ -5,6 +5,7 @@
   <select id="findUserInfo" resultType="com.qitoon.framework.model.User">
     select * from user;
   </select>
+
   <select id="findUser" resultType="com.qitoon.framework.model.User" parameterType="java.util.Map">
     select * from user where email=#{email} and password = #{password};
   </select>
@@ -12,6 +13,11 @@
   <select id="countEmail" resultType="int" parameterType="java.lang.String">
     select count(id) from user where email=#{email};
   </select>
+
+  <select id="getUserIdByEmail" resultType="java.lang.String" parameterType="java.lang.String">
+    select id from user where email=#{email} limit 1;
+  </select>
+
   <insert id="insert" parameterType="com.qitoon.framework.model.User">
     INSERT INTO user(
         id,

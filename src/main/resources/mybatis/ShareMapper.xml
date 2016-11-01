@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qitoon.framework.dao.ShareMapper">
+ 
+  <select id="getSharesByProjectId" resultType="com.qitoon.framework.model.Share" parameterType="java.lang.String">
+    SELECT s.*,u.nickname username FROM SHARE s
+         LEFT JOIN USER u ON u.id = s.userid
+         WHERE s.projectId = #{projectId}
+  </select>
+
+  <select id="selectById" resultType="com.qitoon.framework.model.Share" parameterType="java.lang.String">
+    select * from SHARE  where id=#{id};
+  </select>
+  <insert id="insert" parameterType="com.qitoon.framework.model.Share">
+    INSERT INTO SHARE(
+        id,
+        name,
+        createtime,
+        userId,
+        shareAll,
+        password,
+        moduleIds,
+        projectId
+		) VALUES (
+        #{id},
+        #{name},
+        #{createtime},
+        #{userId},
+        #{shareAll},
+        #{password},
+        #{moduleIds},
+        #{projectId}
+		)
+  </insert>
+
+  <delete id="deleteById"  parameterType="java.lang.String">
+    DELETE FROM SHARE where id = #{id}
+  </delete>
+
+<update id="updateById" parameterType="com.qitoon.framework.model.Share">
+    UPDATE SHARE
+    <set>
+        <if test="id!=null">
+            id = #{id},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="createtime!=null">
+            createtime = #{createtime},
+        </if>
+        <if test="userId!=null">
+            userId = #{userId},
+        </if>
+        <if test="shareAll!=null">
+            shareAll = #{shareAll},
+        </if>
+        <if test="password!=null">
+            password = #{password},
+        </if>
+        <if test="moduleIds!=null">
+            moduleIds = #{moduleIds},
+        </if>
+        <if test="projectId!=null">
+            projectId = #{projectId}
+        </if>
+
+    </set>
+    WHERE id = #{id}
+</update>
+</mapper>

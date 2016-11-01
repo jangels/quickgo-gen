@@ -1,5 +1,11 @@
 package com.qitoon.framework.param;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.qitoon.framework.view.JsonResponse.FAIL_CODE;
+import static com.qitoon.framework.view.JsonResponse.SUCCESS_CODE;
+
 /**
  * @author : huangjie
  * @since : 16/5/4
@@ -29,7 +35,20 @@ public class Result<T> {
         this.errorMsg =errorMsg;
     }
 
+    public static <T> Object returnInfo(T data) {
 
+        Map<Object,Object> jo = new HashMap<>();
+        jo.put("operateTime", System.currentTimeMillis());
+
+        if (data == null) {
+            jo.put("result", FAIL_CODE);
+            jo.put("msg", "未查询到数据。");
+        } else {
+            jo.put("data", data);
+            jo.put("result", SUCCESS_CODE);
+        }
+        return jo;
+    }
     public int getCode() {
         return code;
     }

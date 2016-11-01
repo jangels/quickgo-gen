@@ -15,6 +15,8 @@ public interface IUserService {
 
     int create(User user);
 
+    String getUserIdByEmail(String email);
+
     List<User> getAllUserByUserId(String userId);
 
     int findPassword(FindPassword findPassword);

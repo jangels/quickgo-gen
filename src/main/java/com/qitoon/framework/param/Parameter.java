@@ -2,6 +2,7 @@ package com.qitoon.framework.param;
 
 
 import com.qitoon.framework.utils.ConfigUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 
 import javax.servlet.http.HttpServletRequest;
@@ -110,11 +111,24 @@ public class Parameter {
         @Override
         public String put(String key, String value) {
             if(value!=null && ConfigUtils.getRequestEscape()) {
-//                value = StringEscapeUtils.escapeHtml4(value);
+                value = StringEscapeUtils.escapeHtml4(value);
             }
             return super.put(key, value);
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Parameter{" +
+                "path='" + path + '\'' +
+                ", requestURL='" + requestURL + '\'' +
+                ", extension='" + extension + '\'' +
+                ", method='" + method + '\'' +
+                ", contextPath='" + contextPath + '\'' +
+                ", paramString=" + paramString +
+                ", paramFile=" + paramFile +
+                ", request=" + request +
+                ", response=" + response +
+                '}';
+    }
 }

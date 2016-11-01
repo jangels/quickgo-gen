@@ -32,14 +32,14 @@ public interface BaseDao<T extends Serializable> {
 	 * @param id 主键ID
 	 * @return 删除条数
 	 */
-	  int deleteById(Long id);
+	  int deleteById(String id);
     
     /**
      * 根据主键查询一条记录
      * @param id 主键ID
      * @return 实体对象
      */
-	   T selectById(Long id);
+	   T selectById(String id);
 
 	/**
      * 根据主键查询一条记录

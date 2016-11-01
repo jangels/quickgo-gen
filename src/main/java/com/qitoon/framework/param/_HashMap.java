@@ -12,4 +12,5 @@ public class _HashMap<K,V> extends HashMap<K,V> {
         put(key,value);
         return this;
     }
+
 }
