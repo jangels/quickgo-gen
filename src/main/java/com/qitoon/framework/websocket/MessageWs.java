@@ -9,7 +9,7 @@ import java.net.SocketTimeoutException;
  * @author huangjie
  * @since  2016-07-26
  */
-@ServerEndpoint(value = "/api/message")
+@ServerEndpoint(value = "/message")
 public class MessageWs {
     //timeout 1分钟
     private static int timeout = 1*60*1000;

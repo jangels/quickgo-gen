@@ -3,8 +3,10 @@ package com.qitoon.framework.view;
 
 import com.qitoon.framework.exception.InvalidArgumentException;
 import com.qitoon.framework.exception.NotLoginException;
-import com.qitoon.framework.param.Parameter;
 import com.qitoon.framework.param.Result;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author huangjie
@@ -12,19 +14,19 @@ import com.qitoon.framework.param.Result;
  */
 public class JsonView extends JsonParentView {
     @Override
-    public void doRepresent(Parameter parameter) throws Exception {
+    public void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception {
         Object data = super.getData();
         if(!(data instanceof Result)){
             data = new Result<>(true,data);
             super.setData(data);
         }
-        parameter.getResponse().setHeader("Access-Control-Allow-Origin", "*");
-        parameter.getResponse().setHeader("Access-Control-Request-Method", "GET, POST, DELETE, PUT, OPTIONS");
-        super.doRepresent(parameter);
+        httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+        httpServletResponse.setHeader("Access-Control-Request-Method", "GET, POST, DELETE, PUT, OPTIONS");
+        super.doRepresent(httpServletResponse,httpServletRequest);
     }
 
     @Override
-    public void handleException(Parameter parameter, Throwable e) throws Exception {
+    public void handleException(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest, Throwable e) throws Exception {
         if(e instanceof NotLoginException){
             super.setData(new Result<>(-2,"会话已过期"));
         }else {
@@ -35,7 +37,7 @@ public class JsonView extends JsonParentView {
             }
             super.setData(new Result<>(false, err));
         }
-        doRepresent(parameter);
+        doRepresent(httpServletResponse,httpServletRequest);
     }
 
 

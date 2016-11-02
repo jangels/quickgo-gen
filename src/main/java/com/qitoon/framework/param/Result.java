@@ -49,6 +49,21 @@ public class Result<T> {
         }
         return jo;
     }
+    public static <T> Object returnInfo(T data,String msg) {
+
+        Map<Object,Object> jo = new HashMap<>();
+        jo.put("operateTime", System.currentTimeMillis());
+
+        if (data == null) {
+            jo.put("result", FAIL_CODE);
+            jo.put("msg", msg);
+        } else {
+            jo.put("data", data);
+            jo.put("msg", msg);
+            jo.put("result", FAIL_CODE);
+        }
+        return jo;
+    }
     public int getCode() {
         return code;
     }

@@ -1,8 +1,7 @@
 package com.qitoon.framework.view;
 
 
-import com.qitoon.framework.param.Parameter;
-
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -11,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class HeadView extends ResultView {
     @Override
-    public void doRepresent(Parameter parameter) throws Exception {
-        HttpServletResponse response = parameter.getResponse();
-        response.setStatus(200);
+    public void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception {
+        httpServletResponse.setStatus(200);
     }
 }

@@ -2,8 +2,10 @@ package com.qitoon.framework.view;
 
 
 import com.qitoon.framework.exception.NotLoginException;
-import com.qitoon.framework.param.Parameter;
 import com.qitoon.framework.utils.ConfigUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author huangjie
@@ -15,15 +17,15 @@ public class JspView extends JspParentView {
     }
 
     @Override
-    public void handleException(Parameter parameter, Throwable throwable) throws Exception {
+    public void handleException(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest, Throwable throwable) throws Exception {
         if(throwable instanceof NotLoginException){
             String loginUrl = ConfigUtils.getProperty("login.url");
             if(loginUrl == null){
-                loginUrl = parameter.getContextPath();
+                loginUrl = httpServletRequest.getContextPath();
             }
-            parameter.getResponse().sendRedirect(loginUrl);
+            httpServletResponse.sendRedirect(loginUrl);
         }else {
-            super.handleException(parameter, throwable);
+            super.handleException(httpServletResponse,httpServletRequest, throwable);
         }
     }
 }

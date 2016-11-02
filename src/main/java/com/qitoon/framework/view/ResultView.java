@@ -1,20 +1,22 @@
 package com.qitoon.framework.view;
 
 
-import com.qitoon.framework.param.Parameter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author huangjie
  * @since  2016/10/22
  */
+
 public abstract class ResultView {
 
     private Object data;
     private String template;
 
-    public abstract void doRepresent(Parameter parameter) throws Exception;
+    public abstract void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception;
 
-    public void handleException(Parameter parameter,Throwable e) throws Exception {
+    public void handleException(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest,Throwable e) throws Exception {
         e.printStackTrace();
     }
 

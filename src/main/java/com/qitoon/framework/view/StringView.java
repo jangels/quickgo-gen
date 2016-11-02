@@ -1,7 +1,8 @@
 package com.qitoon.framework.view;
 
 
-import com.qitoon.framework.param.Parameter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author huangjie
@@ -14,10 +15,10 @@ public class StringView extends ResultView {
     }
 
     @Override
-    public void doRepresent(Parameter parameter) throws Exception {
+    public void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception {
         Object data = getData();
         if(data instanceof String){
-            parameter.getResponse().getWriter().write((String)data);
+            httpServletResponse.getWriter().write((String)data);
         }
     }
 }

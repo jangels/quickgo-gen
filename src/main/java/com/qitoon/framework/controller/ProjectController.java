@@ -27,7 +27,9 @@ import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.dom4j.DocumentException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -584,11 +586,11 @@ public class ProjectController {
             Font subtitle = new Font(font, 14f, Font.BOLD, BaseColor.BLACK);
             Font apiFont = new Font(font, 10f, Font.BOLD, new BaseColor(66, 66, 66));
             Paragraph temp = new Paragraph(project.getName(), new Font(font, 32f, Font.BOLD, BaseColor.BLACK));
+            document.open();
             document.add(Chunk.NEWLINE);
             temp.setAlignment(Element.ALIGN_CENTER);
             document.add(temp);
             writer.setViewerPreferences(PdfWriter.PageModeUseOutlines);
-            document.open();
             //方正兰亭
 
             if (org.apache.commons.lang3.StringUtils.isNotBlank(project.getDetails())) {
@@ -727,7 +729,7 @@ public class ProjectController {
             document.close();
             byte[] data = baos.toByteArray();
             AsyncTaskBus.instance().push(Log.create(token, Log.EXPORT_PROJECT, project.getName(), project.getId()));
-            return new PdfView(data, project.getName() + ".pdf");
+            return Result.returnInfo(new PdfView(data,project.getName()+".pdf"));
         } finally {
             //document.close();
             IOUtils.closeQuietly(baos);

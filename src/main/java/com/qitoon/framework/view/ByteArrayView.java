@@ -1,8 +1,7 @@
 package com.qitoon.framework.view;
 
 
-import com.qitoon.framework.param.Parameter;
-
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +10,7 @@ import java.util.Map;
  * @author : huangjie
  * @since : 16/6/19
  */
+
 public class ByteArrayView extends ResultView{
     public ByteArrayView(byte[] data) {
         super.setData(data);
@@ -22,17 +22,16 @@ public class ByteArrayView extends ResultView{
         return this;
     }
     @Override
-    public void doRepresent(Parameter parameter) throws Exception {
+    public void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception {
         Object data = getData();
         if(data instanceof byte[]){
-            HttpServletResponse response = parameter.getResponse();
             for(Map.Entry<String,String> entry:headerMap.entrySet()) {
-                response.setHeader(entry.getKey(),entry.getValue());
+                httpServletResponse.setHeader(entry.getKey(),entry.getValue());
             }
-            response.setHeader("Pragma", "No-cache");
-            response.setHeader("Cache-Control", "No-cache");
-            response.setContentLength(((byte[]) data).length);
-            response.getOutputStream().write((byte[]) data);
+            httpServletResponse.setHeader("Pragma", "No-cache");
+            httpServletResponse.setHeader("Cache-Control", "No-cache");
+            httpServletResponse.setContentLength(((byte[]) data).length);
+            httpServletResponse.getOutputStream().write((byte[]) data);
         }
     }
 }

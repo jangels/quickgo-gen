@@ -1,8 +1,8 @@
 package com.qitoon.framework.view;
 
 
-import com.qitoon.framework.param.Parameter;
-
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.net.URLEncoder;
 
 /**
@@ -23,9 +23,9 @@ public class PdfView extends ByteArrayView{
 
 
     @Override
-    public void doRepresent(Parameter parameter) throws Exception {
+    public void doRepresent(HttpServletResponse httpServletResponse, HttpServletRequest httpServletRequest) throws Exception {
         super.setHeader("Content-Type","application/pdf");
         super.setHeader("Content-Disposition","attachment; filename=\""+ URLEncoder.encode(fileName,"UTF-8")+"\"");
-        super.doRepresent(parameter);
+        super.doRepresent(httpServletResponse,httpServletRequest);
     }
 }
