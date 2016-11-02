@@ -1,7 +1,7 @@
 package com.quickgo.platform.view;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qitoon.framework.utils.LogTemplate;
+import com.quickgo.platform.utils.LogTemplate;
 
 /**
  * 用户返回JSON结果集

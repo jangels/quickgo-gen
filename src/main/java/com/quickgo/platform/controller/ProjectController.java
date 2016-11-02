@@ -9,7 +9,6 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.qitoon.framework.utils.DateUtils;
 import com.quickgo.platform.asynctask.AsyncTaskBus;
 import com.quickgo.platform.asynctask.Log;
 import com.quickgo.platform.asynctask.message.MessageBus;

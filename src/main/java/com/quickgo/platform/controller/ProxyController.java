@@ -3,6 +3,7 @@ package com.quickgo.platform.controller;
 import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.utils.HttpUtils;
+import org.apache.commons.httpclient.NameValuePair;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

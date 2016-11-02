@@ -5,5 +5,75 @@
   <select id="findUserInfo" resultType="com.quickgo.platform.model.User">
     select * from user;
   </select>
- 
+
+  <select id="findUser" resultType="com.quickgo.platform.model.User" parameterType="java.util.Map">
+    select * from user where email=#{email} and password = #{password};
+  </select>
+
+  <select id="countEmail" resultType="int" parameterType="java.lang.String">
+    select count(id) from user where email=#{email};
+  </select>
+
+  <select id="getUserIdByEmail" resultType="java.lang.String" parameterType="java.lang.String">
+    select id from user where email=#{email} limit 1;
+  </select>
+
+  <insert id="insert" parameterType="com.quickgo.platform.model.User">
+    INSERT INTO user(
+        id,
+        nickname,
+        createtime,
+        email,
+        password,
+        type,
+        avatar,
+        status
+		) VALUES (
+        #{id},
+        #{nickname},
+        #{createtime},
+        #{email},
+        #{password},
+        #{type},
+        #{avatar},
+        #{status}
+		)
+  </insert>
+
+  <select id="getAllProjectByUserId" resultType="com.quickgo.platform.model.User" parameterType="java.lang.String">
+    SELECT u.id,u.nickname,avatar,u.email FROM USER u
+          WHERE u.id IN (
+          SELECT userId FROM PROJECT_USER WHERE projectId IN (
+          SELECT projectId FROM PROJECT_USER WHERE userId=#{userId}));
+
+  </select>
+
+<update id="updateById" parameterType="com.quickgo.platform.model.User">
+    UPDATE user
+    <set>
+        <if test="nickname!=null">
+            nickname = #{nickname},
+        </if>
+        <if test="createtime!=null">
+            createtime = #{createtime},
+        </if>
+        <if test="email!=null">
+            email = #{email},
+        </if>
+        <if test="password!=null">
+            password = #{password},
+        </if>
+        <if test="type!=null">
+            type = #{type},
+        </if>
+        <if test="avatar!=null">
+            avatar = #{avatar},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+
+    </set>
+    WHERE id = #{id}
+</update>
 </mapper>

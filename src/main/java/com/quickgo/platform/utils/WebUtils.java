@@ -1,6 +1,5 @@
 package com.quickgo.platform.utils;
 
-import com.qitoon.framework.utils.LogTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;

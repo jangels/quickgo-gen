@@ -6,7 +6,7 @@ import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.param._HashMap;
 import com.quickgo.platform.utils.AssertUtils;
 import com.quickgo.platform.utils.ConfigUtils;
-import com.qitoon.framework.utils.FileUtils;
+import com.quickgo.platform.utils.FileUtils;
 import com.quickgo.platform.view.ByteArrayView;
 import com.quickgo.platform.view.StringView;
 import org.apache.commons.io.IOUtils;
