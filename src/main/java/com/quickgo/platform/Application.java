@@ -1,6 +1,7 @@
 package com.quickgo.platform;
 
 import com.quickgo.platform.config.ConfigClass;
+import com.quickgo.platform.converter.AjaxFormMessageConverter;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -26,7 +27,7 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan
 @EnableWebMvc
-@MapperScan("com.qitoon.framework.dao")
+@MapperScan("com.quickgo.platform.dao")
 public class Application {
     private static Logger logger = Logger.getLogger(Application.class);
 
@@ -53,7 +54,10 @@ public class Application {
     public PlatformTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dataSource());
     }
-
+    @Bean
+    public AjaxFormMessageConverter converter() {
+        return new AjaxFormMessageConverter();
+    }
 
     /**
      *  start
