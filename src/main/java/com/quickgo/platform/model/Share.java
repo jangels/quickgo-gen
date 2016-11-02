@@ -6,7 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +22,7 @@ public class Share implements Serializable {
     private String userId;
     @Ignore
     private String username;
-    private Date createTime;
+    private Long createTime;
     private String shareAll;
     private String moduleIds;
     private String password;
@@ -58,11 +57,11 @@ public class Share implements Serializable {
         this.userId = userId;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 

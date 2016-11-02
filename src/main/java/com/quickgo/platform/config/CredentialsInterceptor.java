@@ -1,6 +1,7 @@
 package com.quickgo.platform.config;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -12,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
  * @author 杨鹏兵
  * @Date 2015年5月19日
  */
-
+@Configuration
 public class CredentialsInterceptor implements HandlerInterceptor {
 
 	private static Logger logger = Logger.getLogger(CredentialsInterceptor.class);
 	@Override
 	public boolean preHandle(HttpServletRequest request,HttpServletResponse response, Object handler) throws Exception {
 	    response.setHeader("Access-Control-Allow-Origin", "*");
-		response.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, DELETE");
+		response.setHeader("Access-Control-Allow-Methods","GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH");
 		response.setHeader("Access-Control-Allow-Headers","*");
 
 		logger.info("请求方法："+request.getMethod());

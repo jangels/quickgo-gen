@@ -55,8 +55,8 @@ public class InterfaceController {
         AssertUtils.notNull(in.getFolderId(), "missing folderId");
         AssertUtils.isTrue(projectUserService.
         checkUserHasProjectPermission(MemoryUtils.getUser(token).getId(), in.getProjectId()), "无操作权限");
-        in.setLastUpdateTime(new Date());
-        in.setCreateTime(new Date());
+        in.setLastUpdateTime(new Date().getTime());
+        in.setCreateTime(new Date().getTime());
         in.setStatus(Interface.Status.ENABLE);
         in.setId(Validate.id());
         int rs = interfaceService.create(in);
@@ -82,7 +82,7 @@ public class InterfaceController {
         BeanUtils.copyProperties(in, anInterface);
         in.setId(id);
         AssertUtils.isTrue(projectUserService.checkUserHasProjectPermission(MemoryUtils.getUser(token).getId(), temp.getProjectId()), "无操作权限");
-        in.setLastUpdateTime(new Date());
+        in.setLastUpdateTime(new Date().getTime());
         in.setCreateTime(null);
         int rs = interfaceService.upadteInterface(in);
         AssertUtils.isTrue(rs > 0, "修改失败");

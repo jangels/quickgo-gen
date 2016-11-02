@@ -47,7 +47,7 @@ public class Log implements AsyncTask<ProjectLog> {
         if(user!=null) {
             log.setUserId(user.getId());
         }
-        log.setCreateTime(new Date());
+        log.setCreateTime(new Date().getTime());
         log.setAction(action);
         log.setLog(name);
         log.setProjectId(projectId);

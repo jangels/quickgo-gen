@@ -6,7 +6,6 @@ import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,8 +22,8 @@ public class Module implements Serializable{
     private String name;
     private String host;
     private String description;
-    private Date lastUpdateTime;
-    private Date createTime;
+    private Long lastUpdateTime;
+    private Long createTime;
     private String projectId;
     //请求头
     private String requestHeaders;
@@ -50,19 +49,19 @@ public class Module implements Serializable{
         this.name = name;
     }
 
-    public Date getLastUpdateTime() {
+    public Long getLastUpdateTime() {
         return lastUpdateTime;
     }
 
-    public void setLastUpdateTime(Date lastUpdateTime) {
+    public void setLastUpdateTime(Long lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 

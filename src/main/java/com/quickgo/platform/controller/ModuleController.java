@@ -59,8 +59,8 @@ public class ModuleController {
         AssertUtils.notNull(module.getProjectId(), "项目id为空");
         checkUserHasOperatePermission(module.getProjectId(),token);
         module.setId(Validate.id());
-        module.setLastUpdateTime(new Date());
-        module.setCreateTime(new Date());
+        module.setLastUpdateTime(new Date().getTime());
+        module.setCreateTime(new Date().getTime());
         int rs = moduleService.createModule(module);
         AssertUtils.isTrue(rs > 0, "操作失败");
         AsyncTaskBus.instance().push(Log.create(token, Log.CREATE_MODULE,module.getName(),module.getProjectId()));
@@ -82,7 +82,7 @@ public class ModuleController {
             module = new Module();
         }
         module.setId(id);
-        module.setLastUpdateTime(new Date());
+        module.setLastUpdateTime(new Date().getTime());
         int rs = moduleService.updateModule(module);
         AssertUtils.isTrue(rs > 0, "操作失败");
         AsyncTaskBus.instance().push(Log.create(token, Log.UPDATE_MODULE,module.getName(),module.getProjectId()));

@@ -56,7 +56,7 @@ public class InterfaceFolderController {
 
     @RequestMapping("/create")
     public Object create(String token,InterfaceFolder folder) {
-        folder.setCreateTime(new Date());
+        folder.setCreateTime(new Date().getTime());
         folder.setId(Validate.id());
         AssertUtils.notNull(folder,"接口对象为空");
         AssertUtils.notNull(folder.getModuleId(),"missing moduleId");

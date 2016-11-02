@@ -5,7 +5,6 @@ import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,7 +15,7 @@ public class InterfaceFolder implements Serializable{
     private static final long serialVersionUID = 1L;
     private String id;
     private String name;
-    private Date createTime;
+    private Long createTime;
     private String moduleId;
     private String projectId;
     @Ignore
@@ -38,11 +37,11 @@ public class InterfaceFolder implements Serializable{
         this.name = name;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 

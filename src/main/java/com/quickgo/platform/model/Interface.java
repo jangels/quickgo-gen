@@ -6,7 +6,6 @@ import com.quickgo.platform.annotation.Alias;
 import com.quickgo.platform.annotation.Ignore;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 接口
@@ -33,8 +32,8 @@ public class Interface implements Serializable{
     private String example;
     private String projectId;
     private String moduleId;
-    private Date createTime;
-    private Date lastUpdateTime;
+    private Long createTime;
+    private Long lastUpdateTime;
     private String dataType;
     private String protocol;
     private String status;
@@ -149,19 +148,19 @@ public class Interface implements Serializable{
         this.moduleId = moduleId;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
-    public Date getLastUpdateTime() {
+    public Long getLastUpdateTime() {
         return lastUpdateTime;
     }
 
-    public void setLastUpdateTime(Date lastUpdateTime) {
+    public void setLastUpdateTime(Long lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
     }
 

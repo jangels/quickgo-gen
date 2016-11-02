@@ -2,13 +2,12 @@ package com.quickgo.platform.model;
 
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class User implements Serializable{
     private static final long serialVersionUID = 1L;
     private String id;
     private String nickname;
-    private Date createtime;
+    private Long createtime;
     private String email;
     private String password;
     private String type;
@@ -31,11 +30,11 @@ public class User implements Serializable{
         this.nickname = nickname;
     }
 
-    public Date getCreatetime() {
+    public Long getCreatetime() {
         return createtime;
     }
 
-    public void setCreatetime(Date createtime) {
+    public void setCreatetime(Long createtime) {
         this.createtime = createtime;
     }
 

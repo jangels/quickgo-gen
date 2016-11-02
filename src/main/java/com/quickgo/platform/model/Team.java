@@ -4,7 +4,6 @@ package com.quickgo.platform.model;
 import com.quickgo.platform.annotation.Alias;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author huangjie
@@ -17,7 +16,7 @@ public class Team implements Serializable{
     private String name;
     private String description;
     private String userId;
-    private Date createTime;
+    private Long createTime;
     private String status;
 
     public interface Status{
@@ -58,11 +57,11 @@ public class Team implements Serializable{
         this.userId = userId;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 

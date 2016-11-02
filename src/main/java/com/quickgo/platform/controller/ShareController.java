@@ -142,7 +142,7 @@ public class ShareController {
         if(!Share.ShareAll.YES.equals(share.getShareAll())){
             AssertUtils.notNull(moduleId,"模块id为空");
         }
-        share.setCreateTime(new Date());
+        share.setCreateTime(new Date().getTime());
         share.setProjectId(projectId);
         int rs = shareService.create(share);
         AssertUtils.isTrue(rs>0,"操作失败");

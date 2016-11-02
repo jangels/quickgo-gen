@@ -180,8 +180,8 @@ public class ProjectController {
     //创建默认模块
     private Module createDefaultModule(String token, String projectId) {
         Module module = new Module();
-        module.setLastUpdateTime(new Date());
-        module.setCreateTime(new Date());
+        module.setLastUpdateTime(new Date().getTime());
+        module.setCreateTime(new Date().getTime());
         module.setId(Validate.id());
         module.setProjectId(projectId);
         module.setName("默认模块");
@@ -197,7 +197,7 @@ public class ProjectController {
         InterfaceFolder folder = new InterfaceFolder();
         folder.setId(Validate.id());
         folder.setName("默认分类");
-        folder.setCreateTime(new Date());
+        folder.setCreateTime(new Date().getTime());
         folder.setModuleId(moduleId);
         folder.setProjectId(projectId);
         int rs = interfaceFolderService.create(folder);
@@ -218,7 +218,7 @@ public class ProjectController {
     public Object create(String token, Project project) {
             User user = MemoryUtils.getUser(token);
             project.setId(Validate.id());
-            project.setCreateTime(new Date());
+            project.setCreateTime(new Date().getTime());
             project.setUserId(user.getId());
             project.setStatus(Project.Status.VALID);
             project.setEditable(ProjectUser.Editable.YES);
@@ -259,7 +259,7 @@ public class ProjectController {
      * @param token
      * @return
      */
-    @RequestMapping("/up/{id}")
+    @RequestMapping("/update/{id}")
     public Object update(@PathVariable("id") String id, String token,Project projects) {
         this.checkUserHasEditPermission(id, token);
         Project project = new Project();
@@ -365,7 +365,7 @@ public class ProjectController {
             if (type.equals("folder")) {
                 InterfaceFolder folder = interfaceFolderService.getById(targetId);
                 folder.setId(Validate.id());
-                folder.setCreateTime(new Date());
+                folder.setCreateTime(new Date().getTime());
                 folder.setModuleId(moduleId);
                 if(folder.getName()== null){
                     folder.setName("");
@@ -381,8 +381,8 @@ public class ProjectController {
                         in.setId(Validate.id());
                         in.setFolderId(folder.getId());
                         in.setModuleId(moduleId);
-                        in.setCreateTime(new Date());
-                        in.setLastUpdateTime(new Date());
+                        in.setCreateTime(new Date().getTime());
+                        in.setLastUpdateTime(new Date().getTime());
                         rs = interfaceService.create(in);
                     }
                 }
@@ -397,8 +397,8 @@ public class ProjectController {
                 in.setId(Validate.id());
                 in.setFolderId(folderId);
                 in.setModuleId(moduleId);
-                in.setCreateTime(new Date());
-                in.setLastUpdateTime(new Date());
+                in.setCreateTime(new Date().getTime());
+                in.setLastUpdateTime(new Date().getTime());
                 if (in.getName() == null) {
                     in.setName("");
                 }
@@ -431,7 +431,7 @@ public class ProjectController {
         AssertUtils.isTrue(org.apache.commons.lang3.StringUtils.isNotBlank(pu.getUserId()), "missing userId");
         AssertUtils.isTrue(projectUserService.checkUserHasProjectPermission(id, project.getUserId()), "用户已存在该项目中");
         AssertUtils.isTrue(!pu.getUserId().equals(user.getId()), "不能邀请自己");
-        pu.setCreateTime(new Date());
+        pu.setCreateTime(new Date().getTime());
         pu.setStatus(ProjectUser.Status.PENDING);
         pu.setEditable(ProjectUser.Editable.NO);
         pu.setProjectId(id);
@@ -463,7 +463,7 @@ public class ProjectController {
         pu.setProjectId(id);
         pu.setEditable(ProjectUser.Editable.YES);
         AssertUtils.isTrue(StringUtils.isNotBlank(pu.getProjectId()), "missing projectId");
-        pu.setCreateTime(new Date());
+        pu.setCreateTime(new Date().getTime());
         pu.setStatus(ProjectUser.Status.PENDING);
         int rs = projectUserService.createProjectUser(pu);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
@@ -631,7 +631,7 @@ public class ProjectController {
             for (int m = 0; m < modules.size(); m++) {
                 Module module = modules.get(m);
                 document.add(new Paragraph(module.getName(), moduleFont));
-                createUpdateTimeCell(document, DateUtils.toStr(module.getLastUpdateTime()), apiFont);
+                createUpdateTimeCell(document, DateUtils.toStr(new Date(module.getLastUpdateTime())), apiFont);
 
                 Paragraph cTitle = new Paragraph(module.getName(), moduleFont);
                 Chapter chapter = new Chapter(cTitle, m + 1);
@@ -650,7 +650,7 @@ public class ProjectController {
                         Interface in = ins.get(i);
                         section.addSection(new Paragraph(in.getName(), apiName));
                         section.add(new Paragraph("基本信息", subtitle));
-                        createUpdateTimeCell(section, DateUtils.toStr(in.getLastUpdateTime()), apiFont);
+                        createUpdateTimeCell(section, DateUtils.toStr(new Date(in.getLastUpdateTime())), apiFont);
                         section.add(new Paragraph("请求类型：" + in.getProtocol(), apiFont));
                         section.add(new Paragraph("请求地址：" + in.getUrl(), apiFont));
                         if ("HTTP".equals(in.getProtocol())) {

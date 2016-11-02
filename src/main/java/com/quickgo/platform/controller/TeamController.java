@@ -33,7 +33,7 @@ public class TeamController {
         Team team = BeanCopy.convert(Team.class,parameter.getParamString());
         AssertUtils.notNull(team.getName(),"missing name");
         team.setId(Validate.id());
-        team.setCreateTime(new Date());
+        team.setCreateTime(new Date().getTime());
         team.setUserId(user.getId());
         team.setStatus(Team.Status.VALID);
         int rs =0;// ServiceFactory.instance().create(team);

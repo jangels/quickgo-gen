@@ -53,7 +53,7 @@ public class UserController {
         AssertUtils.isTrue(userService.checkEmail(user.getEmail()), Message.EMAIL_EXISTS);
         user.setPassword(Validate.password(user.getPassword()));
         user.setType(User.Type.USER);
-        user.setCreatetime(new Date());
+        user.setCreatetime(new Date().getTime());
         user.setId(Validate.id());
         user.setStatus(User.Status.PENDING);
         int rs = userService.create(user);

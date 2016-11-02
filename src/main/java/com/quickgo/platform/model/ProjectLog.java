@@ -1,7 +1,6 @@
 package com.quickgo.platform.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 项目操作记录
@@ -12,7 +11,7 @@ public class ProjectLog implements Serializable{
     private static final long serialVersionUID = 1L;
     private String id;
     private String userId;
-    private Date createTime;
+    private Long createTime;
     private String log;
     private String action;
     private String projectId;
@@ -37,11 +36,11 @@ public class ProjectLog implements Serializable{
         this.userId = userId;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 

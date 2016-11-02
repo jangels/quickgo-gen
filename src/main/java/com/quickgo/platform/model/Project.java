@@ -4,7 +4,6 @@ package com.quickgo.platform.model;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 项目
@@ -23,10 +22,10 @@ public class Project implements Serializable{
     private String teamId;
 
     private String userId;
-    @Ignore
+
     private String userName;
     //创建时间
-    private Date createTime;
+    private Long createTime;
     //状态
     private String status;
     //权限
@@ -102,11 +101,11 @@ public class Project implements Serializable{
         this.description = description;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
