@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>service</name>
+	<filePath>Work/qitoon/app/recruit/implement/src/main/java/${packageName}/${moduleName}/impl/${subModuleName}</filePath>
+	<fileName>${ClassName}ServiceImpl.java</fileName>
+	<content><![CDATA[
+/**
+ * 
+ */
+package ${packageName}.${moduleName}.impl<#if subModuleName != "">.${subModuleName}</#if>;
+
+import java.util.List;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import ${packageName}.core.mybaits.Page;
+
+import ${packageName}.${moduleName}.bean.${ClassName};
+import ${packageName}.${moduleName}.dao.${ClassName}Mapper;
+import ${packageName}.${moduleName}.service.${ClassName}Service;
+import ${packageName}.core.exception.BusinessException;
+/**
+ * ${functionName} impl实现
+ * @ClassName: ${ClassName}ServiceImpl
+ * @author ${functionAuthor}
+ * @date ${functionVersion}
+ * Copyright: Copyright (c) 2016 
+ * Company:ToB中心
+ */
+public class ${ClassName}ServiceImpl implements ${ClassName}Service{
+	
+	private static final Logger log = Logger.getLogger(RecruitRequireServiceImpl.class);
+	@Autowired
+    ${ClassName}Mapper ${className}Mapper;
+ 
+ //////////////////公共方法///////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+	@Override
+	public int insert(${ClassName} entity) {
+	try{
+		return ${className}Mapper.insert(entity);
+	   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public int  insertSelective(${ClassName} entity) {
+	 try{
+		return ${className}Mapper.insertSelective(entity);
+		}
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public int deleteById(Long id) {
+		try
+		{
+		return ${className}Mapper.deleteById(id);
+		 }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public int deleteBatchByIds(String ids) {
+	try{
+		String [] mids=ids.split(",");
+		int count=0;
+		for(String id:mids)
+			{ Long idl=Long.getLong(id);
+			count+=deleteById(idl);
+			}
+		return mids.length!=count?-1:count;
+		   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public ${ClassName} selectById(Long id) {
+	try{
+		return ${className}Mapper.selectById(id);
+		}
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public int updateByIdSelective(${ClassName} entity) {
+	
+		try{
+		return ${className}Mapper.updateByIdSelective(entity);
+		   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public int updateById(${ClassName} entity) {
+	try{
+		return ${className}Mapper.updateByIdSelective(entity);
+		   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public List<${ClassName}> queryListPage(Page page) {
+		try
+		{
+		return ${className}Mapper.queryListPage(page);
+		   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+
+	@Override
+	public int getCount() {
+		try{
+		return ${className}Mapper.getCount();
+		}
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public boolean queryCheck(Long id) {
+	try{
+		return ${className}Mapper.queryCheck(id)<=0?false:true;
+		}
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+
+	@Override
+	public List<${ClassName}> queryAll() {
+		try{
+			return ${className}Mapper.queryAll();
+		   }
+		catch (Exception ex) {
+			log.error(ex.getMessage(),ex);
+			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
+		}
+	}
+//////////////////自定义方法///////////////////////////////////////////////////////////////////////////////////////////////////
+	
+}]]>
+	</content>
+</template>
