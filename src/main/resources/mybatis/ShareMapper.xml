@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.ShareMapper">
+<mapper namespace="com.quickgo.platform.dao.ShareMapper">
  
-  <select id="getSharesByProjectId" resultType="com.qitoon.framework.model.Share" parameterType="java.lang.String">
+  <select id="getSharesByProjectId" resultType="com.quickgo.platform.model.Share" parameterType="java.lang.String">
     SELECT s.*,u.nickname username FROM SHARE s
          LEFT JOIN USER u ON u.id = s.userid
          WHERE s.projectId = #{projectId}
   </select>
 
-  <select id="selectById" resultType="com.qitoon.framework.model.Share" parameterType="java.lang.String">
+  <select id="selectById" resultType="com.quickgo.platform.model.Share" parameterType="java.lang.String">
     select * from SHARE  where id=#{id};
   </select>
-  <insert id="insert" parameterType="com.qitoon.framework.model.Share">
+  <insert id="insert" parameterType="com.quickgo.platform.model.Share">
     INSERT INTO SHARE(
         id,
         name,
@@ -37,7 +37,7 @@
     DELETE FROM SHARE where id = #{id}
   </delete>
 
-<update id="updateById" parameterType="com.qitoon.framework.model.Share">
+<update id="updateById" parameterType="com.quickgo.platform.model.Share">
     UPDATE SHARE
     <set>
         <if test="id!=null">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.ProjectUserMapper">
+<mapper namespace="com.quickgo.platform.dao.ProjectUserMapper">
 
     <select id="checkProjectUser" resultType="int" parameterType="java.util.Map">
     SELECT COUNT(id) FROM  PROJECT_USER  WHERE userId=#{userId} AND projectId=#{projectId} AND editable='YES'
@@ -10,18 +10,18 @@
     SELECT editable FROM PROJECT_USER WHERE projectId=#{projectId} AND userId=#{userId} LIMIT 1
   </select>
 
-    <select id="getUsersByProjectId" resultType="com.qitoon.framework.model.User" parameterType="java.lang.String">
+    <select id="getUsersByProjectId" resultType="com.quickgo.platform.model.User" parameterType="java.lang.String">
      SELECT u.id,u.nickname,u.avatar,u.email,pu.editable
      FROM USER u
      LEFT JOIN project_user pu ON pu.userId=u.id
      WHERE pu.projectId=#{projectId}
   </select>
 
-    <select id="selectById" resultType="com.qitoon.framework.model.ProjectUser" parameterType="java.lang.String">
+    <select id="selectById" resultType="com.quickgo.platform.model.ProjectUser" parameterType="java.lang.String">
     select * from PROJECT_USER  where id=#{id};
   </select>
 
-  <insert id="insert" parameterType="com.qitoon.framework.model.ProjectUser">
+  <insert id="insert" parameterType="com.quickgo.platform.model.ProjectUser">
     INSERT INTO PROJECT_USER(
         id,
         projectId,
@@ -49,7 +49,7 @@
     DELETE FROM PROJECT_USER  where projectId=#{projectId} and userId=#{userId}
   </delete>
 
-    <update id="updateById" parameterType="com.qitoon.framework.model.ProjectUser">
+    <update id="updateById" parameterType="com.quickgo.platform.model.ProjectUser">
         UPDATE PROJECT_USER
         <set>
             <if test="id!=null">

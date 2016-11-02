@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.InterfaceMapper">
+<mapper namespace="com.quickgo.platform.dao.InterfaceMapper">
  
-  <select id="getInterfacesByProjectId" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+  <select id="getInterfacesByProjectId" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
     SELECT * FROM INTERFACE WHERE projectId= #{projectId} ORDER BY createTime ASC
   </select>
 
-<select id="getInterfacesByModuleIds" resultType="com.qitoon.framework.model.Interface" parameterType="java.util.ArrayList">
+<select id="getInterfacesByModuleIds" resultType="com.quickgo.platform.model.Interface" parameterType="java.util.ArrayList">
     SELECT * FROM INTERFACE WHERE  moduleId in
     <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
         #{item}
@@ -14,16 +14,16 @@
      ORDER BY createTime ASC
   </select>
 
-<select id="getInterface" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+<select id="getInterface" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
     SELECT * FROM INTERFACE WHERE  folderId = #{folderId}
 
      ORDER BY createTime ASC
   </select>
 
-  <select id="selectById" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+  <select id="selectById" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
     select * from INTERFACE  where id=#{id};
   </select>
-  <insert id="insert" parameterType="com.qitoon.framework.model.Interface">
+  <insert id="insert" parameterType="com.quickgo.platform.model.Interface">
     INSERT INTO INTERFACE(
         id,
         name,
@@ -69,7 +69,7 @@
     DELETE FROM INTERFACE where id = #{id}
   </delete>
 
-<update id="updateById" parameterType="com.qitoon.framework.model.Interface">
+<update id="updateById" parameterType="com.quickgo.platform.model.Interface">
     UPDATE INTERFACE
     <set>
         <if test="id!=null">

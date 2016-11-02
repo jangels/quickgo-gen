@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.ModuleMapper">
+<mapper namespace="com.quickgo.platform.dao.ModuleMapper">
  
-  <select id="getModuleById" resultType="com.qitoon.framework.model.Module">
+  <select id="getModuleById" resultType="com.quickgo.platform.model.Module">
     select * from MODULE where id =#{id};
   </select>
 
-  <select id="getModules" resultType="com.qitoon.framework.model.Module" parameterType="java.lang.String">
+  <select id="getModules" resultType="com.quickgo.platform.model.Module" parameterType="java.lang.String">
     SELECT * FROM MODULE WHERE projectId=#{projectId} ORDER BY createTime ASC
   </select>
 
-    <select id="getModuleList" resultType="com.qitoon.framework.model.Module" parameterType="java.util.ArrayList">
+    <select id="getModuleList" resultType="com.quickgo.platform.model.Module" parameterType="java.util.ArrayList">
        SELECT * FROM MODULE WHERE id IN
         <foreach collection="array" item="item" index="index"  open="(" close=")" separator=",">
             #{item}
@@ -18,7 +18,7 @@
         ORDER BY createTime ASC
 
   </select>
-  <insert id="insert" parameterType="com.qitoon.framework.model.Module">
+  <insert id="insert" parameterType="com.quickgo.platform.model.Module">
     INSERT INTO MODULE (
         id,
         name,
@@ -46,7 +46,7 @@
     DELETE FROM MODULE where id = #{id}
   </delete>
 
-<update id="updateById" parameterType="com.qitoon.framework.model.Module">
+<update id="updateById" parameterType="com.quickgo.platform.model.Module">
     UPDATE MODULE
     <set>
         <if test="id!=null">

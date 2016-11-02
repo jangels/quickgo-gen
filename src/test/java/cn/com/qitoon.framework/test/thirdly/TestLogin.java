@@ -1,7 +1,7 @@
 package cn.com.qitoon.framework.test.thirdly;
 
-import com.qitoon.framework.face.ILoginService;
-import com.qitoon.framework.model.User;
+import com.quickgo.platform.face.ILoginService;
+import com.quickgo.platform.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

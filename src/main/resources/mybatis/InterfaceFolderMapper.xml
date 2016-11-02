@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.InterfaceFolderMapper">
+<mapper namespace="com.quickgo.platform.dao.InterfaceFolderMapper">
  
-  <select id="getFoldersByProjectId" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.lang.String">
+  <select id="getFoldersByProjectId" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.lang.String">
     SELECT * FROM interface_folder WHERE projectId=#{projectId} ORDER BY createTime ASC
   </select>
 
-<select id="getFoldersByModuleIds" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.util.ArrayList">
+<select id="getFoldersByModuleIds" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.util.ArrayList">
     SELECT * FROM    INTERFACE_FOLDER
      WHERE moduleId IN
         <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
@@ -15,10 +15,10 @@
     ORDER BY createTime ASC
   </select>
 
-  <select id="selectById" resultType="com.qitoon.framework.model.InterfaceFolder" parameterType="java.lang.String">
+  <select id="selectById" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.lang.String">
     select * from interface_folder  where id=#{id};
   </select>
-  <insert id="insert" parameterType="com.qitoon.framework.model.InterfaceFolder">
+  <insert id="insert" parameterType="com.quickgo.platform.model.InterfaceFolder">
     INSERT INTO interface_folder(
         id,
         name,
@@ -38,7 +38,7 @@
     DELETE FROM interface_folder where id = #{id}
   </delete>
 
-<update id="updateById" parameterType="com.qitoon.framework.model.InterfaceFolder">
+<update id="updateById" parameterType="com.quickgo.platform.model.InterfaceFolder">
     UPDATE interface_folder
     <set>
         <if test="id!=null">

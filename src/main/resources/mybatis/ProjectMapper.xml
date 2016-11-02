@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qitoon.framework.dao.ProjectMapper">
+<mapper namespace="com.quickgo.platform.dao.ProjectMapper">
  
-  <select id="getProjectsByUserId" resultType="com.qitoon.framework.model.Project" parameterType="java.lang.String">
+  <select id="getProjectsByUserId" resultType="com.quickgo.platform.model.Project" parameterType="java.lang.String">
     SELECT DISTINCT p.*,u.nickname userName,pu.editable,pu.commonlyUsed FROM PROJECT p
         LEFT JOIN USER u ON u.id = p.userId
         LEFT JOIN project_user pu ON pu.projectId = p.id
@@ -10,14 +10,14 @@
         ORDER BY createTime ASC
   </select>
 
-  <select id="selectById" resultType="com.qitoon.framework.model.Project" parameterType="java.lang.String">
+  <select id="selectById" resultType="com.quickgo.platform.model.Project" parameterType="java.lang.String">
     select * from PROJECT  where id=#{id};
   </select>
 
   <select id="getProjectName" resultType="java.lang.String" parameterType="java.lang.String">
     select name from PROJECT  where id=#{id};
   </select>
-  <insert id="insert" parameterType="com.qitoon.framework.model.Project">
+  <insert id="insert" parameterType="com.quickgo.platform.model.Project">
     INSERT INTO PROJECT(
 
         id,
@@ -48,7 +48,7 @@
     DELETE FROM PROJECT where id = #{id}
   </delete>
 
-<update id="updateById" parameterType="com.qitoon.framework.model.Project">
+<update id="updateById" parameterType="com.quickgo.platform.model.Project">
     UPDATE PROJECT
     <set>
         <if test="id!=null">

@@ -1,9 +1,11 @@
 package com.quickgo.platform.utils;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Date;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * 日志打印工具类
@@ -12,18 +14,17 @@ import org.slf4j.LoggerFactory;
  */
 public class LogTemplate {
 
-	private static Logger logger = LoggerFactory.getLogger(JsonMapper.class);
-
+	private static final Logger LOG = LogManager.getLogger(LogTemplate.class);
 	public static void info(String msg, Object... args){
-		logger.info(msg, args);
+		LOG.info(msg, args);
 	}
 	
 	public static void debug(String msg, Object... args){
-		logger.debug(msg, args);
+		LOG.debug(msg, args);
 	}
 	
 	public static void error(String msg, Object... args){
-		logger.error(msg, args);
+		LOG.error(msg, args);
 	}
 	
 	public static void main(String[] args) {

@@ -5,286 +5,159 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e585c51-4dbb-4f0e-bc58-563593812c60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/QuickgoConfigurerAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/SwaggerConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenSchemeController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenTableController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenTemplateController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/HelloController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/SwaggerController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/converter/AjaxFormMessageConverter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenDataBaseDictDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenSchemeDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTableColumnDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTableDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTemplateDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/UserMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dto/GenSchemeDto.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dto/GenTableDto.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/filters/CredentialsInterceptor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/BaseEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/DataEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenCategory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenScheme.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTableColumn.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTemplate.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenSchemeService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenTableService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenTemplateService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/BeanValidators.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/CookieUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/DateUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Dict.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Exceptions.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/FileUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/FreeMarkers.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/GenUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Global.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/IdGen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JaxbMapper$CollectionWrapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JaxbMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonResponse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/LogTemplate.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/PropertiesLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Reflections.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/SpringContextHolder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/StringUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Template.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/WebUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/explorer_icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/logo_small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/pet_store_api.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/throbber.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/wordnik_api.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quickgo_gen_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quickgo_gen_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mangofactory_swagger_models_0_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mangofactory_swagger_springmvc_0_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_wordnik_swagger_annotations_1_3_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__freemarker_freemarker_2_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_2_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_0_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickgo-gen.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenSchemeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTableController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTemplateController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/converter/AjaxFormMessageConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenDataBaseDictDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenSchemeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenTableColumnDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenTableDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenTemplateDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dto/GenSchemeDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dto/GenTableDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/filters/CredentialsInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/BaseEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/DataEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenScheme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTableColumn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTemplate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenSchemeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTableService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTemplateService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanValidators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/CookieUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/DateUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Dict.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Exceptions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FreeMarkers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/GenUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Global.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/IdGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JsonMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JsonResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Page.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/PropertiesLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/SpringContextHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Template.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/GenDataBaseDictDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/GenSchemeDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/GenTableColumnDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/GenTableDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/GenTemplateDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/qitoon.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genSchemeForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genSchemeList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genTableForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genTableList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genTemplateForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/genTemplateList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/swagger/views/taglib.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/controller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/dao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/entity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/impl.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/moduleJs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenDataBaseDictDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenSchemeDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTableColumnDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTableDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTemplateDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/qitoon.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/typography.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/translator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/backbone-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/handlebars-2.0.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/highlight.7.3.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery-1.8.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.ba-bbq.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.slideto.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.wiggle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/marked.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/swagger-oauth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/underscore-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/underscore-min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/o2c.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/swagger-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/swagger-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genSchemeForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genSchemeList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTableForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTableList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTemplateForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTemplateList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/taglib.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/controller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/dao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/entity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/impl.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/mapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/moduleJs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/service.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/Application.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/SwaggerConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/HelloController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/SwaggerController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/UserMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/DateUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/LogTemplate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/WebUtils.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickgo-gen.iml" afterPath="$PROJECT_DIR$/quickgo-gen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/DateUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/FindPasswordMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/FindPasswordMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceFolderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceFolderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ModuleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ModuleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ProjectMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ProjectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ProjectUserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ProjectUserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ShareMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ShareMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/com/qitoon.framework/test/thirdly/TestLogin.java" afterPath="$PROJECT_DIR$/src/test/java/cn/com/qitoon.framework/test/thirdly/TestLogin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/Config.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/Config.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/After.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/After.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Alias.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Alias.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Around.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Around.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Before.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Before.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Delete.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Delete.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Get.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Get.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Ignore.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Ignore.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/PathInject.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/PathInject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Post.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Post.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Put.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Put.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/RequestMapping.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/RequestMapping.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/annotation/Service.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/annotation/Service.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/AsyncTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/AsyncTask.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/AsyncTaskBus.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/AsyncTaskBus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/ObjectMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/ObjectMethod.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/message/Message.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/message/MessageBus.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/message/MessageBus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/asynctask/message/MessageNotify.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/message/MessageNotify.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/cache/Cache.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/cache/Cache.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/cache/MemoryCache.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/cache/MemoryCache.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/cache/RedisCache.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/cache/RedisCache.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/ConfigClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/ConfigClass.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/CredentialsInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/MyInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/MyInterceptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/SwaggerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/SwaggerConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/CallbackController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/CallbackController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/DashboardController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/DashboardController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/ImageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ImageController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/IndexController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/InterfaceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/InterfaceFolderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceFolderController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/LoginController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/ModuleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/ProxyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProxyController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/ShareController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/TeamController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TeamController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TestController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/BaseDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/BaseDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/FindPasswordMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/FindPasswordMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/InterfaceFolderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/InterfaceFolderMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/InterfaceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/InterfaceMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/ModuleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ModuleMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/ProjectMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ProjectMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/ProjectUserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ProjectUserMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/ShareMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ShareMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/UserMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/Handler.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/Handler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/ImageData.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/ImageData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/InvalidArgumentException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/InvalidArgumentException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/InvalidResultException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/InvalidResultException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/MangoException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/MangoException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/NotLoginException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/NotLoginException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/Pagination.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/Pagination.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/exception/ProjectMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/exception/ProjectMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IInterfaceFolderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IInterfaceFolderService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IInterfaceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IInterfaceService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/ILoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/ILoginService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IModuleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IProjectService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IProjectUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IProjectUserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IShareService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IShareService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/face/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/face/IUserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/CopyFolder.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/CopyFolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/FindPassword.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/FindPassword.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Interface.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Interface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/InterfaceFolder.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/InterfaceFolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Module.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Module.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Project.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/ProjectLog.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectLog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/ProjectUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectUser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/RequestResponseArgs.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/RequestResponseArgs.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Share.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/TableNames.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/TableNames.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Team.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Team.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/Thirdparty.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Thirdparty.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/param/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/param/Message.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/param/MyPostMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/param/MyPostMethod.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/param/Parameter.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/param/Parameter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/param/Result.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/param/Result.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/param/_HashMap.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/param/_HashMap.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/InterfaceFolderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/InterfaceFolderService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/InterfaceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/InterfaceService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/LoginService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/ModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ModuleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ProjectService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/ProjectUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ProjectUserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/ServiceTool.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/ShareService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ShareService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/AccessParentToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/AccessParentToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/Github.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/Github.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/QQ.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/QQ.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/Weibo.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/Weibo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/exception/ThirdlyException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/exception/ThirdlyException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/github/Email.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/github/Email.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/github/GithubException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/github/GithubException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/github/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/github/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/qq/AccessQQToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/qq/AccessQQToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/qq/QQException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/qq/QQException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/qq/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/qq/UserInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/weibo/AccessWeiboToken.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/weibo/AccessWeiboToken.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/weibo/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/weibo/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/thirdly/weibo/WeiboException.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/thirdly/weibo/WeiboException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/AssertUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/AssertUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/BaseX.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BaseX.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/BeanCopy.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanCopy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/ConfigUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/ConfigUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/HttpUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/HttpUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/JsonUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JsonUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/MailUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/MailUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/MemoryUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/MemoryUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/ResultUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/ResultUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/Validate.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Validate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/ByteArrayView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/ByteArrayView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/HeadView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/HeadView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/JsonParentView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/JsonParentView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/JsonResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/JsonResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/JsonView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/JsonView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/JspParentView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/JspParentView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/JspView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/JspView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/PdfView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/PdfView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/ResultView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/ResultView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/view/StringView.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/view/StringView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/websocket/MessageWs.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/websocket/MessageWs.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/websocket/ProjectMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/websocket/ProjectMessage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/websocket/WsUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/websocket/WsUtils.java" />
     </list>
     <ignored path="quickgo-gen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -309,82 +182,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="controller.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/controller.xml">
+      <file leaf-file-name="Validate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Validate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="14">
+              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/dao.xml">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5278">
-              <caret line="203" column="38" selection-start-line="203" selection-start-column="38" selection-end-line="203" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-194">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="LogTemplate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="impl.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/impl.xml">
+      <file leaf-file-name="ProxyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProxyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="service.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="754">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -420,23 +293,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/UserUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Dict.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/CookieUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$USER_HOME$/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/javax/validation/Validator.class" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/swagger/views/taglib.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/static/swagger/views/genTemplateForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JsonResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CorsConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/filters/AccessFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/quickgoConfigurerAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/filters/CredentialsInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTemplateController.java" />
@@ -457,7 +318,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/converter/AjaxFormMessageConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTableService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/WebMessageConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/BaseEntity.java" />
@@ -471,6 +331,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenCategory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/GenUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenScheme.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Validate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProxyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/Config.java" />
       </list>
     </option>
   </component>
@@ -491,6 +364,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -539,6 +415,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,9 +514,6 @@
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\workspace\quickgo-gen\src\main\resources\templates\tomvc" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -618,6 +523,12 @@
       <recent name="D:\Work\workspace\quickgo-gen\src\main\resources\templates\tomvc" />
       <recent name="D:\Work\workspace\quickgo-gen\src\main\java\com\quickgo\platform\filters" />
       <recent name="D:\Work\workspace\quickgo-gen\src\main\java\com\quickgo\platform\model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.quickgo.platform.utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\workspace\quickgo-gen\src\main\resources\templates\tomvc" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Unnamed">
@@ -1065,12 +976,12 @@
       <option name="presentableId" value="Default" />
       <updated>1477387520867</updated>
       <workItem from="1477387524703" duration="127104000" />
-      <workItem from="1478053921897" duration="614000" />
+      <workItem from="1478053921897" duration="2139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127718000" />
+    <option name="totallyTimeSpent" value="129243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1088,7 +999,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.50214595" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1175,339 +1086,421 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-tx/4.1.7.RELEASE/spring-tx-4.1.7.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.1.7.RELEASE/spring-aop-4.1.7.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.1.7.RELEASE/spring-web-4.1.7.RELEASE.jar!/org/springframework/web/method/annotation/ModelFactory.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.1.7.RELEASE/spring-webmvc-4.1.7.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.1.7.RELEASE/spring-webmvc-4.1.7.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.1.7.RELEASE/spring-aop-4.1.7.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-tx/4.1.7.RELEASE/spring-tx-4.1.7.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.1.7.RELEASE/spring-core-4.1.7.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceFolderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="-10">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenDataBaseDictDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="-10">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/GenDataBaseDictDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="-10">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/FindPasswordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/InterfaceFolderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/InterfaceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ModuleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ProjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ProjectUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/ShareMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/CopyFolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/FindPassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/InterfaceFolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/RequestResponseArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/InterfaceFolderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/InterfaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ProjectUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ShareService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/AssertUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BaseX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanCopy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/ConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/MailUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/MemoryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/ResultUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/GenTemplateDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/GenTableDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/GenTableColumnDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/GenSchemeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.1.7.RELEASE/spring-webmvc-4.1.7.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.1.7.RELEASE/spring-web-4.1.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar!/org/apache/commons/lang3/StringUtils.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTemplateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2755">
-          <caret line="176" column="39" selection-start-line="176" selection-start-column="35" selection-end-line="176" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/swagger/views/genSchemeForm.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/WebUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="98" column="69" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Validate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/DataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="14">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dto/GenSchemeDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qitoon/framework/utils/LogTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenSchemeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/GenSchemeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="56" column="15" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/swagger/views/genTemplateList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/GenUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="321" column="9" selection-start-line="321" selection-start-column="9" selection-end-line="321" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="e#865#866#0" expanded="false" />
-            <element signature="e#891#892#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenSchemeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="107" column="79" selection-start-line="107" selection-start-column="79" selection-end-line="107" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenScheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-          <folding>
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#2303#2304#0" expanded="true" />
-            <element signature="e#2328#2329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTemplateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/swagger/views/genTemplateForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1064">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/entity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/moduleJs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/controller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/impl.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5278">
-          <caret line="203" column="38" selection-start-line="203" selection-start-column="38" selection-end-line="203" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-520">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="-272">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-194">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="124">
+          <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProxyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/LogTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
