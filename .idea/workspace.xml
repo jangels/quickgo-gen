@@ -5,6 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e585c51-4dbb-4f0e-bc58-563593812c60" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/Application.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/base/BaseService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/QuickgoConfigurerAdapter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/SwaggerConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenSchemeController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenTableController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/GenTemplateController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/HelloController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/SwaggerController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/UserController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/converter/AjaxFormMessageConverter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenDataBaseDictDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenSchemeDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTableColumnDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTableDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/GenTemplateDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dao/UserMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dto/GenSchemeDto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/dto/GenTableDto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/filters/CredentialsInterceptor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/BaseEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/DataEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenCategory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenScheme.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTableColumn.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/GenTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenSchemeService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenTableService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/GenTemplateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/service/UserService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/BeanValidators.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/CookieUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/DateUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Dict.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Exceptions.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/FileUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/FreeMarkers.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/GenUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Global.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/IdGen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JaxbMapper$CollectionWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JaxbMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/JsonResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/LogTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Page.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/PropertiesLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Reflections.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/SpringContextHolder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/StringUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/Template.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/utils/WebUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/explorer_icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/logo_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/pet_store_api.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/throbber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/images/wordnik_api.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quickgo_gen_war.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quickgo_gen_war_exploded.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -13,6 +88,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_14.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_4.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_4.xml" />
@@ -69,7 +145,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_14.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quickgo-gen.iml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseController.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseDao.java" />
@@ -141,19 +219,72 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/moduleJs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenDataBaseDictDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenSchemeDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTableColumnDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTableDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/GenTemplateDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/qitoon.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/css/typography.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-700.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/fonts/droid-sans-v6-latin-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lang/translator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/backbone-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/handlebars-2.0.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/highlight.7.3.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery-1.8.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.ba-bbq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.slideto.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/jquery.wiggle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/marked.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/swagger-oauth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/underscore-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/lib/underscore-min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/o2c.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/swagger-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/swagger-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genSchemeForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genSchemeList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTableForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTableList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTemplateForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/genTemplateList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/swagger/views/taglib.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/controller.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/dao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/entity.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/impl.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/mapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/moduleJs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/tomvc/service.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/Application.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/SwaggerConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/HelloController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/SwaggerController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/UserController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/UserMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/UserService.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/config/SwaggerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/SwaggerConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/HelloController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/HelloController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/SwaggerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/SwaggerController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/UserMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qitoon/framework/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
     </list>
     <ignored path="quickgo-gen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -211,21 +342,9 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+            <state relative-caret-position="-194">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-520">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -235,16 +354,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -956,12 +1065,12 @@
       <option name="presentableId" value="Default" />
       <updated>1477387520867</updated>
       <workItem from="1477387524703" duration="127104000" />
-      <workItem from="1478053921897" duration="302000" />
+      <workItem from="1478053921897" duration="614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127406000" />
+    <option name="totallyTimeSpent" value="127718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -973,7 +1082,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -996,12 +1105,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16294643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49785408" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16255365" sideWeight="0.6286701" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49785408" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16255365" sideWeight="0.6286701" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17430703" sideWeight="0.37132987" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40347072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22014925" sideWeight="0.5060449" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1010,7 +1120,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40401787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1151,6 +1260,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2755">
           <caret line="176" column="39" selection-start-line="176" selection-start-column="35" selection-end-line="176" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,6 +1275,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,6 +1291,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="47" column="25" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,6 +1302,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1194,6 +1312,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,6 +1350,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1244,6 +1375,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#865#866#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1259,6 +1394,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding>
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#2303#2304#0" expanded="true" />
+            <element signature="e#2328#2329#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,16 +1499,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-520">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        <state relative-caret-position="-194">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding />
         </state>
       </provider>

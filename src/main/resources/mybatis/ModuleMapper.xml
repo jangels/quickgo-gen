@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qitoon.framework.dao.ModuleMapper">
+ 
+  <select id="getModuleById" resultType="com.qitoon.framework.model.Module">
+    select * from MODULE where id =#{id};
+  </select>
+
+  <select id="getModules" resultType="com.qitoon.framework.model.Module" parameterType="java.lang.String">
+    SELECT * FROM MODULE WHERE projectId=#{projectId} ORDER BY createTime ASC
+  </select>
+
+    <select id="getModuleList" resultType="com.qitoon.framework.model.Module" parameterType="java.util.ArrayList">
+       SELECT * FROM MODULE WHERE id IN
+        <foreach collection="array" item="item" index="index"  open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        ORDER BY createTime ASC
+
+  </select>
+  <insert id="insert" parameterType="com.qitoon.framework.model.Module">
+    INSERT INTO MODULE (
+        id,
+        name,
+        host,
+        description,
+        lastUpdateTime,
+        projectId,
+        createTime,
+        requestHeaders,
+        requestArgs
+		) VALUES (
+        #{id},
+        #{name},
+        #{host},
+        #{description},
+        #{lastUpdateTime},
+        #{projectId},
+        #{createTime},
+        #{requestHeaders},
+        #{requestArgs}
+		)
+  </insert>
+
+  <delete id="deleteById"  parameterType="java.lang.String">
+    DELETE FROM MODULE where id = #{id}
+  </delete>
+
+<update id="updateById" parameterType="com.qitoon.framework.model.Module">
+    UPDATE MODULE
+    <set>
+        <if test="id!=null">
+            id = #{id},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="host!=null">
+            host = #{host},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="lastUpdateTime!=null">
+            lastUpdateTime = #{lastUpdateTime},
+        </if>
+        <if test="projectId!=null">
+            projectId = #{projectId},
+        </if>
+        <if test="createTime!=null">
+            createTime = #{createTime}
+        </if>
+        <if test="requestHeaders!=null">
+            requestHeaders = #{requestHeaders}
+        </if>
+        <if test="requestArgs!=null">
+            requestArgs = #{requestArgs}
+        </if>
+
+    </set>
+    WHERE id = #{id}
+</update>
+</mapper>

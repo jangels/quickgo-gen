@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qitoon.framework.dao.InterfaceMapper">
+ 
+  <select id="getInterfacesByProjectId" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+    SELECT * FROM INTERFACE WHERE projectId= #{projectId} ORDER BY createTime ASC
+  </select>
+
+<select id="getInterfacesByModuleIds" resultType="com.qitoon.framework.model.Interface" parameterType="java.util.ArrayList">
+    SELECT * FROM INTERFACE WHERE  moduleId in
+    <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+        #{item}
+    </foreach>
+     ORDER BY createTime ASC
+  </select>
+
+<select id="getInterface" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+    SELECT * FROM INTERFACE WHERE  folderId = #{folderId}
+
+     ORDER BY createTime ASC
+  </select>
+
+  <select id="selectById" resultType="com.qitoon.framework.model.Interface" parameterType="java.lang.String">
+    select * from INTERFACE  where id=#{id};
+  </select>
+  <insert id="insert" parameterType="com.qitoon.framework.model.Interface">
+    INSERT INTO INTERFACE(
+        id,
+        name,
+        description,
+        folderId,
+        url,
+        requestMethod,
+        contentType,
+        requestHeaders,
+        requestArgs,
+        responseArgs,
+        example,
+        moduleId,
+        projectId,
+        lastUpdateTime,
+        createTime,
+        dataType,
+        protocol,
+        status
+		) VALUES (
+        #{id},
+        #{name},
+        #{description},
+        #{folderId},
+        #{url},
+        #{requestMethod},
+        #{contentType},
+        #{requestHeaders},
+        #{requestArgs},
+        #{responseArgs},
+        #{example},
+        #{moduleId},
+        #{projectId},
+        #{lastUpdateTime},
+        #{createTime},
+        #{dataType},
+        #{protocol},
+        #{status}
+		)
+  </insert>
+
+  <delete id="deleteById"  parameterType="java.lang.String">
+    DELETE FROM INTERFACE where id = #{id}
+  </delete>
+
+<update id="updateById" parameterType="com.qitoon.framework.model.Interface">
+    UPDATE INTERFACE
+    <set>
+        <if test="id!=null">
+            id = #{id},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="folderId!=null">
+            folderId = #{folderId},
+        </if>
+        <if test="url!=null">
+            url = #{url},
+        </if>
+        <if test="requestMethod!=null">
+            requestMethod = #{requestMethod},
+        </if>
+        <if test="contentType!=null">
+            contentType = #{contentType},
+        </if>
+        <if test="requestHeaders!=null">
+            requestHeaders = #{requestHeaders},
+        </if>
+        <if test="requestArgs!=null">
+            requestArgs = #{requestArgs},
+        </if>
+        <if test="responseArgs!=null">
+            responseArgs = #{responseArgs}
+        </if>
+        <if test="example!=null">
+            example = #{example}
+        </if>
+        <if test="moduleId!=null">
+            moduleId = #{moduleId}
+        </if>
+        <if test="projectId!=null">
+            projectId = #{projectId}
+        </if>
+        <if test="lastUpdateTime!=null">
+            lastUpdateTime = #{lastUpdateTime}
+        </if>
+        <if test="createTime!=null">
+            createTime = #{createTime}
+        </if>
+        <if test="dataType!=null">
+            dataType = #{dataType}
+        </if>
+        <if test="protocol!=null">
+            protocol = #{protocol}
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+
+    </set>
+    WHERE id = #{id}
+</update>
+</mapper>

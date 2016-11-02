@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qitoon.framework.dao.ProjectMapper">
+ 
+  <select id="getProjectsByUserId" resultType="com.qitoon.framework.model.Project" parameterType="java.lang.String">
+    SELECT DISTINCT p.*,u.nickname userName,pu.editable,pu.commonlyUsed FROM PROJECT p
+        LEFT JOIN USER u ON u.id = p.userId
+        LEFT JOIN project_user pu ON pu.projectId = p.id
+        WHERE ( pu.userId=#{userId}) AND p.status='VALID'
+        ORDER BY createTime ASC
+  </select>
+
+  <select id="selectById" resultType="com.qitoon.framework.model.Project" parameterType="java.lang.String">
+    select * from PROJECT  where id=#{id};
+  </select>
+
+  <select id="getProjectName" resultType="java.lang.String" parameterType="java.lang.String">
+    select name from PROJECT  where id=#{id};
+  </select>
+  <insert id="insert" parameterType="com.qitoon.framework.model.Project">
+    INSERT INTO PROJECT(
+
+        id,
+        name,
+        description,
+        userId,
+        teamId,
+        createTime,
+        status,
+        permission,
+        environments,
+        details
+		) VALUES (
+        #{id},
+        #{name},
+        #{description},
+        #{userId},
+        #{teamId},
+        #{createTime},
+        #{status},
+        #{permission},
+        #{environments},
+        #{details}
+		)
+  </insert>
+
+  <delete id="deleteById"  parameterType="java.lang.String">
+    DELETE FROM PROJECT where id = #{id}
+  </delete>
+
+<update id="updateById" parameterType="com.qitoon.framework.model.Project">
+    UPDATE PROJECT
+    <set>
+        <if test="id!=null">
+            id = #{id},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="teamId!=null">
+            teamId = #{teamId},
+        </if>
+        <if test="createTime!=null">
+            createTime = #{createTime},
+        </if>
+        <if test="status!=null">
+            status = #{status},
+        </if>
+        <if test="permission!=null">
+            permission = #{permission},
+        </if>
+        <if test="environments!=null">
+            environments = #{environments},
+        </if>
+        <if test="details!=null">
+            details = #{details}
+        </if>
+
+    </set>
+    WHERE id = #{id}
+</update>
+</mapper>
