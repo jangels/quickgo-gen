@@ -1,21 +1,16 @@
 package com.quickgo.platform.controller;
 
 
-import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.exception.Handler;
 import com.quickgo.platform.face.*;
-import com.quickgo.platform.param.Parameter;
+import com.quickgo.platform.model.*;
 import com.quickgo.platform.param.Result;
 import com.quickgo.platform.param._HashMap;
 import com.quickgo.platform.service.ServiceTool;
-import com.quickgo.platform.model.*;
 import com.quickgo.platform.utils.*;
-import jdk.nashorn.internal.ir.annotations.Ignore;
-import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
@@ -40,18 +35,14 @@ public class ShareController {
     @Autowired
     private IShareService shareService;
 
-    @Ignore
-//    @Get("/{id}/view")
     @RequestMapping("/{id}/view")
-    public Object get(@PathVariable("id")String id, Parameter parameter){
-        Share share =null;// ServiceFactory.instance().getShare(id);
+    public Object get(@PathVariable("id")String id,String code, Share share){
+//        Share share =null;// ServiceFactory.instance().getShare(id);
         AssertUtils.notNull(share,"该分享不存在或已删除");
 
 
-        String code = parameter.getParamString().get("code");
-
         //如果需要密码
-        if(org.apache.commons.lang3.StringUtils.isNotBlank(share.getPassword())){
+        if(StringUtils.isNotBlank(share.getPassword())){
             //表示输入了密码
              if(org.apache.commons.lang3.StringUtils.isNotBlank(code)){
                 if(!code.equals(share.getPassword())){
@@ -117,33 +108,25 @@ public class ShareController {
 
     /**
      * 新增
-     * @param parameter
+     * @param share share
      * @return
      */
-    @Post
-    public Object create(Parameter parameter){
-        String moduleId = parameter.getParamString().get("moduleId");
+    @RequestMapping("/create")
+    public Object create(String moduleId,String token,Share share){
+        AssertUtils.notNull(share.getProjectId(),"项目id为空");
+        ServiceTool.checkUserHasEditPermission(share.getProjectId(),token);
 
-        String projectId = parameter.getParamString().get("projectId");
-        AssertUtils.notNull(projectId,"项目id为空");
-        ServiceTool.checkUserHasEditPermission(projectId,parameter);
-
-        Share share = new Share();
         share.setId(Validate.id());
         share.setModuleIds(moduleId);
-        share.setName(parameter.getParamString().get("name"));
         if(org.apache.commons.lang3.StringUtils.isBlank(share.getName())){
             share.setName(DateUtils.toStr(new Date()));
         }
-        share.setPassword(parameter.getParamString().get("password"));
-        User user = MemoryUtils.getUser(parameter);
+        User user = MemoryUtils.getUser(token);
         share.setUserId(user.getId());
-        share.setShareAll(parameter.getParamString().get("shareAll"));
         if(!Share.ShareAll.YES.equals(share.getShareAll())){
             AssertUtils.notNull(moduleId,"模块id为空");
         }
         share.setCreateTime(new Date().getTime());
-        share.setProjectId(projectId);
         int rs = shareService.create(share);
         AssertUtils.isTrue(rs>0,"操作失败");
         return rs;
@@ -151,15 +134,15 @@ public class ShareController {
 
     /**
      * 删除
-     * @param id
-     * @param parameter
-     * @return
+     * @param id id
+     * @param token token
+     * @return Object
      */
-    @Delete("/{id}")
-    public Object delete(@RequestParam("id")String id, Parameter parameter){
+    @RequestMapping("/delete/{id}")
+    public Object delete(@PathVariable("id")String id,String token){
         Share share = shareService.getShare(id);
         AssertUtils.notNull(share,"该数据不存在");
-        ServiceTool.checkUserHasEditPermission(share.getProjectId(),parameter);
+        ServiceTool.checkUserHasEditPermission(share.getProjectId(),token);
         //TODO
         int rs =0;// ServiceFactory.instance().delete(SqlUtils.getTableName(Share.class),id);
         AssertUtils.isTrue(rs>0,"操作失败");
@@ -167,16 +150,15 @@ public class ShareController {
     }
     /**
      * 修改
-     * @param id
-     * @param parameter
-     * @return
+     * @param id id
+     * @param token token
+     * @return Object
      */
-    @Post("/{id}")
-    public Object update(@RequestParam("id")String id, Parameter parameter){
+    @RequestMapping("/update/{id}")
+    public Object update(@PathVariable("id")String id,String token){
         Share share = shareService.getShare(id);
         AssertUtils.notNull(share,"该数据不存在");
-        ServiceTool.checkUserHasEditPermission(share.getProjectId(),parameter);
-        share = BeanCopy.convert(Share.class,parameter.getParamString());
+        ServiceTool.checkUserHasEditPermission(share.getProjectId(),token);
         share.setId(id);
         int rs = shareService.updateShare(share);
         AssertUtils.isTrue(rs>0,"操作失败");

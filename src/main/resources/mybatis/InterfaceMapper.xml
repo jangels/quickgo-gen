@@ -100,28 +100,28 @@
             requestArgs = #{requestArgs},
         </if>
         <if test="responseArgs!=null">
-            responseArgs = #{responseArgs}
+            responseArgs = #{responseArgs},
         </if>
         <if test="example!=null">
-            example = #{example}
+            example = #{example},
         </if>
         <if test="moduleId!=null">
-            moduleId = #{moduleId}
+            moduleId = #{moduleId},
         </if>
         <if test="projectId!=null">
-            projectId = #{projectId}
+            projectId = #{projectId},
         </if>
         <if test="lastUpdateTime!=null">
-            lastUpdateTime = #{lastUpdateTime}
+            lastUpdateTime = #{lastUpdateTime},
         </if>
         <if test="createTime!=null">
-            createTime = #{createTime}
+            createTime = #{createTime},
         </if>
         <if test="dataType!=null">
-            dataType = #{dataType}
+            dataType = #{dataType},
         </if>
         <if test="protocol!=null">
-            protocol = #{protocol}
+            protocol = #{protocol},
         </if>
         <if test="status!=null">
             status = #{status}

@@ -3,16 +3,15 @@
  */
 package com.quickgo.platform.utils;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Validator;
-
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * JSR303 Validator(Hibernate Validator)工具类.
@@ -32,7 +31,7 @@ public class BeanValidators {
 	/**
 	 * 调用JSR303的validate方法, 验证失败时抛出ConstraintViolationException.
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+
 	public static void validateWithException(Validator validator, Object object, Class<?>... groups)
 			throws ConstraintViolationException {
 		Set constraintViolations = validator.validate(object, groups);

@@ -2,7 +2,6 @@ package com.quickgo.platform.service;
 
 
 import com.quickgo.platform.model.User;
-import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.utils.AssertUtils;
 import com.quickgo.platform.utils.MemoryUtils;
 
@@ -12,8 +11,8 @@ import com.quickgo.platform.utils.MemoryUtils;
  */
 public class ServiceTool {
 
-    public static void checkUserHasEditPermission(String projectId,Parameter parameter){
-        User user = MemoryUtils.getUser(parameter);
+    public static void checkUserHasEditPermission(String projectId,String token){
+        User user = MemoryUtils.getUser(token);
         AssertUtils.notNull(user,"无操作权限");
         boolean permission = true;//ServiceFactory.instance().checkUserHasProjectPermission(user.getId(),projectId);
         AssertUtils.isTrue(permission,"无操作权限");

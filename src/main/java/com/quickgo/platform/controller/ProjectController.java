@@ -255,9 +255,9 @@ public class ProjectController {
     /**
      * 更新
      *
-     * @param id
-     * @param token
-     * @return
+     * @param id id
+     * @param token token
+     * @return Object
      */
     @RequestMapping("/update/{id}")
     public Object update(@PathVariable("id") String id, String token,Project projects) {
@@ -292,9 +292,9 @@ public class ProjectController {
     /**
      * 删除项目
      *
-     * @param id
-     * @param token
-     * @return
+     * @param id id
+     * @param token token
+     * @return Object
      */
     @RequestMapping("/delete/{id}")
     public Object delete(@PathVariable("id") String id, String token) {
@@ -318,9 +318,9 @@ public class ProjectController {
     /**
      * 移动复制
      *
-     * @param id
-     * @param copyFolder
-     * @return
+     * @param id id
+     * @param copyFolder copyFolder
+     * @return Object
      */
     @RequestMapping("/{id}/copymove")
     public Object copyMove(@PathVariable("id") String id,String token, CopyFolder copyFolder) {
@@ -447,7 +447,7 @@ public class ProjectController {
      * @param id id
      * @param token token
      * @param email email
-     * @return
+     * @return Object
      */
     @RequestMapping("/{id}/invite/email")
     public Object inviteByEmail(@PathVariable("id") String id, String token,String email) {

@@ -5,32 +5,656 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e585c51-4dbb-4f0e-bc58-563593812c60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/filters/CredentialsInterceptor.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/model/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/css/button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/dialog/dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/display/fullscreen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/foldgutter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/show-hint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/lint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/merge/merge.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/scroll/simplescrollbars.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/tern/tern.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/lib/codemirror.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smartymixed/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smartymixed/smartymixed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiki/tiki.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/3024-day.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/3024-night.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/ambiance-mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/ambiance.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/base16-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/base16-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/blackboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/cobalt.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/colorforth.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/eclipse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/elegant.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/erlang-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/lesser-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/mbo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/mdn-like.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/midnight.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/monokai.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/neat.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/neo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/night.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/paraiso-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/paraiso-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/pastel-on-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/rubyblue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/solarized.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/the-matrix.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/tomorrow-night-bright.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/tomorrow-night-eighties.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/twilight.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/vibrant-ink.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/xq-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/xq-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/theme/zenburn.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/js/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/jsonFormater.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/app/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/app/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/app/route.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/index.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/add.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/api-editor-request-args.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/api-editor-request-headers.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/api-editor-response-args.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/api.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/export.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/member.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/profile-relation.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/profile-security.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/profile.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/project-left.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/project-nav.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/quit.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/release.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/settings.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/transfer.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/dashboard/vue/welcome.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/findpassword.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/findpassword.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/forget.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/forget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/help.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/includes/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/includes/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/index.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/login.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/register.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/register.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/findpassword.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/forget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/resources.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/src/vue.ex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/unsupport.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webApp/unsupport.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/MyInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/maven/cn.com.xiaoyao.api/api/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/maven/cn.com.xiaoyao.api/api/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/root.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/404.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/illegal.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/third-party.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/button.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/modify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style-f1702f565c.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/dialog/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/display/fullscreen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/foldgutter.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/show-hint.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/lint.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/merge/merge.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/scroll/simplescrollbars.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/tern/tern.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/lib/codemirror.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smartymixed/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smartymixed/smartymixed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiki/tiki.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/3024-day.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/3024-night.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/ambiance-mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/ambiance.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/base16-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/base16-light.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/blackboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/cobalt.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/colorforth.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/eclipse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/elegant.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/erlang-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/lesser-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/mbo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/mdn-like.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/midnight.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/monokai.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/neat.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/neo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/night.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/paraiso-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/paraiso-light.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/pastel-on-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/rubyblue.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/solarized.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/the-matrix.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/tomorrow-night-bright.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/tomorrow-night-eighties.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/twilight.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/vibrant-ink.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/xq-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/xq-light.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/theme/zenburn.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/bj1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-code2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-jiekou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-jiekou2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-join.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-join2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-zujian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/icon/icon-zujian2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/swiper-3.3.1.jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/jsonFormater.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/1.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/10.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/11.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/12.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/2.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/3.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/4.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/5.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/6.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/7.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/8.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/9.80a531f5ca299cd0ab25.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/a642f335f50193096f0a29bd3ce119ac.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/common-40665ef21e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/dashboard-3476f54a8a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/db0cb55a7e2ef56963bc9a0670718c59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/f548f0c825d33e93f4ccd3cb27b33ea7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/findpassword-dbf59e5baa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/findpassword.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/forget-0de671b13a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/forget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/index-fd6d97d83e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/login-985d130133.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/login.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/register-5050fdc281.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/register.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/built/thirdparty-bc66a0b851.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/dashboard/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/etc/webdefault.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/findpassword.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/forget.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/help.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/includes/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/includes/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/unsupport.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/quickgo/platform/filters/CredentialsInterceptor.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/QuickgoConfigurerAdapter.class" afterPath="$PROJECT_DIR$/target/classes/com/quickgo/platform/config/QuickgoConfigurerAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quickgo-gen.iml" afterPath="$PROJECT_DIR$/quickgo-gen.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceFolderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceFolderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TeamController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TeamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Interface.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Interface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/InterfaceFolder.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/InterfaceFolder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Module.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectLog.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/ProjectUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Team.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Team.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanValidators.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanValidators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Template.java" afterPath="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Template.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/clipboard/clipboard.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/clipboard/clipboard.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/BUGS.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/BUGS.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/CHANGE.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/CHANGE.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/Gulpfile.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/Gulpfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/README.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/bower.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.logo.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.logo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.logo.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.logo.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.preview.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.preview.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/css/editormd.preview.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/css/editormd.preview.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/editormd.amd.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/editormd.amd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/editormd.amd.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/editormd.amd.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/editormd.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/editormd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/editormd.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/editormd.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/editormd-logo.eot" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/editormd-logo.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/editormd-logo.svg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/editormd-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/editormd-logo.ttf" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/editormd-logo.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/editormd-logo.woff" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/editormd-logo.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/loading.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/loading.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/loading@2x.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/loading@2x.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/loading@3x.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/loading@3x.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-favicon-16x16.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-favicon-16x16.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-favicon-24x24.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-favicon-24x24.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-favicon-32x32.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-favicon-32x32.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-favicon-48x48.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-favicon-48x48.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-favicon-64x64.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-favicon-64x64.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-114x114.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-114x114.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-120x120.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-120x120.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-144x144.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-144x144.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-16x16.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-16x16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-180x180.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-180x180.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-240x240.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-240x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-24x24.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-24x24.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-320x320.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-320x320.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-32x32.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-32x32.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-48x48.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-48x48.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-57x57.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-57x57.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-64x64.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-64x64.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-72x72.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-72x72.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/editormd-logo-96x96.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/editormd-logo-96x96.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/images/logos/vi.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/images/logos/vi.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/languages/en.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/languages/en.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/languages/zh-tw.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/languages/zh-tw.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/README.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/comment/comment.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/comment/comment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/comment/continuecomment.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/comment/continuecomment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/dialog/dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/dialog/dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/display/fullscreen.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/display/fullscreen.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/display/panel.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/display/panel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/display/placeholder.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/display/placeholder.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/display/rulers.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/display/rulers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/closebrackets.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/closebrackets.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/closetag.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/closetag.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/continuelist.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/continuelist.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/matchbrackets.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/matchbrackets.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/matchtags.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/matchtags.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/edit/trailingspace.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/edit/trailingspace.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/brace-fold.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/brace-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/comment-fold.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/comment-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/foldcode.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/foldcode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/foldgutter.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/foldgutter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/indent-fold.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/indent-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/markdown-fold.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/markdown-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/fold/xml-fold.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/fold/xml-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/anyword-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/anyword-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/css-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/css-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/html-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/html-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/javascript-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/javascript-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/show-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/show-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/sql-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/sql-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/hint/xml-hint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/hint/xml-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/coffeescript-lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/coffeescript-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/css-lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/css-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/javascript-lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/javascript-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/json-lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/json-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/lint/yaml-lint.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/lint/yaml-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/merge/merge.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/merge/merge.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/mode/loadmode.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/mode/loadmode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/mode/multiplex.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/mode/multiplex.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/mode/multiplex_test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/mode/multiplex_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/mode/overlay.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/mode/overlay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/mode/simple.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/mode/simple.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/runmode/colorize.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/runmode/colorize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/runmode/runmode-standalone.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/runmode/runmode-standalone.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/runmode/runmode.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/runmode/runmode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/runmode/runmode.node.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/runmode/runmode.node.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/scroll/annotatescrollbar.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/scroll/annotatescrollbar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/scroll/scrollpastend.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/scroll/scrollpastend.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/scroll/simplescrollbars.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/scroll/simplescrollbars.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/search/match-highlighter.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/search/match-highlighter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/search/matchesonscrollbar.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/search/matchesonscrollbar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/search/search.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/search/search.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/search/searchcursor.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/search/searchcursor.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/selection/active-line.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/selection/active-line.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/selection/mark-selection.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/selection/mark-selection.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/selection/selection-pointer.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/selection/selection-pointer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/tern/tern.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/tern/tern.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/tern/worker.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/tern/worker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addon/wrap/hardwrap.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addon/wrap/hardwrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/addons.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/addons.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/bower.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/codemirror.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/codemirror.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/codemirror.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/codemirror.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/lib/codemirror.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/lib/codemirror.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/apl/apl.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/apl/apl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/apl/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/apl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/asterisk/asterisk.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/asterisk/asterisk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/asterisk/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/asterisk/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/clike/clike.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/clike/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/clike/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/clike/scala.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/clike/scala.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/clojure/clojure.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/clojure/clojure.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/clojure/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/clojure/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/cobol/cobol.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/cobol/cobol.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/cobol/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/cobol/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/coffeescript/coffeescript.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/coffeescript/coffeescript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/coffeescript/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/coffeescript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/commonlisp/commonlisp.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/commonlisp/commonlisp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/commonlisp/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/commonlisp/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/css.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/css.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/less.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/less.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/less_test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/less_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/scss.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/scss.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/scss_test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/scss_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/css/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/css/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/cypher/cypher.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/cypher/cypher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/cypher/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/cypher/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/d/d.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/d/d.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/d/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/d/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dart/dart.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dart/dart.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dart/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dart/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/diff/diff.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/diff/diff.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/diff/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/diff/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/django/django.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/django/django.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/django/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/django/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dockerfile/dockerfile.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dockerfile/dockerfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dockerfile/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dockerfile/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dtd/dtd.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dtd/dtd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dtd/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dtd/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dylan/dylan.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dylan/dylan.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/dylan/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/dylan/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ebnf/ebnf.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ebnf/ebnf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ebnf/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ebnf/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ecl/ecl.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ecl/ecl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ecl/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ecl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/eiffel/eiffel.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/eiffel/eiffel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/eiffel/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/eiffel/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/erlang/erlang.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/erlang/erlang.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/erlang/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/erlang/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/forth/forth.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/forth/forth.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/forth/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/forth/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/fortran/fortran.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/fortran/fortran.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/fortran/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/fortran/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gas/gas.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gas/gas.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gas/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gas/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gfm/gfm.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gfm/gfm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gfm/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gfm/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gfm/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gfm/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gherkin/gherkin.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gherkin/gherkin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/gherkin/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/gherkin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/go/go.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/go/go.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/go/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/go/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/groovy/groovy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/groovy/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/groovy/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haml/haml.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haml/haml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haml/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haml/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haml/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haskell/haskell.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haskell/haskell.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haskell/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haskell/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haxe/haxe.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haxe/haxe.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/haxe/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/haxe/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/htmlembedded/htmlembedded.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/htmlembedded/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/htmlembedded/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/htmlmixed/htmlmixed.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/htmlmixed/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/htmlmixed/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/http/http.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/http/http.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/http/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/http/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/idl/idl.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/idl/idl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/idl/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/idl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/jade/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/jade/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/jade/jade.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/jade/jade.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/javascript/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/javascript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/javascript/javascript.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/javascript/javascript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/javascript/json-ld.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/javascript/json-ld.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/javascript/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/javascript/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/javascript/typescript.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/javascript/typescript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/jinja2/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/jinja2/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/jinja2/jinja2.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/jinja2/jinja2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/julia/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/julia/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/julia/julia.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/julia/julia.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/kotlin/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/kotlin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/kotlin/kotlin.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/kotlin/kotlin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/livescript/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/livescript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/livescript/livescript.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/livescript/livescript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/lua/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/lua/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/lua/lua.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/lua/lua.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/markdown/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/markdown/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/markdown/markdown.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/markdown/markdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/markdown/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/markdown/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/meta.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/meta.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/mirc/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/mirc/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/mirc/mirc.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/mirc/mirc.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/mllike/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/mllike/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/mllike/mllike.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/mllike/mllike.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/modelica/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/modelica/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/modelica/modelica.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/modelica/modelica.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/nginx/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/nginx/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/nginx/nginx.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/nginx/nginx.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ntriples/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ntriples/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ntriples/ntriples.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ntriples/ntriples.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/octave/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/octave/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/octave/octave.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/octave/octave.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pascal/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pascal/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pascal/pascal.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pascal/pascal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pegjs/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pegjs/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pegjs/pegjs.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pegjs/pegjs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/perl/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/perl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/perl/perl.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/perl/perl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/php/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/php/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/php/php.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/php/php.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/php/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/php/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pig/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pig/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/pig/pig.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/pig/pig.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/properties/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/properties/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/properties/properties.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/properties/properties.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/puppet/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/puppet/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/puppet/puppet.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/puppet/puppet.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/python/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/python/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/python/python.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/python/python.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/q/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/q/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/q/q.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/q/q.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/r/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/r/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/r/r.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/r/r.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rpm/changes/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rpm/changes/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rpm/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rpm/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rpm/rpm.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rpm/rpm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rst/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rst/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rst/rst.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rst/rst.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ruby/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ruby/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ruby/ruby.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ruby/ruby.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/ruby/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/ruby/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rust/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rust/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/rust/rust.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/rust/rust.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sass/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sass/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sass/sass.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sass/sass.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/scheme/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/scheme/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/scheme/scheme.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/scheme/scheme.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/shell/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/shell/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/shell/shell.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/shell/shell.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/shell/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/shell/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sieve/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sieve/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sieve/sieve.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sieve/sieve.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/slim/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/slim/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/slim/slim.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/slim/slim.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/slim/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/slim/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smalltalk/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smalltalk/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smalltalk/smalltalk.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smalltalk/smalltalk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smarty/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smarty/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/smarty/smarty.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/smarty/smarty.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/solr/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/solr/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/solr/solr.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/solr/solr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/soy/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/soy/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/soy/soy.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/soy/soy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sparql/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sparql/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sparql/sparql.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sparql/sparql.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/spreadsheet/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/spreadsheet/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/spreadsheet/spreadsheet.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sql/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sql/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/sql/sql.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/stex/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/stex/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/stex/stex.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/stex/stex.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/stex/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/stex/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/stylus/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/stylus/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/stylus/stylus.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/stylus/stylus.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tcl/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tcl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tcl/tcl.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tcl/tcl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/textile/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/textile/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/textile/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/textile/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/textile/textile.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/textile/textile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiddlywiki/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiddlywiki/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiki/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiki/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tiki/tiki.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tiki/tiki.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/toml/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/toml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/toml/toml.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/toml/toml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tornado/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tornado/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/tornado/tornado.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/tornado/tornado.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/turtle/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/turtle/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/turtle/turtle.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/turtle/turtle.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/vb/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/vb/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/vb/vb.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/vb/vb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/vbscript/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/vbscript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/vbscript/vbscript.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/vbscript/vbscript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/velocity/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/velocity/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/velocity/velocity.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/velocity/velocity.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/verilog/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/verilog/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/verilog/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/verilog/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/verilog/verilog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xml/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xml/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xml/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xml/xml.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xml/xml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xquery/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xquery/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xquery/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xquery/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/xquery/xquery.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/xquery/xquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/yaml/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/yaml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/yaml/yaml.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/yaml/yaml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/z80/index.html" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/z80/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/mode/z80/z80.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/mode/z80/z80.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/modes.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/modes.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/codemirror/package.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/codemirror/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/flowchart.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/flowchart.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/jquery.flowchart.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/jquery.flowchart.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/marked.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/marked.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/prettify.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/prettify.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/raphael.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/raphael.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/sequence-diagram.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/sequence-diagram.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/lib/underscore.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/lib/underscore.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/package.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/code-block-dialog/code-block-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/code-block-dialog/code-block-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/emoji-dialog/emoji-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/emoji-dialog/emoji-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/emoji-dialog/emoji.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/emoji-dialog/emoji.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/goto-line-dialog/goto-line-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/goto-line-dialog/goto-line-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/help-dialog/help-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/help-dialog/help-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/help-dialog/help.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/help-dialog/help.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/html-entities-dialog/html-entities-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/html-entities-dialog/html-entities-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/html-entities-dialog/html-entities.json" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/html-entities-dialog/html-entities.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/image-dialog/image-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/image-dialog/image-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/link-dialog/link-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/link-dialog/link-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/plugin-template.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/plugin-template.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/preformatted-text-dialog/preformatted-text-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/reference-link-dialog/reference-link-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/reference-link-dialog/reference-link-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/table-dialog/table-dialog.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/table-dialog/table-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/plugins/test-plugin/test-plugin.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/plugins/test-plugin/test-plugin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.codemirror.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.codemirror.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.dialog.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.dialog.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.form.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.form.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.grid.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.grid.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.logo.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.logo.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.menu.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.menu.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.preview.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.preview.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.preview.themes.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.preview.themes.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.tab.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.tab.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/editormd.themes.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/editormd.themes.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/font-awesome.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/github-markdown.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/github-markdown.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/lib/prefixes.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/lib/prefixes.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/lib/variables.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/lib/variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/scss/prettify.scss" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/scss/prettify.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/editor.md/src/editormd.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/editor.md/src/editormd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/about.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/about.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/chrome.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/chrome.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/defaultlogo.jpg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/defaultlogo.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/firefox.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/firefox.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/header.jpg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/header.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/help.jpg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/help.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/loading.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/loading.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/100x100.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/100x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/128x128.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/128x128.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/16x16.ico" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/16x16.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/16x16.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/16x16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/32x32.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/32x32.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/48x48.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/48x48.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/64x64.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/64x64.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/full-w.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/full-w.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/full-white.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/full-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/full.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/full.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/logox200.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/logox200.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/logox80.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/logox80.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/logo/小幺鸡3.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/logo/小幺鸡3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/market.jpg" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/market.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/plus.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/plus.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/img/qqbrowser.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/img/qqbrowser.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jquery/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jquery/jquery.min.map" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jquery/jquery.min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/browser.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/js/browser.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/resources.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/js/resources.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/README.md" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/images/Collapsed.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/images/Collapsed.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/images/Expanded.gif" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/images/Expanded.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/images/demo.png" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/images/demo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/jsonformat/jsonFormater.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/jsonformat/jsonFormater.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/pace/pace.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/pace/pace.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/pace/pace.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/pace/pace.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/seajs/sea.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/seajs/sea.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/toastr/toastr.js.map" afterPath="$PROJECT_DIR$/src/main/webApp/assets/toastr/toastr.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/toastr/toastr.min.css" afterPath="$PROJECT_DIR$/src/main/webApp/assets/toastr/toastr.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/toastr/toastr.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/toastr/toastr.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/vue/vue.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/vue/vue.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/vue/vue.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/vue/vue.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/vue/vue.min.js.map" afterPath="$PROJECT_DIR$/src/main/webApp/assets/vue/vue.min.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/xml2json/xml2json.min.js" afterPath="$PROJECT_DIR$/src/main/webApp/assets/xml2json/xml2json.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/favicon.ico" afterPath="$PROJECT_DIR$/src/main/webApp/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/includes/js.html" afterPath="$PROJECT_DIR$/src/main/webApp/includes/js.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/includes/js1.html" afterPath="$PROJECT_DIR$/src/main/webApp/includes/js1.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/binary/blank.xls" afterPath="$PROJECT_DIR$/src/main/webApp/test/binary/blank.xls" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/image/test.jpg" afterPath="$PROJECT_DIR$/src/main/webApp/test/image/test.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/json/1.json" afterPath="$PROJECT_DIR$/src/main/webApp/test/json/1.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/json/2.json" afterPath="$PROJECT_DIR$/src/main/webApp/test/json/2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/json/3.json" afterPath="$PROJECT_DIR$/src/main/webApp/test/json/3.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/jsonp/test.js" afterPath="$PROJECT_DIR$/src/main/webApp/test/jsonp/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/txt/test.txt" afterPath="$PROJECT_DIR$/src/main/webApp/test/txt/test.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/test/xml/testxml.xml" afterPath="$PROJECT_DIR$/src/main/webApp/test/xml/testxml.xml" />
     </list>
     <ignored path="quickgo-gen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +690,8 @@
       <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+            <state relative-caret-position="159">
+              <caret line="450" column="7" selection-start-line="450" selection-start-column="7" selection-end-line="450" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,91 +699,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CredentialsInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="-1092">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncTaskBus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/AsyncTaskBus.java">
+      <file leaf-file-name="controller.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/controller.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WsUtils.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/websocket/WsUtils.java">
+      <file leaf-file-name="dao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/dao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuickgoConfigurerAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java">
+      <file leaf-file-name="entity.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/entity.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/MyInterceptor.java">
+      <file leaf-file-name="impl.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/impl.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="-1872">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShareController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java">
+      <file leaf-file-name="mapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="144" column="48" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeamController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TeamController.java">
+      <file leaf-file-name="service.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-508">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java">
+      <file leaf-file-name="GenSchemeService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenSchemeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3576">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+            <state relative-caret-position="-693">
+              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -196,15 +810,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenTableService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/WebMessageConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/GenTableColumnDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenTableController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/GenTemplateDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/GenSchemeDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/GenSchemeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenSchemeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/GenCategory.java" />
@@ -240,13 +845,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceFolderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/TeamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/filters/CredentialsInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webApp/assets/js/config.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanValidators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Template.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java" />
       </list>
     </option>
   </component>
@@ -335,8 +949,26 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickgo-gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,6 +1028,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="D:/Devtools/node" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -408,11 +1041,11 @@
       <recent name="com.quickgo.platform.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workflow_new\quickgonew\quickgo-gen\src\main\webApp" />
       <recent name="D:\workflow_new\quickgonew\quickgo-gen\src\main\resources" />
       <recent name="D:\Work\workspace\quickgo-gen\src\main\java\com\quickgo\platform\converter" />
       <recent name="D:\Work\workspace\quickgo-gen\src\main\java\com\quickgo\platform\utils" />
       <recent name="D:\Work\workspace\quickgo-gen\src\main\resources\templates\tomvc" />
-      <recent name="D:\Work\workspace\quickgo-gen\src\main\java\com\quickgo\platform\filters" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -900,7 +1533,7 @@
       <workItem from="1477387524703" duration="127104000" />
       <workItem from="1478053921897" duration="2139000" />
       <workItem from="1478056246644" duration="6436000" />
-      <workItem from="1478079580658" duration="3563000" />
+      <workItem from="1478079580658" duration="15043000" />
     </task>
     <task id="LOCAL-00001" summary="更改配置文件">
       <created>1478058878829</created>
@@ -909,11 +1542,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478058878829</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更改配置文件">
+      <created>1478083319079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478083319079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139242000" />
+    <option name="totallyTimeSpent" value="150722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,7 +1569,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.50214595" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822758" sideWeight="0.50429183" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -940,7 +1580,7 @@
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29321662" sideWeight="0.7707889" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29321662" sideWeight="0.7707889" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33150986" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -949,7 +1589,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16294643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.49785408" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822758" sideWeight="0.49570817" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26770386" sideWeight="0.6286701" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1028,164 +1668,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProxyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$1/FileUtils.java" />
-    <entry file="file://D:/logs/142504@syswin.com/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="175" column="7" selection-start-line="175" selection-start-column="7" selection-end-line="175" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/GenUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="325" column="33" selection-start-line="325" selection-start-column="22" selection-end-line="325" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DateUtils.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3369">
-          <caret line="210" column="5" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ProjectUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="43" column="22" selection-start-line="41" selection-start-column="8" selection-end-line="43" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ProjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$2/Application.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/base/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/FreeMarkers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3666">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/InterfaceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#862#863#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/dao/InterfaceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
-          <folding>
-            <marker date="1478075853682" expanded="true" signature="339:416" ph="SELECT * FRO... INTERFACE" />
-            <marker date="1478075853682" expanded="true" signature="559:753" ph="SELECT * FRO... INTERFACE" />
-            <marker date="1478075853682" expanded="true" signature="881:964" ph="SELECT * FRO... INTERFACE" />
-            <marker date="1478075853682" expanded="true" signature="1092:1131" ph="select * fro... INTERFACE" />
-            <marker date="1478075853682" expanded="true" signature="1225:1994" ph="INSERT INTO INTERFACE... " />
-            <marker date="1478075853682" expanded="true" signature="2073:2111" ph="DELETE FROM " />
-            <marker date="1478075853682" expanded="true" signature="2207:3832" ph="UPDATE INTER... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Team.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1206,14 +1688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1306,14 +1780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/InterfaceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1335,17 +1801,9 @@
         <state relative-caret-position="-3296">
           <caret line="33" column="30" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="30" />
           <folding>
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="144" column="48" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,48 +1819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3576">
           <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/MyInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1423,10 +1839,252 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/model/Share.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/QuickgoConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/websocket/WsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/InterfaceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2523">
+          <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
+          <folding>
+            <marker date="1478141783108" expanded="true" signature="339:416" ph="SELECT * FRO... INTERFACE" />
+            <marker date="1478141783108" expanded="true" signature="559:753" ph="SELECT * FRO... INTERFACE" />
+            <marker date="1478141783108" expanded="true" signature="881:964" ph="SELECT * FRO... INTERFACE" />
+            <marker date="1478141783108" expanded="true" signature="1092:1131" ph="select * fro... INTERFACE" />
+            <marker date="1478141783108" expanded="true" signature="1225:1994" ph="INSERT INTO INTERFACE... " />
+            <marker date="1478141783108" expanded="true" signature="2073:2111" ph="DELETE FROM " />
+            <marker date="1478141783108" expanded="true" signature="2207:3840" ph="UPDATE INTER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webApp/assets/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/swagger/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ModuleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="109" column="77" selection-start-line="109" selection-start-column="77" selection-end-line="109" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/asynctask/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/ServiceTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ShareController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="164" column="21" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/config/CredentialsInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Dict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Reflections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8819">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/Validate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/JaxbMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/IdGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/utils/BeanValidators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="450" column="7" selection-start-line="450" selection-start-column="7" selection-end-line="450" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1092">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/controller.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/entity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/impl.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1872">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tomvc/service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quickgo/platform/service/GenSchemeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
           <folding />
         </state>
       </provider>
