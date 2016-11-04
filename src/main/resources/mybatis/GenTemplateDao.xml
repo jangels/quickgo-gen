@@ -39,6 +39,9 @@
 			AND a.name LIKE
 				concat('%',#{name},'%')
 		</if>
+		<if test="project_id != null and project_id != ''">
+			AND a.project_id =#{projectId}
+		</if>
 		<if test="category != null and category != ''">
 			AND a.category LIKE
 				concat('%',#{category},'%')
@@ -51,7 +54,10 @@
 			<include refid="genTemplateColumns"/>
 		FROM gen_template a
 		<include refid="genTemplateJoins"/>
-		WHERE a.del_flag = #{DEL_FLAG_NORMAL} 
+		WHERE a.del_flag = #{DEL_FLAG_NORMAL}
+		<if test="project_id != null and project_id != ''">
+		AND a.project_id =#{projectId}
+	</if>
 		ORDER BY a.name, a.update_date DESC
 	</select>
 	

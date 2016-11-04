@@ -1,8 +1,6 @@
 package com.quickgo.platform.model;
 
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +16,7 @@ public class InterfaceFolder implements Serializable{
     private Long createTime;
     private String moduleId;
     private String projectId;
-    @Ignore
+
     private List<Interface> children = new ArrayList<>();
 
     public String getId() {

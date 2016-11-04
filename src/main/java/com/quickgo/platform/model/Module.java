@@ -2,8 +2,6 @@ package com.quickgo.platform.model;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import jdk.nashorn.internal.ir.annotations.Ignore;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +28,6 @@ public class Module implements Serializable{
     //请求参数
     private String requestArgs;
 
-    @Ignore
     private List<InterfaceFolder> folders=new ArrayList<>();
 
     public String getId() {

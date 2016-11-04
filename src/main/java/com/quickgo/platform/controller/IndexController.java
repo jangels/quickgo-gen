@@ -3,7 +3,6 @@ package com.quickgo.platform.controller;
 
 import com.quickgo.platform.annotation.Get;
 import com.quickgo.platform.param.Parameter;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
@@ -15,13 +14,13 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 @RequestMapping("/")
 public class IndexController {
-    @Ignore
+
     @Get(value = "/login", template = "/login")
     public Object login() {
         return "login";
     }
 
-    @Ignore
+
     @Get(value = "/register", template = "/register")
     public Object register() {
         return "register";
@@ -34,7 +33,6 @@ public class IndexController {
         return new RedirectView("/");
     }
 
-    @Ignore
     @Get(value = "/about", template = "/about")
     public Object about() {
         return null;

@@ -31,6 +31,7 @@
 		FROM gen_scheme a
 		<include refid="genSchemeJoins"/>
 		WHERE a.id = #{id}
+
 	</select>
 	
 	<select id="findList" resultType="com.quickgo.platform.model.GenScheme">
@@ -42,6 +43,9 @@
 		<if test="name != null and name != ''">
 			AND a.name LIKE concat('%',#{name},'%')
 		</if>
+		<if test="project_id != null and project_id != ''">
+			AND a.project_id =#{projectId}
+		</if>
 		ORDER BY a.update_date DESC
 	</select>
 	
@@ -50,7 +54,10 @@
 			<include refid="genSchemeColumns"/>
 		FROM gen_scheme a
 		<include refid="genSchemeJoins"/>
-		WHERE a.del_flag = #{DEL_FLAG_NORMAL} 
+		WHERE a.del_flag = #{DEL_FLAG_NORMAL}
+		<if test="project_id != null and project_id != ''">
+			AND a.project_id =#{projectId}
+		</if>
 		ORDER BY a.update_date DESC
 	</select>
 	

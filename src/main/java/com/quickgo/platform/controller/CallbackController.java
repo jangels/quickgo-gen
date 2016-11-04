@@ -12,7 +12,6 @@ import com.quickgo.platform.thirdly.Weibo;
 import com.quickgo.platform.utils.ConfigUtils;
 import com.quickgo.platform.view.JspView;
 import com.quickgo.platform.view.ResultView;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +34,6 @@ public class CallbackController {
         add("relation");
     }};
 
-    @Ignore
     @Get(value = "qq", template = "/third-party")
     public Object qqCallback(Parameter parameter) {
         String code = parameter.getParamString().get("code");
@@ -63,7 +61,7 @@ public class CallbackController {
     }
 
 
-    @Ignore
+
     @Get(value = "weibo", template = "/third-party")
     public Object weibo(Parameter parameter) {
         String code = parameter.getParamString().get("code");
@@ -81,7 +79,7 @@ public class CallbackController {
         return illegalView();
     }
 
-    @Ignore
+
     @Get(value = "weibo/cancel")
     public Object weiboCancel(Parameter parameter) {
         logger.info("callback weibo cancel");
@@ -89,7 +87,7 @@ public class CallbackController {
     }
 
 
-    @Ignore
+
     @Get(value = "github", template = "/third-party")
     public Object github(Parameter parameter) {
         String code = parameter.getParamString().get("code");

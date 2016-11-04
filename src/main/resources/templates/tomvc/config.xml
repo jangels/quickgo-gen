@@ -11,11 +11,18 @@
 			<template>moduleJs.xml</template>
 			<template>impl.xml</template>
 			<template>implTest.xml</template>
+			<template>modulejs.xml</template>
 		</category>
 		<category value="dao" label="仅持久层（dao/entity/mapper）">
 			<template>dao.xml</template>
 			<template>entity.xml</template>
 			<template>mapper.xml</template>
+		</category>
+
+		<category value="web" label="前端API（js/dto/controller）">
+			<template>modulejs.xml</template>
+			<template>controller.xml</template>
+			<template>dto.xml</template>
 		</category>
 	</category>
 	<!-- java类型 -->

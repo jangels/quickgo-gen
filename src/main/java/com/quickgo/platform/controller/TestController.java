@@ -4,7 +4,6 @@ package com.quickgo.platform.controller;
 import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.param._HashMap;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -17,7 +16,6 @@ import java.util.Map;
  * @author : huangjie
  * @since : 16/8/27
  */
-@Ignore
 @RequestMapping("/test")
 public class TestController {
 

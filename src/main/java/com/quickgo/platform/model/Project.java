@@ -1,8 +1,6 @@
 package com.quickgo.platform.model;
 
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
-
 import java.io.Serializable;
 
 /**
@@ -35,10 +33,9 @@ public class Project implements Serializable{
     //详细说明
     private String details;
     //是否可编辑
-    @Ignore
+
     private String editable;
     //是否常用项目
-    @Ignore
     private String commonlyUsed;
 
 

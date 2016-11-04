@@ -306,8 +306,8 @@ public class GenUtils {
 	 */
 	public static String generateToFile(GenTemplate tpl, Map<String, Object> model, boolean isReplaceFile){
 		// 获取生成文件
-		String fileName = Global.getProjectPath() + File.separator 
-				+ StringUtils.replaceEach(FreeMarkers.renderString(tpl.getFilePath() + "/", model), 
+		String fileName = Global.getProjectPath() + File.separator
+				+ StringUtils.replaceEach(FreeMarkers.renderString(tpl.getFilePath() + "/", model),
 						new String[]{"//", "/", "."}, new String[]{File.separator, File.separator, File.separator})
 				+ FreeMarkers.renderString(tpl.getFileName(), model);
 		logger.debug(" fileName === " + fileName);
@@ -315,12 +315,12 @@ public class GenUtils {
 		// 获取生成文件内容
 		String content = FreeMarkers.renderString(StringUtils.trimToEmpty(tpl.getContent()), model);
 		logger.debug(" content === \r\n" + content);
-		
+
 		// 如果选择替换文件，则删除原文件
 		if (isReplaceFile){
 			FileUtils.deleteFile(fileName);
 		}
-		
+
 		// 创建并写入文件
 		if (FileUtils.createFile(fileName)){
 			FileUtils.writeToFile(fileName, content, true);
@@ -331,7 +331,7 @@ public class GenUtils {
 			return "文件已存在："+fileName+"<br/>";
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		try {
 			GenConfig config = getConfig();

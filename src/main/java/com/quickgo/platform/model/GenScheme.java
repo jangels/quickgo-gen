@@ -35,7 +35,15 @@ public class GenScheme extends DataEntity<GenScheme> {
 	public GenScheme(String id){
 		super(id);
 	}
-	
+
+	private String projectId;//项目ID
+	public String getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
 	@Length(min=1, max=200)
 	public String getName() {
 		return name;

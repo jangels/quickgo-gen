@@ -22,6 +22,15 @@ import com.google.common.collect.Lists;
 public class GenTemplate extends DataEntity<GenTemplate> {
 	
 	private static final long serialVersionUID = 1L;
+
+	private String projectId;//项目ID
+	public String getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
 	private String name; 	// 名称
 	private String category;		// 分类
 	private String filePath;		// 生成文件路径

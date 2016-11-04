@@ -46,6 +46,9 @@
 		<if test="parentTable != null and parentTable != ''">
 			AND a.parent_table = #{parentTable}
 		</if>
+		<if test="project_id != null and project_id != ''">
+			AND a.project_id =#{projectId}
+		</if>
 		<choose>
 			<when test="page.orderBy != null and page.orderBy != ''">
 				ORDER BY ${page.orderBy}
@@ -61,6 +64,9 @@
 		FROM gen_table a
 		<include refid="genTableJoins"/>
 		WHERE a.del_flag = #{DEL_FLAG_NORMAL}
+		<if test="project_id != null and project_id != ''">
+			AND a.project_id =#{projectId}
+		</if>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
 				ORDER BY ${page.orderBy}

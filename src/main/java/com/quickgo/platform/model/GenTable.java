@@ -18,6 +18,16 @@ import com.google.common.collect.Lists;
 public class GenTable extends DataEntity<GenTable> {
 	
 	private static final long serialVersionUID = 1L;
+
+	private String projectId;//项目ID
+	public String getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
+
 	private String name; 	// 名称
 	private String comments;		// 描述
 	private String className;		// 实体类名称
@@ -41,6 +51,8 @@ public class GenTable extends DataEntity<GenTable> {
 	public GenTable(String id){
 		super(id);
 	}
+
+
 
 	@Length(min=1, max=200)
 	public String getName() {
