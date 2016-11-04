@@ -43,7 +43,7 @@ public class ModuleController {
         }
         Module module = moduleService.getById(id);
         AssertUtils.notNull(module,"无效id");
-        return new _HashMap<>().add("module",module);
+        return Result.returnInfo(new _HashMap<>().add("module",module));
     }
 
     /**
@@ -65,7 +65,7 @@ public class ModuleController {
         AssertUtils.isTrue(rs > 0, "操作失败");
         AsyncTaskBus.instance().push(Log.create(token, Log.CREATE_MODULE,module.getName(),module.getProjectId()));
         AsyncTaskBus.instance().push(module.getProjectId(), Project.Action.CREATE_MODULE,module.getId(),token);
-        return module.getId();
+        return Result.returnInfo(module.getId());
     }
 
     /**
