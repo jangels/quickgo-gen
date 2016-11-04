@@ -45,7 +45,7 @@
     };
     function load(self){
         utils.get('/project/list.json',{},function(rs){
-          //  projects.projects=rs.data.projects;
+            projects.projects=rs.data.projects;
         },null,function(rs){
             
         });
