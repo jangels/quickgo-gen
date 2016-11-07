@@ -3,7 +3,7 @@
 <mapper namespace="com.quickgo.platform.dao.GenTemplateDao">
     
     <sql id="genTemplateColumns">
-	a.`id` id,
+	a.`id` id,a.project_id projectId,
 	a.`name` "name",
 	a.`category` category,
 	a.`file_path` filePath,
@@ -39,7 +39,7 @@
 			AND a.name LIKE
 				concat('%',#{name},'%')
 		</if>
-		<if test="project_id != null and project_id != ''">
+		<if test="projectId != null and projectId != ''">
 			AND a.project_id =#{projectId}
 		</if>
 		<if test="category != null and category != ''">
@@ -55,7 +55,7 @@
 		FROM gen_template a
 		<include refid="genTemplateJoins"/>
 		WHERE a.del_flag = #{DEL_FLAG_NORMAL}
-		<if test="project_id != null and project_id != ''">
+		<if test="projectId != null and projectId != ''">
 		AND a.project_id =#{projectId}
 	</if>
 		ORDER BY a.name, a.update_date DESC

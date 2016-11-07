@@ -3,7 +3,8 @@
 <mapper namespace="com.quickgo.platform.dao.GenTableDao">
     
     <sql id="genTableColumns">
-		a.id,a.name,a.comments
+		a.id,a.name,a.comments,
+		a.project_id projectId
 		,a.class_name className
 		,a.parent_table parentTable
 		,a.parent_table_fk parentTableFk
@@ -46,7 +47,7 @@
 		<if test="parentTable != null and parentTable != ''">
 			AND a.parent_table = #{parentTable}
 		</if>
-		<if test="project_id != null and project_id != ''">
+		<if test="projectId != null and projectId != ''">
 			AND a.project_id =#{projectId}
 		</if>
 		<choose>

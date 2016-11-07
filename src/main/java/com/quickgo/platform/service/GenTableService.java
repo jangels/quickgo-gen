@@ -164,5 +164,44 @@ public class GenTableService extends BaseService {
 		genTableDao.delete(genTable);
 		genTableColumnDao.deleteByGenTableId(genTable);
 	}
-	
+
+	/**
+	 * 根据项目获取所有的表的集合
+	 * @param projectId
+	 * @return
+	 */
+    public List<GenTable> queryByProjectId(String projectId) {
+		GenTable genTable =new GenTable();
+		genTable.setProjectId(projectId);
+		List<GenTable> tableList=genTableDao.findList(genTable);
+		return tableList;
+    }
+
+	/**
+	 * 根据表ID获取列的集合
+	 * @param tableId
+	 * @return
+	 */
+	public List<GenTableColumn> queryColsByTableId(String tableId) {
+		GenTable genTable=new GenTable();
+		genTable.setId(tableId);
+		GenTableColumn col =new GenTableColumn();
+		col.setGenTable(genTable);
+		List<GenTableColumn> cols=genTableColumnDao.findList(col);
+		return cols;
+	}
+
+	/**
+	 * 根据表名获取列的集合
+	 * @param tableName
+	 * @return
+	 */
+	public List<GenTableColumn> queryColsByTableName(String tableName) {
+		GenTable genTable=new GenTable();
+		genTable.setName(tableName);
+		GenTableColumn col = new GenTableColumn();
+		col.setGenTable(genTable);
+		List<GenTableColumn> cols = genTableColumnDao.findList(col);
+		return cols;
+	}
 }

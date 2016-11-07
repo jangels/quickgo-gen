@@ -3,6 +3,7 @@
  */
 package com.quickgo.platform.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,6 +15,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.quickgo.platform.base.BaseController;
 import com.quickgo.platform.dto.GenTableDto;
 import com.quickgo.platform.model.GenTable;
+import com.quickgo.platform.model.GenTableColumn;
 import com.quickgo.platform.service.GenTableService;
 import com.quickgo.platform.utils.GenUtils;
 import com.quickgo.platform.utils.JsonResponse;
@@ -34,7 +36,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * Copyright: Copyright (c) 2016
  * Company:快狗俱乐部
  */
-@Controller
+@RestController
 @RequestMapping(value = "/gen/genTable")
 public class GenTableController extends BaseController {
 
@@ -82,6 +84,54 @@ public class GenTableController extends BaseController {
 		dto.setConfig(GenUtils.getConfig());
 		return JsonResponse.success(dto);
 	}
+
+	@RequestMapping(value = "/queryByProjectId",method = { RequestMethod.POST , RequestMethod.GET })
+	public @ResponseBody
+	Object queryByProjectId(String projectId) {
+		List<GenTable> genTableList=new ArrayList<>();
+		try {
+			genTableList = genTableService.queryByProjectId(projectId);
+			if(genTableList ==null)
+				return JsonResponse.fail("queryByProjectId查询表集合为空。");
+		}
+		catch (Exception ex)
+		{
+			return JsonResponse.error("queryByProjectId出现异常",ex);
+		}
+		return JsonResponse.success(genTableList);
+	}
+
+	@RequestMapping(value = "/queryColsByTableId",method = { RequestMethod.POST , RequestMethod.GET })
+	public @ResponseBody
+	Object queryColsByTableId(String tableId) {
+		List<GenTableColumn> cols=new ArrayList<>();
+		try {
+			cols = genTableService.queryColsByTableId(tableId);
+			if(cols ==null)
+				return JsonResponse.fail("queryColsByTableId查询tableId表列的集合为空。");
+		}
+		catch (Exception ex)
+		{
+			return JsonResponse.error("queryColsByTableId出现异常",ex);
+		}
+		return JsonResponse.success(cols);
+	}
+	@RequestMapping(value = "/queryColsByTableName",method = { RequestMethod.POST , RequestMethod.GET })
+	public @ResponseBody
+	Object queryColsByTableName(String tableName) {
+		List<GenTableColumn> cols=new ArrayList<>();
+		try {
+			cols = genTableService.queryColsByTableName(tableName);
+			if(cols ==null)
+				return JsonResponse.fail("queryColsByTableId查询tableId表列的集合为空。");
+		}
+		catch (Exception ex)
+		{
+			return JsonResponse.error("queryColsByTableId出现异常",ex);
+		}
+		return JsonResponse.success(cols);
+	}
+
 
 //	@ResponseBody
 //	@RequestMapping(value = "/save",method = { RequestMethod.POST , RequestMethod.GET })

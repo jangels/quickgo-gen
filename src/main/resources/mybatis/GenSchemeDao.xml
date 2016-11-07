@@ -3,7 +3,7 @@
 <mapper namespace="com.quickgo.platform.dao.GenSchemeDao">
     
     <sql id="genSchemeColumns">
-		a.`id` id,
+		a.`id` id,a.project_id projectId,
 		a.`name` "name",
 		a.`category` category,
 		a.`package_name` packageName,
@@ -43,7 +43,7 @@
 		<if test="name != null and name != ''">
 			AND a.name LIKE concat('%',#{name},'%')
 		</if>
-		<if test="project_id != null and project_id != ''">
+		<if test="projectId != null and projectId != ''">
 			AND a.project_id =#{projectId}
 		</if>
 		ORDER BY a.update_date DESC

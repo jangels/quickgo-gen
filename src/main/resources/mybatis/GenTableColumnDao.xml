@@ -57,6 +57,9 @@
 		<if test="genTable != null and genTable.id != null and genTable.id != ''">
 			AND a.gen_table_id = #{genTable.id}
 		</if>
+		<if test="genTable != null and genTable.name != null and genTable.name != ''">
+			AND b.name = #{genTable.name}
+		</if>
 		ORDER BY a.sort ASC
 	</select>
 	
