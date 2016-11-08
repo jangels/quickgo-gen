@@ -90,6 +90,7 @@
         	selectProFun:function(item){
         		this.selectPro=item ; 
         		this.$parent.projectId = item.id ;
+        		this.$parent.projectName= item.name;
         	}
            
         }

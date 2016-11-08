@@ -1,5 +1,6 @@
 <template>
 	  <li class="fl db-back db-item" v-link="'/project'"><a >控制台 </a></li>
+	  <li class="fl db-back db-item" v-if="projectName" >{{projectName}}</li>
 	 <!-- <li class="fl db-back db-item" v-link="'/project'"><a ><i class="iconfont icon-left"></i>后退</a></li>-->
 	  
     <li class="fl db-back db-item" v-if="path.indexOf('/profile')==0"><a v-link="'/project'"><i class="iconfont icon-left"></i>返回控制台 </a></li>
