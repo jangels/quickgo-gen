@@ -1,9 +1,9 @@
 <template>
     <template v-if="!status.loading">
         <div class="api-modules-tab ta-c">
+        	<a class="api-module api-module-item" v-bind:class="{'active':!editing}" v-on:click="editing=false">浏览模式</a>
             <a class="api-module api-module-item" v-bind:class="{'active':editing}" v-on:click="editing=true">编辑模式</a>
-            <a class="api-module api-module-item" v-bind:class="{'active':!editing}" v-on:click="editing=false">浏览模式</a>
-            <a class="api-module api-module-item" v-bind:class="" v-link="{path:'/createCode'}">生成代码</a>
+            <a class="api-module api-module-item" v-bind:class="" v-link="{path:'/createCode/'+project.id}">生成代码</a>
         </div>
         <div class="api-modules">
             <div class="cb api-modules-container">

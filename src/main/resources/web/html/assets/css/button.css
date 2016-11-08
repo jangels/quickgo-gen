@@ -131,8 +131,8 @@ a.btn.disabled,fieldset[disabled] a.btn {
 }
 
 .btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover {
-    background-color: rgb(26, 119, 101);
-    border-color: rgb(26, 119, 101)
+    background-color: #aaa;
+    border-color: #aaa;
 }
 
 .btn-primary .badge {

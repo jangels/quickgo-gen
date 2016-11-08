@@ -1,5 +1,5 @@
 <template>
-    <div class="db-members cb">
+    <div class="db-members cb win-card-box">
     	<ul class="win-card db-m-list">
 	    	  <li class="tit">
 		      	<p ><i class="icon icon-set"></i> 成员管理</p>
@@ -24,7 +24,7 @@
                 <validator name="form">
                     <div >
                         <input type="text" class="text" v-model="email"
-                                   v-validate:email="['email']" initial="off" placeholder="请输入成员的邮箱">
+                                   v-validate:email="['email']" initial="off" placeholder="请输入对方邮箱">
 				      	<input type="button"  v-on:click="inviteByEmail" value="邀请" class="btn-right btn btn-primary btn-lg">
 				      	<div class="tip" v-if="$form.email.invalid">{{this.$form.email.errors[0].message}}</div>
                     </div>
@@ -46,7 +46,7 @@
             </li>
 	    
 	    </ul>      
-    	
+<!--    	
     	
         <div class="fl">
             <div style="width: 400px">
@@ -119,7 +119,7 @@
                 </validator>
             </div>
         </div>
-    </div>
+    </div>-->
     <style>
         .db-members-box{
             padding:20px 0 0 20px

@@ -1,5 +1,5 @@
 <template>
-    <div class="db-view-new">
+    <div class="db-view-new win-card-box">
 
         <div class="step1" v-if="!success">
             <validator name="af">

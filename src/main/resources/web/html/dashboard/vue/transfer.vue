@@ -1,6 +1,9 @@
 <template>
-<div class="db-members cb">
-    <div class="form dvn-import-members">
+<div class="db-members cb win-card-box">
+    <div class="form dvn-import-members win-card">
+    	<li class="tit">
+	      	<p ><i class="icon icon-set"></i> 项目转让</p>
+	    </li>
         <div class="spinner" v-if="loading">
             <div class="rect1"></div>
             <div class="rect2"></div>
@@ -9,27 +12,26 @@
             <div class="rect5"></div>
         </div>
         <template v-if="users.length>1">
-            <div class="item">
-                <div class="col-sm-2 label">选择成员</div>
-                <div class="col-sm-10">
-                    <ul class="cb dbv-chose-users">
-                        <li v-for="item in users" v-if="item.id != project.userId" v-bind:class="{'active':userId==item.id}" v-on:click="chose(item)">
-                            <div class="dbv-user-icon">
-                                <img class="img" v-bind:src="item.avatar" v-if="item.avatar">
-                                <div class="img ta-c word" v-else>{{item.nickname}}</div>
-                                <p class="flag"></p>
-                            </div>
-                            <p>{{item.nickname}}</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-sm-2 label"></div>
-                <div class="col-sm-2">
-                    <input type="button" class="btn btn-primary" v-on:click="ok" v-bind:disabled="!userId" value="确认">
-                </div>
-            </div>
+        	
+			 <li>
+			 	 <div class="item">
+		            <p >选择成员 :</p>
+		            <div >
+		                <ul class="cb dbv-chose-users">
+		                    <li v-for="item in users" v-if="item.id != project.userId" v-bind:class="{'active':userId==item.id}" v-on:click="chose(item)">
+		                        <div class="dbv-user-icon">
+		                            <img class="img" v-bind:src="item.avatar" v-if="item.avatar">
+		                            <div class="img ta-c word" v-else>{{item.nickname}}</div>
+		                            <p class="flag"></p>
+		                        </div>
+		                        <p>{{item.nickname}}</p>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		         <input type="button"  class="btn-right btn btn-primary biggest" v-on:click="ok" v-bind:disabled="!userId" value="确认">
+			 </li>
+		  
         </template>
         <template v-if="!loading && users.length<=1">
             <div class="ta-c api-error-tip" v-cloak v-else>

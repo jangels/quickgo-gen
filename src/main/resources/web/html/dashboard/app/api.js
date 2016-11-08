@@ -389,7 +389,7 @@ export default{
         data: function (transition) {
             //初始化
             this.currentFolder=null;
-            this.currentModule = {};
+            //this.currentModule = {};
             this.currentApi={result:null}
             this.$parent.$data.pageName = '接口列表';
             this.id = transition.to.params.id;

@@ -25,11 +25,7 @@
 			 	<p class="icon" ><i class="icon-code"></i> </p>
 		    	<p class="dis" >代码生成</p>
 		    </li>
-			<li class="t3"   >
-				<p class="icon" ><i class="icon-team"></i> </p>
-		    	<p class="dis" >组件库</p>
-		    </li>
-		    <li class="t1"   v-link="'/project/'+selectPro.id+'/members'">
+		 	<li class="t3"   v-link="'/project/'+selectPro.id+'/members'">
 				<p class="icon" ><i class="icon-team"></i> </p>
 		    	<p class="dis" >成员管理</p>
 		    </li>
@@ -37,9 +33,13 @@
 		    	<p class="icon" ><i class="icon-set"></i> </p>
 		    	<p class="dis" >项目设置</p>
 		    </li>
+		      <li class="t1"   v-link="'/project/'+selectPro.id+'/transfer'">
+				<p class="icon" ><i class="icon-team"></i> </p>
+		    	<p class="dis" >项目转让和删除</p>
+		    </li>
 		    <li class="t6 tend"   v-on:click="selectPro={}">
 		    	<p class="icon" ><i class="icon-end"></i> </p>
-		    	<p class="dis" >退出当前项目</p>
+		    	<p class="dis" >切换项目</p>
 		    </li>
 		   
 		</ul>
