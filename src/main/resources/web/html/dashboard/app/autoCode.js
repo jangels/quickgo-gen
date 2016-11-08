@@ -7,6 +7,7 @@ import utils from "../../src/utils";
 export default {
 	data: function() {
 		return {
+			projectId : "",
 			transition : {},
 			curView: 0,
 			card: [{
@@ -78,7 +79,7 @@ export default {
 			},
 			genSchemeList:{},
 			genSchemeModify:{},
-			saveGenSchemeFilter:{}
+			saveGenSchemeFilter:{genTable:{id:""}}
 			
 		}
 	},
@@ -90,9 +91,10 @@ export default {
 			this.$parent.showProject = false;
 		},
 		data: function(transition) {
-			this.curView = transition.to.params.id;
+			this.curView = transition.to.params.type;
+			this.projectId = transition.to.params.id || this.$parent.projectId || "";
 			this.transition = transition ;
-			this.init()
+			this.init();
 		}
 	},
 	created: function() {
@@ -102,7 +104,7 @@ export default {
 	methods: {
 		init: function() {
 			//module.getGenTableForm({id:"9a8122400a5b45f28dd60fb00ade2d64"},this,true) ;
-			this.saveGenSchemeFilter = {}
+			this.saveGenSchemeFilter = {genTable:{}}
 		},
 		backTable:function(){
 			if(history.length>1){
@@ -113,30 +115,36 @@ export default {
 		},
 		//获取业务表列表
 		getGenTableList : function(){
+			this.genTableFilter.projectId = this.projectId ;
 			module.getGenTableList(this.genTableFilter,this) ;
 		},
 		//修改业务表
 		TableModifyById : function(id){
 			//this.$route.router.go({path:'/autoCode/1.1'}) ;
-			module.getGenTableForm({id:id},this,true) ;
+			
+			module.getGenTableForm({projectId : this.projectId,id:id},this,true) ;
 		},
 		//判断表是否存在 添加业务表
 		genTableFormById : function(){
+			this.genTableFormFilter.projectId = this.projectId ;
 			module.getGenTableForm(this.genTableFormFilter,this,true) ;
 		},
 		//保存业务表
 		saveGenTableForm : function(){
+			this.saveGenTableFormFilter.projectId = this.projectId ;
 			module.saveGenTableForm(this.saveGenTableFormFilter,this) ;
 		},
 		//配置方案列表
 		genSchemeListForm : function(){
+			this.genSchemeFilter.projectId = this.projectId ;
 			module.genSchemeList(this.genSchemeFilter,this) ;
 		},
 		genSchemeModifyById : function(id){
-			module.genSchemeModifyById({id:id},this,true) ;
+			module.genSchemeModifyById({projectId : this.projectId,id:id},this,true) ;
 		},
 		saveGenSchemeForm: function(flag){
 			this.saveGenSchemeFilter.flag = flag ;
+			this.saveGenSchemeFilter.projectId = this.projectId ;
 			module.saveGenSchemeForm(this.saveGenSchemeFilter,this) ;
 		},
 		deleteGenSchemeForm: function(id){
@@ -154,16 +162,16 @@ export default {
          			module.getGenTableList(self.genTableFilter,self) ;
          		break ;
          		case 1 : 
-         			module.getGenTableForm({},self) ;
+         			module.getGenTableForm({projectId:self.projectId},self) ;
          		break ;
          		case 2 :
-         			module.genSchemeList({},self) ;
+         			module.genSchemeList({projectId:self.projectId},self) ;
          		break ;
          		case 3 : 
          			if(self.transition.to.query.id && !self.genSchemeModify.id ){
-         				module.genSchemeModifyById({id:self.transition.to.query.id },this,true) ;
+         				module.genSchemeModifyById({projectId:self.projectId,id:self.transition.to.query.id },this,true) ;
          			}else{
-         				module.genSchemeModifyById({},this,true) ;
+         				module.genSchemeModifyById({projectId:self.projectId},this,true) ;
          			}
          		break ;
          	}
@@ -175,13 +183,13 @@ var module = {
 	//获取业务表列表
     getGenTableList:function(data,self){
 //   	self.genTableList = t.rs1.data ;
-        utils.post('gen/genTable/list', data, function (rs) {
+        utils.post('/gen/genTable/list', data, function (rs) {
         	self.genTableList =rs.data ;
         });
     },
     //获取业务表详情
     getGenTableForm:function(data,self , query){
-        utils.post('gen/genTable/form', data, function (rs) {
+        utils.post('/gen/genTable/form', data, function (rs) {
         	self.genTableForm.config =  rs.data.config ;
     		self.saveGenTableFormFilter =  rs.data.genTable ;
     		self.genTableFormList =rs.data.tableList ;
@@ -197,7 +205,7 @@ var module = {
 				t.isList=t.isList==1 ?  true : false;
     		}
         	if(query){
-        		self.$route.router.go({path:'/autoCode/1.1',query:data} ) ;
+        		self.$route.router.go({path:'/autoCode/1.1/'+self.projectId,query:data} ) ;
         	}
         });
     },
@@ -235,7 +243,7 @@ var module = {
 			_data["columnList["+i+"].genTable.id"] = data.columnList[i].genTable&&data.columnList[i].genTable.id ?data.columnList[i].genTable.id :  "" ;
       		
     	}
-        utils.post('gen/genTable/save',   _data   , function (rs) {
+        utils.post('/gen/genTable/save',   _data   , function (rs) {
 			 toastr.success(rs.msg);
 			 setTimeout(function(){
 			 	history.go(-1);
@@ -245,17 +253,17 @@ var module = {
     //获取配置方案
     genSchemeList:function(data,self){
      	///self.genSchemeList = t.rs2.data ;
-        utils.post('gen/genScheme/list', data, function (rs) {
+        utils.post('/gen/genScheme/list', data, function (rs) {
         	self.genSchemeList = rs.data ;
         });
     },
     genSchemeModifyById:function(data,self , query){
-          utils.post('gen/genScheme/form', data, function (rs) {
+          utils.post('/gen/genScheme/form', data, function (rs) {
          	self.genSchemeModify.config =  rs.data.config ;
     		self.saveGenSchemeFilter =  rs.data.genScheme ;
     		self.genTableFormList =rs.data.tableList ;
          	if(query){
-        		self.$route.router.go({path:'/autoCode/3',query:data} ) ;
+        		self.$route.router.go({path:'/autoCode/3/'+self.projectId,query:data} ) ;
         	}
         });
     },
@@ -266,7 +274,7 @@ var module = {
     	}
     	
     	delete data.genTable ;
-        utils.post('gen/genScheme/save',   data   , function (rs) {
+        utils.post('/gen/genScheme/save',   data   , function (rs) {
 			 toastr.success(rs.msg);
 			 setTimeout(function(){
 			 	history.go(-1);
@@ -274,12 +282,12 @@ var module = {
         });
     },
     deleteGenSchemeForm: function(data,self){
-		utils.post('gen/genScheme/delete',   data   , function (rs) {
+		utils.post('/gen/genScheme/delete',   data   , function (rs) {
 			 toastr.success(rs.msg);
         });
 	},
 	deleteGenTableForm : function(data,self){
-		 utils.post('gen/genTable/delete',   data   , function (rs) {
+		 utils.post('/gen/genTable/delete',   data   , function (rs) {
 			 toastr.success(rs.msg);
         });
 	}

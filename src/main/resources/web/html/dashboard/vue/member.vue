@@ -1,5 +1,53 @@
 <template>
     <div class="db-members cb">
+    	<ul class="win-card db-m-list">
+	    	  <li class="tit">
+		      	<p ><i class="icon icon-set"></i> 成员管理</p>
+		      </li>
+		      <!--添加成员-->
+	    	  <li >
+	    	  	<div class="item" v-if="users && users.length>0">
+                    <p>邀请同事:</p>
+                    <div >
+                        <ul class="cb dbv-chose-users">
+                            <li v-for="item in projectUsers" v-on:click="inviteByUserId(item,$event)">
+                                <div class="dbv-user-icon">
+                                    <img class="img" v-bind:src="item.avatar" v-if="item.avatar">
+                                    <img class="user-logo" v-else src="../../assets/img/defaultlogo.jpg">
+                                    <p class="flag"></p>
+                                </div>
+                                <p>{{item.nickname}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <validator name="form">
+                    <div >
+                        <input type="text" class="text" v-model="email"
+                                   v-validate:email="['email']" initial="off" placeholder="请输入成员的邮箱">
+				      	<input type="button"  v-on:click="inviteByEmail" value="邀请" class="btn-right btn btn-primary btn-lg">
+				      	<div class="tip" v-if="$form.email.invalid">{{this.$form.email.errors[0].message}}</div>
+                    </div>
+                </validator>
+		      </li>
+		      <!--<成员列表-->
+		    <li class="usersList"  v-for="item in users">
+                <div class="avatar">
+                    <img class="user-logo" v-if="item.avatar" v-bind:src="item.avatar">
+                    <img class="user-logo" v-else src="../../assets/img/defaultlogo.jpg">
+                </div>
+                <div class="info">
+                	<p>昵称： {{item.nickname}}</p>
+                	<p><span v-if="item.name">姓名： {{item.name}} </span >  <span v-if="item.name&&item.email"> | </span> <span v-if="item.email">邮箱： {{item.email}}</span></p>
+                </div>
+                <div class="col-sm-1 del">
+                	<i class="iconfont icon-close "  v-on:click="remove(item)"></i>
+                </div>
+            </li>
+	    
+	    </ul>      
+    	
+    	
         <div class="fl">
             <div style="width: 400px">
                 <ul class="nav nav-tabs nav-justified">

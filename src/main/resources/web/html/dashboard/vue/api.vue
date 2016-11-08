@@ -3,6 +3,7 @@
         <div class="api-modules-tab ta-c">
             <a class="api-module api-module-item" v-bind:class="{'active':editing}" v-on:click="editing=true">编辑模式</a>
             <a class="api-module api-module-item" v-bind:class="{'active':!editing}" v-on:click="editing=false">浏览模式</a>
+            <a class="api-module api-module-item" v-bind:class="" v-link="{path:'/createCode'}">生成代码</a>
         </div>
         <div class="api-modules">
             <div class="cb api-modules-container">
@@ -55,6 +56,7 @@
                             <div class="fl" v-on:click="folderNewApi(null,$event)"><i class="icon-tianjia iconfont"></i> 添加接口</div>
                         </div>
                         <ul class="apis-nav" id="api-edit-nav">
+                        	
                             <li>
                                 <div class="api-name api-description cb" v-bind:class="{'active':showGuide}"
                                      v-on:click="apiDescClick">
@@ -268,6 +270,16 @@
                                               v-model="currentApi.description">{{currentApi.description}}</textarea>
                                     </div>
                                 </div>
+                                
+                                <div class="item">
+                                    <div class="col-sm-1 label">操作表</div>
+                                    <div class="col-sm-11">
+                                    <select id="name" name="name" class="input-xxlarge select2-offscreen" tabindex="-1" v-model="selectGenTable.id" >
+										<option  v-for="item in genTableFormList"   :value="item.id"  >{{item.nameAndComments}} </option>
+	 								</select>
+                                    </div>
+                                </div>
+                                
                                 <template v-if="currentApi.protocol == 'HTTP'">
                                     <p class="api-details-title">发送数据</p>
                                 <div class="tabs">

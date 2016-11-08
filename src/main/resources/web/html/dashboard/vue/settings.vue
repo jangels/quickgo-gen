@@ -2,33 +2,61 @@
 <div class="form db-view-form">
     <template v-if="!loading">
     <validator name="form">
-    <div class="item">
-        <div class="col-sm-2 label">项目名称</div>
-        <div class="col-sm-10">
-            <input type="text" v-model="project.name" v-validate:project-name="['required']" maxlength="20" class="text invalid" placeholder="请输入项目名称">
-            <div class="tip"  v-if="$form.projectName.invalid">{{$form.projectName.errors[0].message}}</div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="col-sm-2 label">项目描述</div>
-        <div class="col-sm-10">
-            <textarea rows="10" placeholder="请输入项目描述" maxlength="300" class="text" v-model="project.description">{{project.description}}</textarea>
-        </div>
-    </div>
-    <div class="item">
-        <div class="col-sm-2 label">项目公开性</div>
-        <div class="col-sm-10">
-            <p><input type="radio" name="permission" v-model="project.permission" value="PRIVATE" id="dvnr-private"> <label for="dvnr-private">私有项目（只有加入项目后的成员才能看见）</label></p>
-            <p><input type="radio" name="permission" v-model="project.permission" id="dvnr-public" value="PUBLIC"> <label for="dvnr-public">公开项目（所有用户均能看见）</label></p>
-            <div class="tip"></div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="col-sm-2 label"></div>
-        <div class="col-sm-3">
-            <input type="submit" value="确认" v-on:click="ok" class="btn btn-primary biggest">
-        </div>
-    </div>
+    
+    <ul class="win-card">
+    	
+    	  <li class="tit">
+	      	<p ><i class="icon icon-set"></i> 项目设置</p>
+	      </li>
+    		
+    	  <li >
+	      	<input v-model="project.name" type="text"   v-validate:project-name="['required']" maxlength="20"  placeholder="项目名称:"  /> 
+	      	<span class="tip"  v-if="$form.projectName.invalid">{{$form.projectName.errors[0].message}}</span>
+	      </li>
+    	 <li>
+	      <textarea rows="10" placeholder="请输入项目描述" maxlength="300" class="text" v-model="project.description">{{project.description}}</textarea>
+	    </li>
+	    <li >
+            <p>
+                              项目属性：
+            <input type="radio" name="permission" v-model="project.permission" value="PRIVATE" id="dvnr-private"> <label for="dvnr-private">私有项目</label>
+            <input type="radio" name="permission" v-model="project.permission" id="dvnr-public" value="PUBLIC"> <label for="dvnr-public">公开项目</label>
+	    	<input type="submit" value="确认" v-on:click="ok" class="btn-right btn btn-primary biggest">
+            </p>
+	    </li>
+    	
+    	
+<!--    	
+    	
+    	
+	    <li class="item">
+	        <div class="col-sm-2 label">项目名称</div>
+	        <div class="col-sm-10">
+	            <input type="text" v-model="project.name" v-validate:project-name="['required']" maxlength="20" class="text invalid" placeholder="请输入项目名称">
+	            <div class="tip"  v-if="$form.projectName.invalid">{{$form.projectName.errors[0].message}}</div>
+	        </div>
+	    </li>
+	    <li class="item">
+	        <div class="col-sm-2 label">项目描述</div>
+	        <div class="col-sm-10">
+	            <textarea rows="10" placeholder="请输入项目描述" maxlength="300" class="text" v-model="project.description">{{project.description}}</textarea>
+	        </div>
+	    </li>
+	    <li class="item">
+	        <div class="col-sm-2 label">项目公开性</div>
+	        <div class="col-sm-10">
+	            <p><input type="radio" name="permission" v-model="project.permission" value="PRIVATE" id="dvnr-private"> <label for="dvnr-private">私有项目（只有加入项目后的成员才能看见）</label></p>
+	            <p><input type="radio" name="permission" v-model="project.permission" id="dvnr-public" value="PUBLIC"> <label for="dvnr-public">公开项目（所有用户均能看见）</label></p>
+	            <div class="tip"></div>
+	        </div>
+	    </li>
+	    <li class="item">
+	        <div class="col-sm-2 label"></div>
+	        <div class="col-sm-3">
+	            <input type="submit" value="确认" v-on:click="ok" class="btn btn-primary biggest">
+	        </div>
+	    </li>-->
+     </ul>	
     </validator>
     </template>
     <template v-if="loading">

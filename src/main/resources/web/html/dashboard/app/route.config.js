@@ -77,12 +77,19 @@ export default {
         }
     },
     
-    '/autoCode/:id':{
+    '/autoCode/:type/:id':{
         component:
             function(resolve){
                 $('body').addClass('loading');
                 require(['../vue/auto-code.vue'],resolve);
             }
     }
-    
+    ,
+    '/createCode/:id':{
+        component:
+            function(resolve){
+	            $('body').addClass('loading');
+	            require(['../vue/create-code.vue'],resolve);
+        	}
+    }
 }
