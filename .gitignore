@@ -1,5 +1,7 @@
 #Maven Project File
 target/
+quickgo-gen/src/main/resources/web/node_module/
+node_module/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -32,7 +34,7 @@ local.properties
 _svn
 
 
-# Flex项目文件
+# Flex锟斤拷目锟侥硷拷
 .externalToolBuilders
 .actionScriptProperties
 .flexProperties
@@ -46,7 +48,7 @@ FlexFormatConfig.properties
 *.class
 
 
-#gradle文件
+#gradle锟侥硷拷
 .gradle
 build/
 gradle-app.setting
@@ -54,13 +56,13 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 
-# 其他文件
+# 锟斤拷锟斤拷锟侥硷拷
 *.log
 *.bak
-build/
+
 doc/
 
-# 苹果机器的内部管理文件
+# 苹锟斤拷锟斤拷锟斤拷锟斤拷锟节诧拷锟斤拷锟斤拷锟侥硷拷
 .DS_Store
 
 #打包文件
