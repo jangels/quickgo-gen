@@ -3227,7 +3227,7 @@ body.dashboard:before {
 }
 .win-card>li.tit,.win-card>li.tit p{background: #32465f;color: #fff;font-size:22px;line-height:70px; }
 .win-card>li .icon{display: inline-block;width: 30px;height:30px;vertical-align: top;margin-top:20px;}
-.win-card>li .tip{float: right;line-height: 56px;margin: 0;}
+.win-card>li .tip{    border-top: 1px solid #ddd;line-height: 56px;margin: 0;}
 .btn-right{padding: 0; float: right;height:56px;line-height:56px;width:140px;margin-right: -20px;font-size:24px;background:#32465f;border: none; }
 
 

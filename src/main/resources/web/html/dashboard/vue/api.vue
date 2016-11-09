@@ -1,9 +1,9 @@
 <template>
     <template v-if="!status.loading">
         <div class="api-modules-tab ta-c">
-        	<a class="api-module api-module-item" v-bind:class="{'active':!editing}" v-on:click="editing=false">浏览模式</a>
-            <a class="api-module api-module-item" v-bind:class="{'active':editing}" v-on:click="editing=true">编辑模式</a>
-            <a class="api-module api-module-item" v-bind:class="" v-link="{path:'/createCode/'+project.id}">生成代码</a>
+        	<a class="api-module api-module-item" v-bind:class="{'active':editing==0}" v-on:click="editing=0">浏览模式</a>
+            <a class="api-module api-module-item" v-bind:class="{'active':editing==1}" v-on:click="editing=1">编辑模式</a>
+            <a class="api-module api-module-item"  v-bind:class="{'active':editing==2}" v-on:click="editing=2">生成代码</a>
         </div>
         <div class="api-modules">
             <div class="cb api-modules-container">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div v-show="editing">
+        <div v-show="editing==1">
             <div id="api-edit-box" class="apis">
                 <div class="cb api-container">
                     <div class="fl apis-left">
@@ -494,7 +494,7 @@
                 </div>
 
         </div>
-        <div v-show="!editing">
+        <div v-show="editing==0">
             <template v-if="!error.projectNotExists">
                 <div class="apis">
                     <div v-if="currentModule.folders && currentModule.folders.length>0" class="cb api-container">
@@ -832,8 +832,34 @@
                 </div>
             </template>
         </div>
-
-
+		<!--生成代码-->
+		
+		<div v-show="editing==2">
+			<table id="contentTable" class="table table-striped table-bordered table-condensed">
+				<thead>
+					<tr>
+						<th>分类</th>
+						<th>选择</th>
+						<th>接口名称</th>
+						<th>接口地址</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tbody v-for="item in currentModule.folders"> 
+						<tr v-for="api in item.children">
+							<td v-if="$index==0" :rowspan="item.children.length" >{{item.name}}</td>
+							<td><input type="checkbox" /></td>
+							<td>{{api.name}}</td>
+							<td>{{api.url}}</td>
+						</tr>
+					</tbody>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		
+	
         <div class="modal env-modal" v-cloak v-if="status.envModal">
             <div class="modal-header">
                 <i class="iconfont icon-close modal-close" v-on:click="status.envModal=false"></i>
@@ -865,9 +891,7 @@
 
                     <div class="ta-c actions">
                         <button class="btn btn-default-box middle" tabindex="3"
-                                v-on:click="status.envModal=false">
-                            取消
-                        </button>
+                                v-on:click="status.envModal=false"> 取消 </button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-primary middle" v-on:click="envSave" tabindex="2">确定</button>
                     </div>

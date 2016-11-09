@@ -1,7 +1,5 @@
 <template>
 <div class="project">
-	
-		
 		<ul class="list box" v-show="!selectPro.id"  transition="animateRightOut">
 			<li :class="projects.length==1&&$index==0?'t3' :'t'+($index+1)  " v-for="item in projects | filterBy filter in 'name'" @click="selectProFun(item)" >
 				<p class="tit" >
@@ -37,7 +35,7 @@
 				<p class="icon" ><i class="icon-team"></i> </p>
 		    	<p class="dis" >项目转让和删除</p>
 		    </li>
-		    <li class="t6 tend"   v-on:click="selectPro={}">
+		    <li class="t6 tend"   v-on:click="selectPro={} ,$parent.projectName =null ">
 		    	<p class="icon" ><i class="icon-end"></i> </p>
 		    	<p class="dis" >切换项目</p>
 		    </li>
@@ -91,6 +89,7 @@
         		this.selectPro=item ; 
         		this.$parent.projectId = item.id ;
         		this.$parent.projectName= item.name;
+        		 
         	}
            
         }

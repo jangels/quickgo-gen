@@ -582,7 +582,7 @@ export default{
             _czc.push(["_trackEvent", "接口", "切换模式",value+""]);
         },
         "showGuide": function (value) {
-            if (value && this.editing) {
+            if (value && this.editing==1) {
                 if (!window.editor) {
                     var desc = this.project.details;
                     initEditor(desc, this);
@@ -1753,7 +1753,7 @@ function reget(self) {
             }
             var isNew = (self.$route.query.n == 'y');
             if (isNew) {
-                self.editing = true;
+                self.editing = 1;
                 self.showGuide = false;
                 self.currentFolder = gdata.modules[0].folders[0];
                 self.currentApi = self.currentFolder.children[0];

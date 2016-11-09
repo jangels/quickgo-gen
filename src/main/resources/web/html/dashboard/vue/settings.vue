@@ -77,7 +77,7 @@
                 var project=this.project;
                 var self = this;
                 delete this.project.createTime ;
-                utils.post('/project/up/'+this.project.id+".json",this.project,function(rs){
+                utils.post('/project/update/'+this.project.id+".json",this.project,function(rs){
                     self.project = project;
                    toastr.success('修改成功');
                 })
