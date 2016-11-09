@@ -39,7 +39,7 @@ public class DateSourceController  {
     @RequestMapping(value = "/delete")
     public JSONObject delete(DateSource model) {
         dateSourceService.delete(model);
-        return JsonResponse.success( "删除生成方案成功");
+        return JsonResponse.success( "删除生成方案成功 ");
     }
 
 
