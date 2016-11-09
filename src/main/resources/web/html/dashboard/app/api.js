@@ -951,24 +951,13 @@ export default{
                     localStorage.setItem(key, value);
                 }
             }
-
-
-            var params = {
-                url: url,
-                cache: false,
-                headers: headers,
-                type: self.currentApi.requestMethod,
-                data: args,
-                beforeSend: function (xhr) {
-                    xhr.beginTime = Date.now();
-                },
-                dataType: self.currentApi.contentType,
-                crossDomain:true,
-                xhrFields: {
-                    withCredentials: true
-                },
-                jsonpCallback: self.currentApi.contentType == 'JSONP' ? 'callback' : undefined,
-                complete(xhr, status){
+			
+			 $._ajax_({
+	            url: url,
+	            data: args,
+	            type: self.currentApi.requestMethod,
+	            dataType: 'json',
+	            complete(xhr, status){
                     var e = {
                         type: status,
                         text: (xhr.responseText || xhr.statusText),
@@ -992,43 +981,84 @@ export default{
                     new Result().resolve(rs, self.currentApi.contentType);
                     //self.result = rs;
                 }
-
-
-            };
-            switch (this.currentApi.dataType) {
-                case "FORM-DATA":
-                    params.contentType = false;
-                    params.processData = false;
-                    break;
-                case "RAW":
-                    params.data = $('#rawBody').val() || '';
-                    params.processData = false;
-                    params.contentType = 'text/plain';
-                    break;
-                case "BINARY":
-                    params.processData = false;
-                    params.contentType = 'application/octet-stream';
-                    params.data = $('#binaryBody')[0];
-                default:
-                    break;
-            }
-            self.status.apiLoading = true;
-            // chrome 插件中jsonp 会出问题
-            if (this.extVer && self.currentApi.contentType != 'JSONP') {
-                delete params['complete'];
-                delete params['success'];
-                delete params['error'];
-                delete params['beforeSend'];
-                if (this.currentApi.dataType == 'BINARY') {
-                    params.data = '#binaryBody';
-                }
-                var ce = new CustomEvent('request', {
-                    detail: params
-                });
-                document.dispatchEvent(ce);
-            } else {
-                $.ajax(params);
-            }
+	        });
+			
+//			源码ajax请求
+//          var params = {
+//              url: url,
+//              cache: false,
+//              headers: headers,
+//              type: self.currentApi.requestMethod,
+//              data: args,
+//              beforeSend: function (xhr) {
+//                  xhr.beginTime = Date.now();
+//              },
+//              dataType: self.currentApi.contentType,
+//              crossDomain:true,
+//              xhrFields: {
+//                  withCredentials: true
+//              },
+//              jsonpCallback: self.currentApi.contentType == 'JSONP' ? 'callback' : undefined,
+//              complete(xhr, status){
+//                  var e = {
+//                      type: status,
+//                      text: (xhr.responseText || xhr.statusText),
+//                      headers: xhr.getAllResponseHeaders(),
+//                      readyState: xhr.readyState,
+//                      responseText: xhr.responseText,
+//                      status: xhr.status || 0,
+//                      statusText: xhr.statusText,
+//                      useTime: Date.now() - xhr.beginTime
+//                  };
+//                  if (status != 'success') {
+//                      var msg = (xhr.responseText || xhr.statusText);
+//                      if (status == 'error') {
+//                          msg = ('status:' + xhr.status + ' readyState:' + xhr.readyState + '  errorText:' + msg);
+//                      }
+//                      e.text = msg
+//                  }
+//                  xhrComplete(self, {detail: e});
+//              },
+//              success(rs){
+//                  new Result().resolve(rs, self.currentApi.contentType);
+//                  //self.result = rs;
+//              }
+//
+//          };
+//          switch (this.currentApi.dataType) {
+//              case "FORM-DATA":
+//                  params.contentType = false;
+//                  params.processData = false;
+//                  break;
+//              case "RAW":
+//                  params.data = $('#rawBody').val() || '';
+//                  params.processData = false;
+//                  params.contentType = 'text/plain';
+//                  break;
+//              case "BINARY":
+//                  params.processData = false;
+//                  params.contentType = 'application/octet-stream';
+//                  params.data = $('#binaryBody')[0];
+//              default:
+//                  break;
+//          }
+//          self.status.apiLoading = true;
+//          // chrome 插件中jsonp 会出问题
+//          if (this.extVer && self.currentApi.contentType != 'JSONP') {
+//              delete params['complete'];
+//              delete params['success'];
+//              delete params['error'];
+//              delete params['beforeSend'];
+//              if (this.currentApi.dataType == 'BINARY') {
+//                  params.data = '#binaryBody';
+//              }
+//              var ce = new CustomEvent('request', {
+//                  detail: params
+//              });
+//              document.dispatchEvent(ce);
+//          } else {
+//              $.ajax(params);
+//          }
             _czc.push(["_trackEvent",'接口','测试',this.currentApi.name,this.currentApi.id]);
         },
         apiMock: function () {

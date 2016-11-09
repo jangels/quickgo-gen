@@ -213,6 +213,7 @@ var module = {
     saveGenTableForm:function(data,self ){
     	var _data = {
     		id:data.id ||  "",
+    		projectId:self.projectId,
 			name:data.name,
 			comments:data.comments,
 			className:data.className,
