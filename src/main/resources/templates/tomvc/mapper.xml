@@ -10,13 +10,13 @@
     
   <resultMap id="BaseResultMap" type="${ClassName}" >
     	<#list table.columnList as c>
-    	<#if c.isPk == '1'>
-    	 <id  column="${c.name}" property="${c.javaFieldId}" jdbcType="BIGINT"  />
-    	 </#if>
-    	<#if c.isPk == '0'>
-		<result column="${c.name}" property="${c.javaFieldId}" />
-		</#if>
-	</#list>
+			<#if c.isPk == '1'>
+			 <id  column="${c.name}" property="${c.javaFieldId}" jdbcType="BIGINT"  />
+			 </#if>
+			<#if c.isPk == '0'>
+			<result column="${c.name}" property="${c.javaFieldId}" />
+			</#if>
+		</#list>
   </resultMap>
   
     <#-- 输出字段列 -->

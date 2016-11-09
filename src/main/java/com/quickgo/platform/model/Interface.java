@@ -37,6 +37,10 @@ public class Interface implements Serializable{
     private String dataType;
     private String protocol;
     private String status;
+    private String inputParam;
+    private String outputParam;
+    private String tableName;
+    private String tableId;
 
     public interface Status{
         //启用
@@ -198,5 +202,37 @@ public class Interface implements Serializable{
 
     public void setRequestHeaders(String requestHeaders) {
         this.requestHeaders = requestHeaders;
+    }
+
+    public String getInputParam() {
+        return inputParam;
+    }
+
+    public void setInputParam(String inputParam) {
+        this.inputParam = inputParam;
+    }
+
+    public String getOutputParam() {
+        return outputParam;
+    }
+
+    public void setOutputParam(String outputParam) {
+        this.outputParam = outputParam;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    public String getTableId() {
+        return tableId;
+    }
+
+    public void setTableId(String tableId) {
+        this.tableId = tableId;
     }
 }

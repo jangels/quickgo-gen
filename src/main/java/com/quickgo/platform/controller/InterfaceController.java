@@ -1,28 +1,35 @@
 package com.quickgo.platform.controller;
 
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quickgo.platform.asynctask.AsyncTaskBus;
 import com.quickgo.platform.asynctask.Log;
 import com.quickgo.platform.face.IInterfaceService;
 import com.quickgo.platform.face.IProjectUserService;
 import com.quickgo.platform.model.Interface;
 import com.quickgo.platform.model.Project;
+import com.quickgo.platform.param.RequestArgs;
 import com.quickgo.platform.param.Result;
 import com.quickgo.platform.param._HashMap;
 import com.quickgo.platform.utils.AssertUtils;
 import com.quickgo.platform.utils.MemoryUtils;
+import com.quickgo.platform.utils.StringUtils;
 import com.quickgo.platform.utils.Validate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 /**
- * @author : huangjie
- * @since : 16/7/13
+ * create by huangjie
+ * on 16/7/13
  */
 @RestController
 @RequestMapping("/interface")
@@ -46,7 +53,6 @@ public class InterfaceController {
      * @param in
      * @return
      */
-//    @RequestMapping("/create")
     public Object createInterface(String token,Interface in) {
         Interface anInterface =  new Interface();
         BeanUtils.copyProperties(in,anInterface);
@@ -55,10 +61,11 @@ public class InterfaceController {
         AssertUtils.notNull(in.getFolderId(), "missing folderId");
         AssertUtils.isTrue(projectUserService.
         checkUserHasProjectPermission(MemoryUtils.getUser(token).getId(), in.getProjectId()), "无操作权限");
-        in.setLastUpdateTime(new Date().getTime());
         in.setCreateTime(new Date().getTime());
         in.setStatus(Interface.Status.ENABLE);
         in.setId(Validate.id());
+        //解析参数
+        in.setInputParam(this.analyticParameter(in));
         int rs = interfaceService.create(in);
         AssertUtils.isTrue(rs > 0, "增加失败");
         AsyncTaskBus.instance().push(Log.create(token, Log.CREATE_INTERFACE, in.getName(), in.getProjectId()));
@@ -69,9 +76,9 @@ public class InterfaceController {
     /**
      * 更新
      *
-     * @param id        id
-     * @param in
-     * @return
+     * @param id id
+     * @param in Interface
+     * @return Object
      */
     @RequestMapping("/update/{id}")
     public Object update(@PathVariable String id,String token, Interface in) {
@@ -83,7 +90,8 @@ public class InterfaceController {
         in.setId(id);
         AssertUtils.isTrue(projectUserService.checkUserHasProjectPermission(MemoryUtils.getUser(token).getId(), temp.getProjectId()), "无操作权限");
         in.setLastUpdateTime(new Date().getTime());
-        in.setCreateTime(null);
+        //解析参数
+        in.setInputParam(this.analyticParameter(in));
         int rs = interfaceService.upadteInterface(in);
         AssertUtils.isTrue(rs > 0, "修改失败");
         AsyncTaskBus.instance().push(Log.create(token, Log.UPDATE_INTERFACE, temp.getName(), temp.getProjectId()));
@@ -139,4 +147,39 @@ public class InterfaceController {
         }
         return update(id, token,in);
     }
+
+    private String analyticParameter(Interface in) {
+        if (StringUtils.isNotEmpty(in.getRequestArgs()) || StringUtils.isNotEmpty(in.getTableName())) {
+            StringBuilder inputParam = new StringBuilder();
+            //将入参json转化为对象
+            ObjectMapper mapper = new ObjectMapper();
+            List<RequestArgs> beanList = null;
+            try {
+                beanList = mapper.readValue(in.getRequestArgs(), new TypeReference<List<RequestArgs>>() {
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (CollectionUtils.isEmpty(beanList)) {
+                return null;
+            } else {
+                //提取入参
+                for (RequestArgs requesArgs : beanList) {
+                    if (requesArgs.getType().contains("object")) {
+                        //首字母转化为大写
+                        inputParam.append(in.getTableName().replaceFirst(in.getTableName().substring(0, 1),
+                                in.getTableName().substring(0, 1).toUpperCase()));
+                        inputParam.append(" " + in.getTableName() + ",");
+                    } else {
+                        inputParam.append("String " + requesArgs.getName() + ",");
+                    }
+                }
+                return inputParam.toString().substring(0, inputParam.length() - 1);
+            }
+        }
+            return  null;
+    }
+
+
+
 }

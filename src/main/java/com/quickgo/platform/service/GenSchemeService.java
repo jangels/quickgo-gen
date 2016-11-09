@@ -3,9 +3,6 @@
  */
 package com.quickgo.platform.service;
 
-import java.util.List;
-import java.util.Map;
-
 import com.quickgo.platform.base.BaseService;
 import com.quickgo.platform.dao.GenSchemeDao;
 import com.quickgo.platform.dao.GenTableColumnDao;
@@ -17,6 +14,9 @@ import com.quickgo.platform.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * 生成方案Service
@@ -58,7 +58,7 @@ public class GenSchemeService extends BaseService {
 		}
 		// 生成代码
 		if ("1".equals(genScheme.getFlag())){
-			return generateCode(genScheme);
+			return this.generateCode(genScheme);
 		}
 		return "";
 	}

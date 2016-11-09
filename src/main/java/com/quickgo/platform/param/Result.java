@@ -1,5 +1,7 @@
 package com.quickgo.platform.param;
 
+import com.quickgo.platform.utils.StringUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,10 +38,8 @@ public class Result<T> {
     }
 
     public static <T> Object returnInfo(T data) {
-
         Map<Object,Object> jo = new HashMap<>();
         jo.put("operateTime", System.currentTimeMillis());
-
         if (data == null) {
             jo.put("result", FAIL_CODE);
             jo.put("msg", "未查询到数据。");
@@ -49,8 +49,8 @@ public class Result<T> {
         }
         return jo;
     }
-    public static <T> Object returnInfo(T data,String msg) {
 
+    public static <T> Object returnInfo(T data,String msg) {
         Map<Object,Object> jo = new HashMap<>();
         jo.put("operateTime", System.currentTimeMillis());
 
@@ -58,9 +58,16 @@ public class Result<T> {
             jo.put("result", FAIL_CODE);
             jo.put("msg", msg);
         } else {
-            jo.put("data", data);
-            jo.put("msg", msg);
-            jo.put("result", FAIL_CODE);
+            if(StringUtils.isEmpty(msg)){
+                jo.put("data", data);
+                jo.put("msg", msg);
+                jo.put("result", SUCCESS_CODE);
+
+            }else {
+                jo.put("data", data);
+                jo.put("msg", msg);
+                jo.put("result", FAIL_CODE);
+            }
         }
         return jo;
     }

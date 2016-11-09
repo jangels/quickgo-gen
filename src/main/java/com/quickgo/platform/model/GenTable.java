@@ -3,12 +3,11 @@
  */
 package com.quickgo.platform.model;
 
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import com.quickgo.platform.utils.StringUtils;
 import org.hibernate.validator.constraints.Length;
 
-import com.google.common.collect.Lists;
+import java.util.List;
 
 /**
  * 业务表Entity
@@ -20,13 +19,7 @@ public class GenTable extends DataEntity<GenTable> {
 	private static final long serialVersionUID = 1L;
 
 	private String projectId;//项目ID
-	public String getProjectId() {
-		return projectId;
-	}
 
-	public void setProjectId(String projectId) {
-		this.projectId = projectId;
-	}
 
 	private String name; 	// 名称
 	private String comments;		// 描述
@@ -52,7 +45,13 @@ public class GenTable extends DataEntity<GenTable> {
 		super(id);
 	}
 
+	public String getProjectId() {
+		return projectId;
+	}
 
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
 
 	@Length(min=1, max=200)
 	public String getName() {

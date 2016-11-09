@@ -42,7 +42,11 @@
         createTime,
         dataType,
         protocol,
-        status
+        status,
+        inputParam,
+        outputParam,
+        tableId,
+        tableName
 		) VALUES (
         #{id},
         #{name},
@@ -61,7 +65,11 @@
         #{createTime},
         #{dataType},
         #{protocol},
-        #{status}
+        #{status},
+        #{inputParam},
+        #{outputParam},
+        #{tableId},
+        #{tableName}
 		)
   </insert>
 
@@ -124,7 +132,19 @@
             protocol = #{protocol},
         </if>
         <if test="status!=null">
-            status = #{status}
+            status = #{status},
+        </if>
+        <if test="inputParam!=null">
+            inputParam = #{inputParam},
+        </if>
+        <if test="outputParam!=null">
+            outputParam = #{outputParam},
+        </if>
+        <if test="tableId!=null">
+            tableId = #{tableId},
+        </if>
+        <if test="tableName!=null">
+            tableName = #{tableName}
         </if>
 
     </set>

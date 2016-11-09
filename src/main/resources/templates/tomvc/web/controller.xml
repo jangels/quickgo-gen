@@ -17,9 +17,9 @@
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/${apiName}")
-    public Object ${apiName}(${ClassName}Dto ${className}Dto) {
+    public Object ${apiName}(${inputParam}) {
 		try {
-			Object o = ${className}Service.${apiName}(${className}Dto);
+			Object o = ${className}Service.${apiName}(${inputParam});
 			if(o!=null)
             {
             	return JsonResponse.success(o);

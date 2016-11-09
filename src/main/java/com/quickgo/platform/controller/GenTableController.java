@@ -3,14 +3,6 @@
  */
 package com.quickgo.platform.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-
 import com.alibaba.fastjson.JSONObject;
 import com.quickgo.platform.base.BaseController;
 import com.quickgo.platform.dto.GenTableDto;
@@ -22,10 +14,14 @@ import com.quickgo.platform.utils.JsonResponse;
 import com.quickgo.platform.utils.Page;
 import com.quickgo.platform.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -86,9 +82,8 @@ public class GenTableController extends BaseController {
 	}
 
 	@RequestMapping(value = "/queryByProjectId",method = { RequestMethod.POST , RequestMethod.GET })
-	public @ResponseBody
-	Object queryByProjectId(String projectId) {
-		List<GenTable> genTableList=new ArrayList<>();
+	public Object queryByProjectId(String projectId) {
+		List<GenTable> genTableList = null;
 		try {
 			genTableList = genTableService.queryByProjectId(projectId);
 			if(genTableList ==null)

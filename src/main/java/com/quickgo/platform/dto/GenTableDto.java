@@ -6,7 +6,8 @@ import com.quickgo.platform.model.GenTable;
 import java.util.List;
 
 /**
- * Created by 144435 on 2016-10-27.
+ * Created by
+ * 144435 on 2016-10-27.
  */
 public class GenTableDto {
     private GenTable genTable;//表信息
