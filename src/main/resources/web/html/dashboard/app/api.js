@@ -4,6 +4,8 @@ import ResponseArgsVue from "../vue/api-editor-response-args.vue";
 import utils from "../../src/utils";
 import "../../assets/jsonformat/jsonFormater.js";
 import "../../assets/jsonformat/jsonFormater.css";
+
+ 
 //todo 浏览模式的环境切换样式
 //todo 编辑模式仿造postman
 RequestHeadersVue.name = 'request-headers-vue';
@@ -82,7 +84,9 @@ var gdata = {
     id: '',
     extVer: false,
     collapse: false,
-    results: {}
+    results: {},
+    genTableFormList : [],
+    selectGenTable: {id:"",name:""}
 };
 var page = {
     x2js:new X2JS(),
@@ -96,6 +100,45 @@ var page = {
         complete:  function (e) {
             xhrComplete(gdata, e);
         }
+    },
+    //获取业务表详情
+    getGenTableForm:function(data){
+        utils.get('/gen/genTable/queryByProjectId', data, function (rs) {
+        	gdata.genTableFormList = rs.data ;
+        });
+    },
+    //获取业务表详情
+    getGenTableFormDatial:function(data){
+        utils.post('/gen/genTable/form', data, function (rs) {
+        	var _rs = rs.data.genTable.columnList , 
+        		_data = {
+        			requestArgs:[],
+        			responseArgs:[
+        				{"children":[],"name":"module","type":"object","require":"true"}
+        			]
+        		} ;
+        	_rs.forEach(function(item){
+        		_data.requestArgs.push({
+        			"require":""+item.isNull=="0"?"false":"true",
+		            "children":[], 
+		            "type": !("/LONG/INTEGER/DOUBLE/INT".indexOf(item.javaType.toUpperCase())<0) ?"number" : item.javaType ,
+		            "name":item.name,
+		            "description":item.comments ,
+		            "defaultValue" :""
+        		});
+        		_data.responseArgs[0]["children"].push({
+        			"require":""+item.isNull=="0"?"false":"true",
+		            "children":[], 
+		            "type": !("/LONG/INTEGER/DOUBLE/INT".indexOf(item.javaType.toUpperCase())<0) ?"number" : item.javaType ,
+		            "name":item.name,
+		            "description":item.comments ,
+		            "defaultValue" :""
+        		});
+        		
+        	});
+        	gdata.currentApi.requestArgs = _data.requestArgs;
+        	gdata.currentApi.responseArgs = _data.responseArgs;
+        });
     },
     updateInterface:function(id){
         utils.get('/interface/update/'+id+'.json',{},function(rs){
@@ -346,7 +389,7 @@ export default{
         data: function (transition) {
             //初始化
             this.currentFolder=null;
-            this.currentModule = {};
+            //this.currentModule = {};
             this.currentApi={result:null}
             this.$parent.$data.pageName = '接口列表';
             this.id = transition.to.params.id;
@@ -448,6 +491,14 @@ export default{
         }
     },
     watch: {
+    	"selectGenTable.id":function(value){
+    		gdata.genTableFormList.forEach(function(item){
+    			if(item.id==value){
+    				gdata.selectGenTable.name = item.name ;
+    			}
+    		})
+    		page.getGenTableFormDatial({id:value})
+    	},
         "status.folderModal": function (value) {
             if (!value) {
                 var self = this;
@@ -455,7 +506,6 @@ export default{
                     self.$data.currentFolder = null;
                 }, 100)*/
             }
-
             if (value) {
                 $("body").addClass("modal-open");
             } else {
@@ -523,13 +573,16 @@ export default{
                     var desc = this.project.details;
                     initEditor(desc, this);
                 }
+                //请求表信息
+                if( gdata.genTableFormList.length ==  0  ){page.getGenTableForm({projectId:gdata.id});}
             } else {
                 renderViewBox(this.project.details);
+                 
             }
             _czc.push(["_trackEvent", "接口", "切换模式",value+""]);
         },
         "showGuide": function (value) {
-            if (value && this.editing) {
+            if (value && this.editing==1) {
                 if (!window.editor) {
                     var desc = this.project.details;
                     initEditor(desc, this);
@@ -771,6 +824,7 @@ export default{
             if (document.documentElement.scrollTop > 100) {
                 document.documentElement.scrollTop = 110;
             }
+            
             _czc.push(["_trackEvent",'接口','新建api']);
         },
         folderClick: function (event) {
@@ -784,6 +838,7 @@ export default{
             this.currentFolder = folder;
             this.showGuide = false;
             this.currentApi = item;
+             this.selectGenTable.id=item.tableId;
             initInterface(this, item);
 
             if (document.documentElement.scrollTop > 100) {
@@ -814,6 +869,8 @@ export default{
             temp.requestArgs = JSON.stringify(temp.requestArgs);
             temp.responseArgs = JSON.stringify(temp.responseArgs);
             temp.requestHeaders = JSON.stringify(temp.requestHeaders);
+            temp.tableName = gdata.selectGenTable.name;
+            temp.tableId = gdata.selectGenTable.id;
             let self = this;
             let tempFolder = self.currentFolder;
             let tempModule = self.currentModule;
@@ -1216,6 +1273,8 @@ export default{
 }
 
 function initInterface(self, item) {
+	
+	
     if (!item.requestArgs) {
         item.requestArgs = []
     }
@@ -1303,6 +1362,9 @@ function initInterface(self, item) {
     }
 
     self.currentApi = Object.assign({}, item, item);
+    
+  	
+  	console.log( JSON.stringify(self.currentApi) )
 }
 function initDefaultData(arr) {
     arr.forEach(function (d) {
@@ -1691,7 +1753,7 @@ function reget(self) {
             }
             var isNew = (self.$route.query.n == 'y');
             if (isNew) {
-                self.editing = true;
+                self.editing = 1;
                 self.showGuide = false;
                 self.currentFolder = gdata.modules[0].folders[0];
                 self.currentApi = self.currentFolder.children[0];
@@ -1700,9 +1762,8 @@ function reget(self) {
                 }
                 initInterface(self, self.currentApi);
             }
-             console.log("gdata.currentModule");
-             console.log(gdata.currentModule);
-
+           
+            
         }
     }, function () {
         self.status.loading = false;

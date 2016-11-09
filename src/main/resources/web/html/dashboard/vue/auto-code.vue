@@ -2,8 +2,8 @@
 	<div class="auto-code">
 		<div class="data-body">
 			<ul class="nav nav-tabs" style="height: 40px;">
-				<li v-for="item in card" :class="curView.substring(0,1)==$index?'active':'' ">
-					<a v-link="$index==0 ? '0' :  $index">{{item.name}}</a>{{ '' | dateFormat}}
+				<li v-for="item in card" :class=" (curView == $index || (curView>$index&& curView<1+$index))?'active':'' ">
+					<a  v-link="'/autoCode/'+($index==0 ? 0 :  $index)+'/'+projectId"  >{{item.name}}</a>
 				</li>
 			</ul>
 			
@@ -69,9 +69,7 @@
 				</div>
 			</div>
 			<!--业务表添加结束-->
-
-			
-
+ 
 			<!--业务表修改-->
 			<div id="inputForm" class="form-horizontal genTableAdd cardBox2 cardBox" :class="curView==1.1 ? 'on': '' ">
 				<input id="id" name="id" type="hidden" v-model="saveGenTableFormFilter.id" >

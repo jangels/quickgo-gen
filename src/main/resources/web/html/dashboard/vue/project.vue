@@ -1,8 +1,10 @@
 <template>
 <div class="project">
-		<ul class="list box" v-show="!selectPro.id">
-			<li :class="projects.length==1&&$index==0?'t3' :'t'+($index+1)  " v-for="item in projects | filterBy filter in 'name'" @click="selectPro=item" >
-				<p class="tit" >{{item.name}}</p>
+		<ul class="list box" v-show="!selectPro.id"  transition="animateRightOut">
+			<li :class="projects.length==1&&$index==0?'t3' :'t'+($index+1)  " v-for="item in projects | filterBy filter in 'name'" @click="selectProFun(item)" >
+				<p class="tit" >
+					<span>{{item.name.substring(0,1) }}</span>
+				</p>
 				<p class="dis" >{{item.name}}</p>
 			</li>
 			<li class="add t1" v-link="{path:'/add'}" >
@@ -12,21 +14,30 @@
 		</ul>
 		
 		
-		<ul class="list2 box" v-show="selectPro.id">
-			 <li class="t1"  v-link="{ path: '/project/'+selectPro.id,params:{name:selectPro.name}}"  >
-		    	<p class="tit" >API管理</p>
+		<ul class="list2 box" v-show="selectPro.id" transition="animateRightOut">
+			 <li class="t4"  v-link="{ path: '/project/'+selectPro.id,params:{name:selectPro.name}}"  >
+		    	<p class="icon" ><i class="icon-apis"></i> </p>
+		    	<p class="dis" >API管理</p>
 		    </li>
-			 <li class="t2"   v-link="'/autoCode/0'"  >
-		    	<p class="tit" >代码生成</p>
+			 <li class="t3"   v-link="'/autoCode/0/'+selectPro.id"  >
+			 	<p class="icon" ><i class="icon-code"></i> </p>
+		    	<p class="dis" >代码生成</p>
 		    </li>
-			<li class="t3"   v-link="'/project/'+selectPro.id+'/members'">
-		    	<p class="tit" >成员管理</p>
+		 	<li class="t3"   v-link="'/project/'+selectPro.id+'/members'">
+				<p class="icon" ><i class="icon-team"></i> </p>
+		    	<p class="dis" >成员管理</p>
 		    </li>
-		    <li class="t4"   v-link="'/project/'+selectPro.id+'/settings'">
-		    	<p class="tit" >项目设置</p>
+		    <li class="t2"   v-link="'/project/'+selectPro.id+'/settings'">
+		    	<p class="icon" ><i class="icon-set"></i> </p>
+		    	<p class="dis" >项目设置</p>
 		    </li>
-		    <li class="tend"   v-on:click="selectPro={}">
-		    	<p class="tit" >退出当前项目</p>
+		      <li class="t1"   v-link="'/project/'+selectPro.id+'/transfer'">
+				<p class="icon" ><i class="icon-team"></i> </p>
+		    	<p class="dis" >项目转让和删除</p>
+		    </li>
+		    <li class="t6 tend"   v-on:click="selectPro={} ,$parent.projectName =null ">
+		    	<p class="icon" ><i class="icon-end"></i> </p>
+		    	<p class="dis" >切换项目</p>
 		    </li>
 		   
 		</ul>
@@ -40,12 +51,12 @@
     var projects={
     	selectPro:{},
         showContent:false,
-        projects:[{"name":"智慧怀柔" , "id" : "2454215saf;kj"}],
+        projects:[{"name":"无数据" , "id" : ""}],
         filter:''
     };
     function load(self){
         utils.get('/project/list.json',{},function(rs){
-            projects.projects=rs.data.projects;
+        	projects.projects=rs.data.projects;
         },null,function(rs){
             
         });
@@ -62,12 +73,7 @@
 				
 			},
 			data: function(transition) {
-//				projects={
-//			    	selectPro:{},
-//			        showContent:false,
-//			        projects:[{"name":"智慧怀柔" , "id" : "2454215saf;kj"}],
-//			        filter:''
-//			    };
+
 			}
 		},
         created: function() {
@@ -79,6 +85,12 @@
       
         },
         methods: {
+        	selectProFun:function(item){
+        		this.selectPro=item ; 
+        		this.$parent.projectId = item.id ;
+        		this.$parent.projectName= item.name;
+        		 
+        	}
            
         }
     }

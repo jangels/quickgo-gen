@@ -66,5 +66,6 @@ doc/
 
 #打包文件
 node_modules/
-
+resources/web/built/
+resources/web/dist/
 

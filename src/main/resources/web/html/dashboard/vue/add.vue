@@ -1,48 +1,30 @@
 <template>
-    <div class="db-view-new">
+    <div class="db-view-new win-card-box">
 
         <div class="step1" v-if="!success">
             <validator name="af">
-                <div class="dvn-title">
-                    <h2>添加项目</h2>
-                    <br/>
-                    <p>欢迎使用快狗，在这里您可以创建项目、接口，通过简单操作便可以完成对接口管理。</p>
-                </div>
-                <br/><br/>
-                <div class="form db-view-form">
-                    <div class="item">
-                        <div class="col-sm-2 label">项目名称</div>
-                        <div class="col-sm-10">
-                            <input type="text" v-validate:project-name="{required:true,maxlength:20}" v-model="projectName" maxlength="20"
-                                   initial="off" class="text invalid" placeholder="请输入项目名称">
-                            <div class="tip" v-if="$af.projectName.invalid">{{$af.projectName.errors[0].message}}</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-sm-2 label">项目描述</div>
-                        <div class="col-sm-10">
-                            <textarea rows="10" v-model="project.description" placeholder="请输入项目描述"
-                                      class="text" maxlength="300"></textarea>
-                            <div class="tip"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-sm-2 label">项目公开性</div>
-                        <div class="col-sm-10">
-                            <p><input type="radio" v-model="project.permission" value="PUBLIC" id="dvnr-private"> <label
-                                    for="dvnr-private">私有项目（只有加入项目后的成员才能看见）</label></p>
-                            <p><input type="radio" v-model="project.permission" value="PRIVATE" id="dvnr-public"> <label
-                                    for="dvnr-public">公开项目（所有用户均能看见）</label></p>
-                            <div class="tip"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-sm-2 label"></div>
-                        <div class="col-sm-3">
-                            <input type="submit" value="创建项目" v-on:click="create" class="btn btn-primary btn-lg">
-                        </div>
-                    </div>
-                </div>
+			    <ul class="win-card">
+			    	  <li class="tit">
+				      	<p ><i class="icon icon-set"></i> 创建项目</p>
+				      </li>
+			    		
+			    	  <li >
+				      	<input type="text" v-validate:project-name="{required:true,maxlength:20}" v-model="projectName" maxlength="20"
+			                                   initial="off" class="text invalid" placeholder="项目名称" /> 
+				      	<span class="tip" v-if="$af.projectName.invalid">{{$af.projectName.errors[0].message}}</span>
+				      </li>
+			    	 <li>
+				      <textarea rows="10" v-model="project.description" placeholder="请输入项目描述" class="text" maxlength="300"></textarea>
+				    </li>
+				    <li >
+			            <p>
+			                              项目属性：
+			            <input type="radio" v-model="project.permission" value="PUBLIC" id="dvnr-private"><label for="dvnr-private">私有项目</label>
+			            <input type="radio" v-model="project.permission" value="PRIVATE" id="dvnr-public"><label for="dvnr-public">公开项目</label>
+			             <input type="submit" value="创建项目" v-on:click="create" class="btn-right btn btn-primary btn-lg">
+			            </p>
+				    </li>
+			    </ul>        	
             </validator>
         </div>
         <div class="step2" v-else>

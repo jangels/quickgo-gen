@@ -19,12 +19,12 @@
                     <option value="number">number</option>
                     <option value="object">object</option>
                     <option value="array">array</option>
-                    <option value="array[number]">array[number]</option>
+                    <!--<option value="array[number]">array[number]</option>
                     <option value="array[boolean]">array[boolean]</option>
                     <option value="array[string]">array[string]</option>
                     <option value="array[object]">array[object]</option>
                     <option value="array[array]">array[array]</option>
-                    <option value="file">file</option>
+                    <option value="file">file</option>-->
                 </select>
             </li>
             <li class="col-sm-2 input">

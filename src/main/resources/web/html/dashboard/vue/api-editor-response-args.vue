@@ -18,11 +18,11 @@
                     <option value="boolean">boolean</option>
                     <option value="object">object</option>
                     <option value="array">array</option>
-                    <option value="array[number]">array[number]</option>
+                    <!--<option value="array[number]">array[number]</option>
                     <option value="array[boolean]">array[boolean]</option>
                     <option value="array[string]">array[string]</option>
                     <option value="array[object]">array[object]</option>
-                    <option value="array[array]">array[array]</option>
+                    <option value="array[array]">array[array]</option>-->
                 </select>
             </li>
             <li class="col-sm-4 input"><input type="text" class="text" v-model="item.description" value="{{item.description}}"></li>

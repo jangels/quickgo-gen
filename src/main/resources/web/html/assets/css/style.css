@@ -349,10 +349,9 @@ body.modal-open {
 	border: 1px solid #ccc;
 	border-left: none;
 	border-top: none;
-	height: 32px;
+	height: 40px;
 	line-height: 20px;
-	overflow-y: auto;
-	overflow-x: hidden;
+	
 	outline: none;
 }
 
@@ -1218,7 +1217,7 @@ section {
 }
 
 .api-modules-tab {
-	position: fixed;
+	position: absolute;
 	z-index: 2;
 	top: 0;
 	left: 45%;
@@ -1945,11 +1944,11 @@ body.profile .dbl-userinfo {
 
 .db-right .db-nav {
 	display: block;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #dddddd;
 }
 
 .db-nav .db-back {
-	border-right: 1px solid #e1e1e1;
+	border-right: 1px solid #dddddd;
 	/*margin: 0 10px 0 5px;*/
 }
 
@@ -2105,12 +2104,16 @@ body.profile .dbl-userinfo {
 }
 
 .db-main {
-	padding: 60px 0 0 80px;
+	padding: 60px 0 0 0;
 }
 
 .db-view-form {
-	width: 600px;
+	width: 688px;
+	margin: auto;
 }
+
+
+
 
 
 /****** WELCOME ***********/
@@ -2213,6 +2216,7 @@ body.profile .dbl-userinfo {
 	color: #fff;
 	line-height: 50px;
 	overflow: hidden;
+	display: inline-block;
 }
 
 .dvn-new-users {
@@ -2277,7 +2281,7 @@ body.profile .dbl-userinfo {
 
 .db-m-list li .user-logo {
 	border-radius: 100%;
-	display: block;
+	display: inline-block;
 	width: 50px;
 	height: 50px;
 }
@@ -2431,8 +2435,8 @@ footer {
 }
 
 .login-register-body {
-	background: rgb(36, 40, 44) url(../img/bj1.jpg);
-	background-size: cover;
+	/*background: rgb(36, 40, 44) url(../img/bj1.jpg);
+	background-size: cover;*/
 }
 
 .login-form.mc {
@@ -3118,41 +3122,140 @@ legend+.control-group {
 
 
 /*创建项目*/
+body.dashboard:before { 
+	position: fixed;
+	top:0;width: 100%;height: 100%;
+	z-index: -1;
+	content: "";
+	background: #fefefe;
+	}
 
 .project {}
 .project .box {
-    width: 780px;
+    width: 1000px;
     margin: 20px auto 0px;
     overflow: hidden;
+    text-align: center;
+    font-size: 0;
  }
 .project  .box li {
-    width: 360px;
+    width: 220px;
     height: 220px;
     overflow: hidden;
     margin: 10px;
-    float: left;
+    display: inline-block;
     position: relative;
     cursor: pointer;
-    background: #0cb2ff;
-    color: #fff;
-    font-size:44px;
+    background: #9babba;
+    color: #9babba;
+    font-size:55px;
+    font-family: "微软雅黑";
 }
 
-.project  .box li.t1 {width: 360px;height: 220px;background: #007cff;}
-.project  .box li.t2 {width: 360px;height: 220px;background: #ffa90c;}
-.project  .box li.t3 {width: 500px;height: 220px;background: #ff590c;}
-.project  .box li.t4 {width: 220px;height: 220px;background: #0cb2ff;}
-.project  .box li.t5 {width: 260px;height: 220px;background: #61b15e;}
-.project  .box li.t6 {width: 220px;height: 220px;background: #26e4e0;}
-.project  .box li.add {width: 220px;height: 220px;background: #007cff;}
-.project  .box li.tend {width: 740px;height:120px;background: #f4f4f4;color: #c7c2c0;font-size:24px;}
+.project  .box li.t1 {width: 360px;background: #475c6f;color: #475c6f;}
+.project  .box li.t2 {width: 360px;background: #617985;color: #617985;}
+.project  .box li.t3 {width: 220px;background: #9babba;color: #9babba;}
+.project  .box li.t4 {width: 500px;background: #32465f;color: #32465f;}
+.project  .box li.t5 {width: 220px;background: #ced7de;color: #ced7de;}
+.project  .box li.t6 {width: 220px;background: #76c2ad;color: #76c2ad;}
+.project  .box li.t7 {width: 220px;background: #9babba;color: #9babba;}
+.project  .box li.add {width: 220px;background: #cbcdc2;color: #fff;}
 
 
-.project  .box li .tit{
-	position: absolute;width: 100%;height: 50px;
-	line-height: 50px;text-align: center;
-	top: 50%;left: 0;margin-top: -25px;
+/*.project  .box.list2 li{background: #2f334b;}*/
+.project  .box.list2 li.tend {background: #d56f6f;font-size:24px;}
 
+
+.project  .box li .tit{text-align: center;margin-top: 35px;}
+.project  .box li .tit span{display: inline-block;width: 110px;height: 110px;background: #fff; border-radius:50% ;line-height: 110px;text-transform:uppercase;overflow: hidden;  vertical-align: middle; }
+.project  .box li .dis{ width: 100%;height:30px;line-height:30px; font-size:20px;color: #fff;text-align:center;margin-top: 20px;}
+.project  .box li .icon{text-align:center ;margin-top:30px;padding: 0;font-size: 0;margin-bottom: -10px;}
+.project  .box li .icon i{display: inline-block;width: 110px;height: 110px; }
+.icon-apis{background:url("../img/icon/icon-api.png") no-repeat  bottom ;background-size:100% 100%; }
+.icon-team{background:url("../img/icon/icon-team.png") no-repeat  bottom ;background-size:100% 100%; }
+.icon-code{background:url("../img/icon/icon-code.png") no-repeat  bottom ;background-size:100% 100%; }
+.icon-set{background:url("../img/icon/icon-set.png") no-repeat  bottom ; background-size:100% 100%;}
+.icon-end{background:url("../img/icon/icon-end.png") no-repeat  bottom ; background-size:100% 100%;}
+
+/* 从右侧进入 的  动画 animateRightIn*/
+.animateRightOut-transition {transition: all .3s ease;-webkit-transform: scale(1);}
+.animateRightOut-leave{display:none ; -webkit-transform: scale(0) ;}
+.animateRightOut-enter {-webkit-transform: scale(0);}
+
+.win-card-box{
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
 }
-.project  .box li .dis{transition: all .5 ease;   position: absolute;width: 100%;height:30px;line-height:30px; font-size:12px;color: #fff;text-align:center;bottom: 0;}
 
+.win-card{
+	vertical-align: top;
+	width: 740px;
+	margin: auto;
+	display: inline-block;
+	text-align: left;
+}
+
+.win-card>li{
+	min-height:56px ;
+	background: #fff;
+	margin-bottom: 15px;
+	padding: 0 20px;
+	overflow-x: hidden;
+	-webkit-box-shadow:0 2px 10px #ddd;  
+	-moz-box-shadow:0 2px 10px #ddd;  
+	box-shadow:0 2px 10px #ddd;  
+}
+.win-card>li p{
+	line-height:56px ;
+}
+.win-card>li input[type=text]{
+	width: 440px;
+	border: none;
+	display: inline-block;
+	min-height:56px ;
+	line-height: 56px;
+	margin: 0;
+}
+.win-card>li textarea{
+	margin:0;
+	padding:20px 0 ;
+	width: 668px;
+	min-height:110px ;
+	line-height:30px;
+	border: none !important;
+}
+.win-card>li.tit,.win-card>li.tit p{background: #32465f;color: #fff;font-size:22px;line-height:70px; }
+.win-card>li .icon{display: inline-block;width: 30px;height:30px;vertical-align: top;margin-top:20px;}
+.win-card>li .tip{    border-top: 1px solid #ddd;line-height: 56px;margin: 0;}
+.btn-right{padding: 0; float: right;height:56px;line-height:56px;width:140px;margin-right: -20px;font-size:24px;background:#32465f;border: none; }
+
+
+.db-members .usersList{height:90px;position: relative;overflow: hidden;}
+.db-members .usersList .avatar{margin :20px 0;padding: 0;display:inline-block;float: left;}
+.db-members .usersList .info{float: left;height: 90px;box-sizing: border-box;padding:15px 30px;}
+.db-members .usersList .info p{line-height:30px;}
+.db-members .usersList .info p span{}
+.db-members .usersList .del{float: right;line-height: 90px;}
+.db-members .usersList .del i{font-size: 40px;}
+
+.db-members  .dbv-chose-users>li{    width: 100px;
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    height: 110px;
+    text-align: center;
+    border-radius: 9px;
+    padding: 15px;
+    margin:0 10px 10px 0 ;
+}
+.db-members  .dbv-chose-users>li .dbv-user-icon{
+	    height: 62px;
+}
+.db-members  .dbv-chose-users>li p{
+	line-height: 12px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
