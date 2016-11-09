@@ -1,7 +1,7 @@
 package com.quickgo.platform.websocket;
 
 
-import com.quickgo.platform.utils.JsonUtils;
+import com.quickgo.platform.utils.JsonUtil;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 
@@ -57,7 +57,7 @@ public class WsUtils {
         if(sessions!= null){
             for(Session session :sessions){
                 try {
-                    session.getBasicRemote().sendText(JsonUtils.toString(message));
+                    session.getBasicRemote().sendText(JsonUtil.toString(message));
                 } catch (IOException e) {
                     log.error(e.getMessage(),e);
                 }

@@ -177,7 +177,6 @@ public class GenUtils {
 	 * @param clazz
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	public static <T> T fileToObject(String fileName, Class<?> clazz){
 		try {
 			String pathName = "/templates/tomvc/" + fileName;

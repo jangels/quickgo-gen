@@ -37,6 +37,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import static com.quickgo.platform.param.Result.returnInfo;
+
 
 /**
  *
@@ -64,7 +66,6 @@ public class ProjectController {
     private IUserService userService;
 
 
-//    @Get("list")
     @RequestMapping("/list")
     public Object list(String token) {
         User user = MemoryUtils.getUser(token);
@@ -73,7 +74,7 @@ public class ProjectController {
             projects = projectService.getProjects(user.getId());
         }
 
-        return Result.returnInfo(new _HashMap<>().add("projects", projects));
+        return returnInfo(new _HashMap<>().add("projects", projects));
 
     }
 
@@ -90,10 +91,14 @@ public class ProjectController {
         }
         User user = MemoryUtils.getUser(token);
         if (project.getPermission().equals(Project.Permission.PRIVATE)) {
-            AssertUtils.isTrue(user != null, "无访问权限");
+           if(user == null){
+               return  returnInfo("无访问权限");
+           }
             if (!user.getId().equals(project.getUserId())) {
                 boolean is = projectUserService.checkUserHasProjectPermission(user.getId(), project.getId());
-                AssertUtils.isTrue(is, "无访问权限");
+                if(!is){
+                    return  returnInfo("无访问权限");
+                }
             }
         }
         if (user != null) {
@@ -143,7 +148,7 @@ public class ProjectController {
             modules.add(module);
         }
 
-        return Result.returnInfo(new _HashMap<>().add("modules", modules).add("project", project));
+        return returnInfo(new _HashMap<>().add("modules", modules).add("project", project));
     }
 
 
@@ -151,12 +156,12 @@ public class ProjectController {
     public Object info(@PathVariable String id) {
         Project project = projectService.getProject(id);
         AssertUtils.isTrue(project != null, "project is null");
-        return Result.returnInfo(new _HashMap<>().add("project", project));
+        return returnInfo(new _HashMap<>().add("project", project));
     }
 
     @RequestMapping("/{id}/shares")
     public Object shares(@PathVariable String id) {
-        return Result.returnInfo(new _HashMap<>()
+        return returnInfo(new _HashMap<>()
                 .add("shares", shareService.getSharesByProjectId(id)));
     }
 
@@ -164,7 +169,7 @@ public class ProjectController {
     /**
      * 设置是否常用项目
      *
-     * @param id
+     * @param id id
      * @param parameter 参数
      */
     @RequestMapping("/{id}/commonly")
@@ -174,7 +179,7 @@ public class ProjectController {
         AssertUtils.notNull(isCommonlyUsed, "isCommonlyUsed is null");
         int rs = projectUserService.updateCommonlyUsedProject(id, userId, isCommonlyUsed);
         AssertUtils.isTrue(rs > 0, "操作失败");
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     //创建默认模块
@@ -210,7 +215,7 @@ public class ProjectController {
     @RequestMapping("/{id}/users")
     public Object getUsers(@PathVariable String id, Parameter parameter) {
         List<User> users = projectUserService.getUsersByProjectId(id);
-        return Result.returnInfo(new _HashMap<>().add("users", users)
+        return returnInfo(new _HashMap<>().add("users", users)
                 .add("fileAccess", ConfigUtils.getFileAccessURL()));
     }
 
@@ -226,14 +231,18 @@ public class ProjectController {
             BeanUtils.copyProperties(project,projectUser);
             projectUser.setProjectId(project.getId());
             projectUser.setId(Validate.uuid());
-            AssertUtils.notNull(project.getName(), "missing name");
-            AssertUtils.notNull(project.getUserId(), "missing userId");
+            if(StringUtils.isEmpty(project.getName())){
+                return  returnInfo("missing name");
+            }
+            if(StringUtils.isEmpty(project.getUserId())){
+                return  returnInfo("missing userId");
+            }
             int rs = projectService.createProject(project);
             AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
             int re = projectUserService.createProjectUser(projectUser);
             AssertUtils.isTrue(re > 0, Message.OPER_ERR);
             AsyncTaskBus.instance().push(Log.create(token, Log.CREATE_PROJECT, project.getName(), project.getId()));
-            return Result.returnInfo(new _HashMap<>().add("id",project.getId()));
+            return returnInfo(new _HashMap<>().add("id",project.getId()));
     }
 
     private void checkUserHasEditPermission(String projectId, String token) {
@@ -243,12 +252,19 @@ public class ProjectController {
         AssertUtils.isTrue(permission, "无操作权限");
     }
 
-    private void checkUserHasOperatePermission(String projectId, String token) {
+    private String checkUserHasOperatePermission(String projectId, String token) {
         User user = MemoryUtils.getUser(token);
-        AssertUtils.notNull(user, "无操作权限");
+        if(user==null){
+            return "无操作权限";
+        }
         Project project = projectService.getProject(projectId);
-        AssertUtils.notNull(project, "项目不存在");
-        AssertUtils.isTrue(user.getId().equals(project.getUserId()), "无操作权限");
+        if(project==null){
+            return "项目不存在";
+        }
+        if(!user.getId().equals(project.getUserId())){
+            return "无操作权限";
+        }
+        return "";
     }
 
 
@@ -271,13 +287,18 @@ public class ProjectController {
 
         String projectName = projectService.getProjectName(id);
         AsyncTaskBus.instance().push(Log.create(token, Log.UPDATE_PROJECT, projectName, id));
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     @RequestMapping("/{id}/transfer")
     public Object transfer(@PathVariable("id") String id, String  userId,String token) {
-        AssertUtils.isTrue(StringUtils.isNotBlank(userId), "missing userId");
-        checkUserHasOperatePermission(id, token);
+        if(!StringUtils.isNotBlank(userId)){
+            return returnInfo(null,"missing userId");
+        }
+        String result = checkUserHasOperatePermission(id, token);
+        if(StringUtils.isNotBlank(result)){
+            return Result.returnInfo(null,result);
+        }
         Project temp = new Project();
         temp.setId(id);
         temp.setUserId(userId);
@@ -285,7 +306,7 @@ public class ProjectController {
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         String projectName = projectService.getProjectName(id);
         AsyncTaskBus.instance().push(Log.create(token, Log.TRANSFER_PROJECT, projectName, id));
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
 
@@ -298,12 +319,15 @@ public class ProjectController {
      */
     @RequestMapping("/delete/{id}")
     public Object delete(@PathVariable("id") String id, String token) {
-        checkUserHasOperatePermission(id, token);
+        String result = checkUserHasOperatePermission(id, token);
+        if(StringUtils.isNotBlank(result)){
+            return Result.returnInfo(null,result);
+        }
         int rs = projectService.deleteProject(id);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         String projectName = projectService.getProjectName(id);
         AsyncTaskBus.instance().push(Log.create(token, Log.DELETE_PROJECT, projectName, id));
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     @RequestMapping("/save")
@@ -311,7 +335,10 @@ public class ProjectController {
         if (StringUtils.isEmpty(id)) {
             return create(token,project);
         }
-        checkUserHasOperatePermission(id, token);
+        String result = checkUserHasOperatePermission(id, token);
+        if(StringUtils.isNotBlank(result)){
+            return Result.returnInfo(null,result);
+        }
         return update(id, token,project);
     }
 
@@ -412,7 +439,7 @@ public class ProjectController {
             }
         }
         AssertUtils.isTrue(rs > 0, "操作失败");
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     /**
@@ -428,9 +455,16 @@ public class ProjectController {
         ProjectUser pu = new ProjectUser();
         pu.setId(Validate.id());
         pu.setUserId(project.getUserId());
-        AssertUtils.isTrue(org.apache.commons.lang3.StringUtils.isNotBlank(pu.getUserId()), "missing userId");
-        AssertUtils.isTrue(projectUserService.checkUserHasProjectPermission(id, project.getUserId()), "用户已存在该项目中");
-        AssertUtils.isTrue(!pu.getUserId().equals(user.getId()), "不能邀请自己");
+        if(!StringUtils.isNotBlank(pu.getUserId())){
+            return returnInfo(null,"missing userId");
+        }
+        boolean is = projectUserService.checkUserHasProjectPermission(id, project.getUserId());
+        if(!is){
+            return returnInfo(null,"用户已存在该项目中");
+        }
+        if(pu.getUserId().equals(user.getId())){
+            return returnInfo(null,"不能邀请自己");
+        }
         pu.setCreateTime(new Date().getTime());
         pu.setStatus(ProjectUser.Status.PENDING);
         pu.setEditable(ProjectUser.Editable.NO);
@@ -438,7 +472,7 @@ public class ProjectController {
         int rs = projectUserService.createProjectUser(pu);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         MessageBus.instance().push("PROJECT.INVITE", pu.getProjectId(), new String[]{pu.getUserId()});
-        return Result.returnInfo(pu.getId());
+        return returnInfo(pu.getId());
     }
 
     /**
@@ -452,23 +486,31 @@ public class ProjectController {
     @RequestMapping("/{id}/invite/email")
     public Object inviteByEmail(@PathVariable("id") String id, String token,String email) {
         String userId = userService.getUserIdByEmail(email);
-        AssertUtils.isTrue(userId != null, "该邮箱未注册");
+        if(StringUtils.isEmpty(userId)){
+            return  returnInfo("该邮箱未注册");
+        }
         User user = MemoryUtils.getUser(token);
-        AssertUtils.isTrue(!userId.equals(user.getId()), "不能邀请自己");
-        AssertUtils.isTrue(projectUserService.checkProjectUserExists(id, userId), "用户已存在该项目中");
-
+        if(userId.equals(user.getId())){
+            returnInfo("不能邀请自己");
+        }
+        boolean is = projectUserService.checkProjectUserExists(id, userId);
+        if(is){
+            returnInfo("用户已存在该项目中");
+        }
         ProjectUser pu = new ProjectUser();
         pu.setId(Validate.id());
         pu.setUserId(userId);
         pu.setProjectId(id);
         pu.setEditable(ProjectUser.Editable.YES);
-        AssertUtils.isTrue(StringUtils.isNotBlank(pu.getProjectId()), "missing projectId");
+        if(!StringUtils.isNotBlank(pu.getProjectId())){
+            return returnInfo("missing projectId");
+        }
         pu.setCreateTime(new Date().getTime());
         pu.setStatus(ProjectUser.Status.PENDING);
         int rs = projectUserService.createProjectUser(pu);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         MessageBus.instance().push("PROJECT.INVITE", pu.getProjectId(), new String[]{pu.getUserId()});
-        return Result.returnInfo(pu.getId());
+        return returnInfo(pu.getId());
     }
 
 
@@ -485,7 +527,7 @@ public class ProjectController {
         pu.setStatus(ProjectUser.Status.ACCEPTED);
         int rs = projectUserService.createProjectUser(pu);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     /**
@@ -499,7 +541,7 @@ public class ProjectController {
         int rs = projectUserService.createProjectUser(pu);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         MessageBus.instance().push("PROJECT.INVITE.REFUSE", pu.getProjectId(), pu.getUserId());
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
 
@@ -513,15 +555,25 @@ public class ProjectController {
      */
     @RequestMapping("/{id}/pu/{userId}")
     public Object removeMember(@PathVariable("id") String id, @PathVariable("userId") String userId, String token) {
-        checkUserHasOperatePermission(id, token);
+        String result = checkUserHasOperatePermission(id, token);
+        if(StringUtils.isNotBlank(result)){
+            return Result.returnInfo(null,result);
+        }
         Project project = projectService.getProject(id);
-        AssertUtils.notNull(project, "项目不存在");
-        AssertUtils.isTrue(!project.getUserId().equals(userId), "不能移除自己");
+        if(project==null){
+           return returnInfo(null,"项目不存在");
+        }
+        boolean isExist = project.getUserId().equals(userId);
+        if(isExist){
+            return  Result.returnInfo(null,"不能移除自己");
+        }
         User temp = MemoryUtils.getUser(token);
-        AssertUtils.isTrue(temp.getId().equals(project.getUserId()), "无操作权限");
+        if(!temp.getId().equals(project.getUserId())){
+            return  Result.returnInfo(null,"无操作权限");
+        }
         int rs = projectUserService.deleteProjectUser(id, userId);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
 
@@ -538,10 +590,13 @@ public class ProjectController {
     public Object editProjectEditable(@PathVariable("id") String projectId, @PathVariable("userId") String userId,
                                    @PathVariable("editable") String editable, String token) {
         AssertUtils.isTrue(ProjectUser.Editable.YES.equals(editable) || ProjectUser.Editable.NO.equals(editable), "参数错误");
-        checkUserHasOperatePermission(projectId, token);
+        String result = checkUserHasOperatePermission(projectId, token);
+        if(StringUtils.isNotBlank(result)){
+            return Result.returnInfo(null,result);
+        }
         int rs = projectUserService.updateProjectUserEditable(projectId, userId, editable);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
     /**
@@ -558,7 +613,7 @@ public class ProjectController {
         AssertUtils.isTrue(!project.getUserId().equals(userId), "项目所有人不能退出项目");
         int rs = projectUserService.deleteProjectUser(id, userId);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
-        return Result.returnInfo(rs);
+        return returnInfo(rs);
     }
 
 
@@ -729,7 +784,7 @@ public class ProjectController {
             document.close();
             byte[] data = baos.toByteArray();
             AsyncTaskBus.instance().push(Log.create(token, Log.EXPORT_PROJECT, project.getName(), project.getId()));
-            return Result.returnInfo(new PdfView(data,project.getName()+".pdf"));
+            return returnInfo(new PdfView(data,project.getName()+".pdf"));
         } finally {
             //document.close();
             IOUtils.closeQuietly(baos);

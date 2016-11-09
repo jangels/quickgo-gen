@@ -5,6 +5,8 @@ package com.quickgo.platform.model;
 
 import org.hibernate.validator.constraints.Length;
 
+import java.util.List;
+
 
 /**
  * 生成方案Entity
@@ -23,7 +25,9 @@ public class GenScheme extends DataEntity<GenScheme> {
 	private String functionNameSimple;		// 生成功能名（简写）
 	private String functionAuthor;		// 生成功能作者
 	private GenTable genTable;		// 业务表名
-	
+	private List<Interface> interfaces;
+
+
 	private String flag; 	// 0：保存方案； 1：保存方案并生成代码
 	
 	private Boolean replaceFile=false;	// 是否替换现有文件    0：不替换；1：替换文件
@@ -133,6 +137,13 @@ public class GenScheme extends DataEntity<GenScheme> {
 		this.replaceFile = replaceFile;
 	}
 
+	public List<Interface> getInterfaces() {
+		return interfaces;
+	}
+
+	public void setInterfaces(List<Interface> interfaces) {
+		this.interfaces = interfaces;
+	}
 }
 
 

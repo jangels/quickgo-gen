@@ -1,28 +1,9 @@
 <template>
-	  <li class="fl db-back db-item" v-link="'/project'"><a >控制台 </a></li>
-	  <li class="fl db-back db-item" v-if="projectName" >{{projectName}}</li>
-	 <!-- <li class="fl db-back db-item" v-link="'/project'"><a ><i class="iconfont icon-left"></i>后退</a></li>-->
-	  
-    <li class="fl db-back db-item" v-if="path.indexOf('/profile')==0"><a v-link="'/project'"><i class="iconfont icon-left"></i>返回控制台 </a></li>
+		 <li class="fl db-back db-item" v-if="$parent.projectName" ><a>{{$parent.projectName}}</a></li>
+    <li class="fl db-back db-item"  ><a v-link="'/'" v-if="path=='/'"  >控制台</a></li>
+    <li class="fl db-back db-item"  ><a v-link="'/'" v-if="path!=='/'" ><i class="iconfont icon-left"></i>返回控制台 </a></li>
   
     <template v-if="$parent.showProject">
-     <!--<li class="fl db-item"  :class="pageName=='1' ? 'current':'' "><a v-link="'/project/'+projectId+'/members'" v-on:click="pageName='1'">成员管理</a></li>
-    <li class="fl db-item"  :class="pageName=='2' ? 'current':'' "><a v-link="'/project/'+projectId+'/settings'" v-on:click="pageName='2'">项目设置</a></li>
-    <li class="fl db-item"  :class="pageName=='3' ? 'current':'' "><a v-link="'/autoCode/0'" v-on:click="pageName='3'">代码生成</a></li>
-    <li class="fl db-item" :class="(pageName=='4_1' || pageName=='4_2' || pageName=='4_3' || pageName=='4_4' ) ? 'current':'' ">
-        <a v-on:click.stop.prevent="status.show='more'">更多操作<i class="iconfont icon-angeldownblock"></i></a>
-        <ul class="db-item-sub" v-show="status.show=='more'">
-            <li class="db-item" :class="pageName=='4_1' ? 'current':'' "><a v-link="'/project/'+projectId+'/quit'" v-on:click="pageName='4_1'"><i class="iconfont icon-shanchu"></i>退出项目</a>
-            </li>
-            <li class="db-item" :class="pageName=='4_2' ? 'current':'' "><a v-link="'/project/'+projectId+'/transfer'" v-on:click="pageName='4_2'"><i
-                    class="iconfont icon-shanchu"></i>项目转让</a></li>
-            <li class="db-item" :class="pageName=='4_3' ? 'current':'' " ><a v-link="'/project/'+projectId+'/release'" v-on:click="pageName='4_3'"><i
-                    class="iconfont icon-shanchu"></i>删除项目</a></li>
-            <li class="db-item" :class="pageName=='4_4' ? 'current':'' "><a v-link="'/project/'+projectId+'/export'" v-on:click="pageName='4_4'"><i class="iconfont icon-shanchu"></i>导出项目</a>
-            </li>
-        
-        </ul>
-    </li>-->
     </template>
     <li class="fr db-item profile">
         <a v-on:click.stop.prevent="status.show='profile'" class="cb">
