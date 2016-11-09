@@ -187,8 +187,6 @@ $._ajax_ = function(params){
     var complete = params.complete;
     var success = params.success;
     params.complete = function (xhr, result) {
-        console.log(xhr)
-        console.log(result)
         if (result == 'error') {
             if (xhr.readyState == 0) {
                 toastr.error('网络错误');
@@ -202,14 +200,12 @@ $._ajax_ = function(params){
     };
     var expired = params.expired;
     params.success = function (rs) {
-        console.log("sss:00")
-        console.log(rs)
         if (rs.result  ) {
             if(parseInt(rs.result) == 200){
                 success.apply(this, arguments);
                 return ;
             }else{
-                toastr.error(rs.message);
+                toastr.error(rs.msg);
                 return ;
             }
 
