@@ -839,7 +839,7 @@
 				<thead>
 					<tr>
 						<th>分类</th>
-						<th>选择</th>
+						<th><input type="checkbox" />全选</th>
 						<th>接口名称</th>
 						<th>接口地址</th>
 					</tr>
@@ -855,10 +855,10 @@
 					</tbody>
 				</tbody>
 			</table>
+			<div class="">
+				<a class="btn btn-primary" @click="">提交</a>
+			</div>
 		</div>
-		
-		
-		
 	
         <div class="modal env-modal" v-cloak v-if="status.envModal">
             <div class="modal-header">

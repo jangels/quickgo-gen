@@ -374,6 +374,12 @@ var page = {
                 this.instance = null;
             }
         }
+    },
+    getModuleInterface:function(data){
+        utils.get('/interface/getInterfacesByMid',data,function(rs){
+        	console.log(rs)
+            gdata.currentModule = rs.data ;
+        });
     }
 };
 export default{
@@ -568,6 +574,7 @@ export default{
             }
         },
         "editing": function (value) {
+        	console.log(value)
             if (value) {
                 if (!window.editor && this.showGuide) {
                     var desc = this.project.details;
@@ -575,6 +582,13 @@ export default{
                 }
                 //请求表信息
                 if( gdata.genTableFormList.length ==  0  ){page.getGenTableForm({projectId:gdata.id});}
+                //如果
+                if(value==2){
+                	var params={
+                		moudId:this.id
+                	}
+                	page.getModuleInterface(params);
+                }
             } else {
                 renderViewBox(this.project.details);
                  
