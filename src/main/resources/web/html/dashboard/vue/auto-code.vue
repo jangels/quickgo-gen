@@ -2,18 +2,18 @@
 	<div class="auto-code">
 		<div class="data-body">
 			<ul class="nav nav-tabs" style="height: 40px;">
-				<li v-for="item in card" :class=" (curView == $index || (curView>$index&& curView<1+$index))?'active':'' ">
-					<a  v-link="'/autoCode/'+($index==0 ? 0 :  $index)+'/'+projectId"  >{{item.name}}</a>
+				<li v-for="item in card" :class="curView == item.type || (item.type=='genAdd'&&curView=='genAdd2')  ?'active':'' ">
+					<a  v-link="'/autoCode/'+item.type+'/'+projectId"  >{{item.name}}</a>
 				</li>
-			</ul>
+			</ul> 
 			
 			<!--//业务表列表 开始-->
-			<div class="table-box cardBox1 cardBox" :class="curView==0 ? 'on': '' ">
+			<div class="table-box cardBox1 cardBox" :class="curView=='genList' ? 'on': '' ">
 				<div id="searchForm" class="breadcrumb form-search">
 					<input id="pageNo" name="pageNo" type="hidden" v-model="genTableFilter.pageNo" >
 					<input id="pageSize" name="pageSize" type="hidden" v-model="genTableFilter.pageNo">
 					<input id="orderBy" name="orderBy" type="hidden" v-model="genTableFilter.orderBy">
-					<label>表名：</label><input id="nameLike" name="nameLike" class="input-medium" type="text" v-model="genTableFilter.nameLike" maxlength="50">
+					<label>表名：</label><input  id="nameLike" name="nameLike" class="input-medium" type="text" v-model="genTableFilter.nameLike" maxlength="50">
 					<label>说明：</label><input id="comments" name="comments" class="input-medium" type="text" v-model="genTableFilter.comments" maxlength="50">
 					<label>父表表名：</label><input id="parentTable" name="parentTable" class="input-medium" type="text" v-model="genTableFilter.parentTable" maxlength="50"> &nbsp;
 					<input id="btnSubmit" class="btn btn-primary" type="submit"  @click="getGenTableList" value="查询">
@@ -49,7 +49,7 @@
 			</div>
 			<!--业务表列表结束-->
 			<!--业务表添加开始-->
-			<div class="genTableAdd cardBox2 cardBox" :class="curView==1 ? 'on': '' ">
+			<div class="genTableAdd cardBox2 cardBox" :class="curView=='genAdd' ? 'on': '' ">
 				<div id="inputForm" class="form-horizontal" novalidate="novalidate">
 					<input id="id" name="id" type="hidden" >
 					<br>
@@ -71,7 +71,7 @@
 			<!--业务表添加结束-->
  
 			<!--业务表修改-->
-			<div id="inputForm" class="form-horizontal genTableAdd cardBox2 cardBox" :class="curView==1.1 ? 'on': '' ">
+			<div id="inputForm" class="form-horizontal genTableAdd cardBox2 cardBox" :class="curView=='genAdd2' ? 'on': '' ">
 				<input id="id" name="id" type="hidden" v-model="saveGenTableFormFilter.id" >
 				<legend>基本信息</legend>
 				<div class="control-group">
@@ -211,7 +211,7 @@
 			<!--业务表修改结束-->
 
 			<!--//生成方案列表 开始-->
-			<div class="table-box cardBox3 cardBox" :class="curView==2 ? 'on': '' ">
+			<div class="table-box cardBox3 cardBox" :class="curView=='schemeList' ? 'on': '' ">
 				<div id="searchForm" class="breadcrumb form-search">
  					<label>方案名称 ：</label>
  					<input id="name" v-model="genSchemeFilter.name" class="input-medium" type="text"  maxlength="50"> &nbsp;
@@ -249,7 +249,7 @@
 			<!--生成方案列表 结束-->
 
 			<!--//生成方案添加 开始-->
-			<div class="table-box cardBox4 cardBox" :class="curView==3 ? 'on': '' ">
+			<div class="table-box cardBox4 cardBox" :class="curView=='schemeAdd' ? 'on': '' ">
 				<div id="inputForm" class="form-horizontal">
 					<input id="id" name="id" type="hidden" v-model="saveGenSchemeFilter.id">
 					<input id="flag" name="flag" type="hidden" v-model="saveGenSchemeFilter.flag">

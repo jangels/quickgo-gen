@@ -15,13 +15,13 @@
 		
 		
 		<ul class="list2 box" v-show="selectPro.id" transition="animateRightOut">
+			 <li class="t3"   v-link="'/autoCode/genAdd/'+selectPro.id"  >
+			 	<p class="icon" ><i class="icon-code"></i> </p>
+		    	<p class="dis" >添加业务表</p>
+		    </li>
 			 <li class="t4"  v-link="{ path: '/project/'+selectPro.id,params:{name:selectPro.name}}"  >
 		    	<p class="icon" ><i class="icon-apis"></i> </p>
 		    	<p class="dis" >API管理</p>
-		    </li>
-			 <li class="t3"   v-link="'/autoCode/0/'+selectPro.id"  >
-			 	<p class="icon" ><i class="icon-code"></i> </p>
-		    	<p class="dis" >代码生成</p>
 		    </li>
 		 	<li class="t3"   v-link="'/project/'+selectPro.id+'/members'">
 				<p class="icon" ><i class="icon-team"></i> </p>

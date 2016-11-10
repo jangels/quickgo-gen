@@ -9,15 +9,15 @@ export default {
 		return {
 			projectId : "",
 			transition : {},
-			curView: 0,
+			curView: false,
 			card: [{
-					name: '业务表列表'
+					name: '业务表添加' ,type: 'genAdd'
+				},{
+					name: '业务表列表',type: 'genList'
+				},  {
+					name: '生成方案列表',type: 'schemeList'
 				}, {
-					name: '业务表添加'
-				}, {
-					name: '生成方案列表'
-				}, {
-					name: '生成方案添加'
+					name: '生成方案添加',type: 'schemeAdd'
 				}
 
 			],
@@ -102,6 +102,7 @@ export default {
 		this.$parent.showProject = true;
 	},
 	methods: {
+		
 		init: function() {
 			//module.getGenTableForm({id:"9a8122400a5b45f28dd60fb00ade2d64"},this,true) ;
 			this.saveGenSchemeFilter = {genTable:{}}
@@ -110,7 +111,7 @@ export default {
 			if(history.length>1){
 				history.go(-1);
 			}else{
-				self.$route.router.replace({path:'/autoCode/1'} ) ;
+				self.$route.router.replace({path:'/autoCode/genList'} ) ;
 			}
 		},
 		//获取业务表列表
@@ -157,17 +158,20 @@ export default {
 	watch:{
 		"curView": function (value) {
 			var self = this ;
-         	switch(parseFloat(value)){
-         		case 0 : 
+         	switch(value){
+         		case 'genList' : 
          			module.getGenTableList(self.genTableFilter,self) ;
          		break ;
-         		case 1 : 
+         		case 'genAdd' : 
          			module.getGenTableForm({projectId:self.projectId},self) ;
          		break ;
-         		case 2 :
+         		case 'genAdd2' : 
+         			//module.getGenTableForm({projectId:self.projectId},self,true) ;
+         		break ;
+         		case 'schemeList' :
          			module.genSchemeList({projectId:self.projectId},self) ;
          		break ;
-         		case 3 : 
+         		case 'schemeAdd' : 
          			if(self.transition.to.query.id && !self.genSchemeModify.id ){
          				module.genSchemeModifyById({projectId:self.projectId,id:self.transition.to.query.id },this,true) ;
          			}else{
@@ -197,6 +201,7 @@ var module = {
     		self.genTableFormFilter.name = rs.data.tableList[0].name ;
     		for(var i in self.saveGenTableFormFilter.columnList){
     			var t = self.saveGenTableFormFilter.columnList[i] ;
+    			t.genTable = t.genTable ? t.genTable  : {id:""};
     			t.isPk = t.isPk==1 ? true : false;
 				t.isInsert=t.isInsert==1 ?  true : false;
 				t.isNull=t.isNull==1 ?  true : false;
@@ -205,7 +210,7 @@ var module = {
 				t.isList=t.isList==1 ?  true : false;
     		}
         	if(query){
-        		self.$route.router.go({path:'/autoCode/1.1/'+self.projectId,query:data} ) ;
+        		self.$route.router.go({path:'/autoCode/genAdd2/'+self.projectId,query:data} ) ;
         	}
         });
     },
@@ -264,7 +269,7 @@ var module = {
     		self.saveGenSchemeFilter =  rs.data.genScheme ;
     		self.genTableFormList =rs.data.tableList ;
          	if(query){
-        		self.$route.router.go({path:'/autoCode/3/'+self.projectId,query:data} ) ;
+        		self.$route.router.go({path:'/autoCode/schemeAdd/'+self.projectId,query:data} ) ;
         	}
         });
     },
