@@ -11,7 +11,11 @@ public interface InterfaceMapper extends BaseDao<Interface> {
 
      List<Interface> getInterfacesByModuleIds(String[] moduleIds);
 
+     List<Interface> getInterfacesByIds(List<String> ids);
+
      List<Interface> getInterface(String folderId);
+
+     List<Interface> getInterfaces(String moduleId);
 
 
 }

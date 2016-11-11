@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
 @ConfigurationProperties(prefix = "token",locations = "classpath:config.properties")
-public class ConfigClass {
+public class ConfigProperties {
     private String expires;
 
     public String getExpires() {

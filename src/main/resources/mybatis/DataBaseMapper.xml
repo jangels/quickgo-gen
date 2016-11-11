@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quickgo.platform.dao.DataBaseMapper">
+    <sql id="data">
+        id AS 'id',
+        db_path AS dbPath,
+        db_port AS dbPort,
+        dbname AS 'dbname',
+        userName AS 'userName',
+        password AS 'password',
+        create_time AS 'createTime',
+        update_time AS 'updateTime',
+        del_flag AS 'delFlag'
+    </sql>
+    <select id="get" resultType="com.quickgo.platform.model.DataBase">
+        SELECT
+        <include refid="data"/>
+        FROM data_base a
+        WHERE a.id = #{id} and a.del_flag ='n'
+
+    </select>
+
+    <insert id="insert" parameterType="com.quickgo.platform.model.DataBase">
+        INSERT INTO data_base(
+        id,
+        db_path,
+        db_port,
+        dbName,
+        userName,
+        password,
+        create_time,
+        update_time,
+        del_flag
+        ) VALUES (
+        #{id},
+        #{dbPath},
+        #{dbPort},
+        #{dbName},
+        #{userName},
+        #{password},
+        #{createTime}
+        #{updateTime},
+        #{delFlag}
+        )
+    </insert>
+    <update id="update" parameterType="com.quickgo.platform.model.DataBase">
+        UPDATE data_base
+        <set>
+            <if test="id!=null">
+                id = #{id},
+            </if>
+            <if test="dbPath!=null">
+                db_path = #{dbPath},
+            </if>
+            <if test="dbPort!=null">
+                db_port = #{dbPort},
+            </if>
+            <if test="dbName!=null">
+                dbName = #{dbName},
+            </if>
+            <if test="userName!=null">
+                userName = #{userName},
+            </if>
+            <if test="password!=null">
+                password = #{password},
+            </if>
+            <if test="createTime!=null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime!=null">
+                update_time = #{updateTime},
+            </if>
+            <if test="delFlag!=null">
+                del_flag = #{delFlag}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete" parameterType="com.quickgo.platform.model.DataBase">
+        UPDATE data_base SET
+        del_flag = #{delFlag}
+        WHERE id = #{id}
+    </update>
+</mapper>

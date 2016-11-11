@@ -8,5 +8,5 @@ import java.util.List;
  */
 public interface IGenApiCodeService {
 
-    int genApiCode(List<String> fids,String packageName);
+    String findList(List<String> fids);
 }

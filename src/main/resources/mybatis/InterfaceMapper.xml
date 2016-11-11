@@ -14,12 +14,23 @@
      ORDER BY createTime ASC
   </select>
 
-<select id="getInterface" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
-    SELECT * FROM INTERFACE WHERE  folderId = #{folderId}
-
+  <select id="getInterfacesByIds" resultType="com.quickgo.platform.model.Interface" >
+    SELECT * FROM INTERFACE WHERE  id in
+    <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+        #{item}
+    </foreach>
      ORDER BY createTime ASC
   </select>
 
+<select id="getInterface" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
+    SELECT * FROM INTERFACE WHERE  folderId = #{folderId}
+     ORDER BY createTime ASC
+  </select>
+
+  <select id="getInterfaces" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
+    SELECT * FROM INTERFACE WHERE  folderId IN ( SELECT id FROM interface_folder t WHERE t.moduleId = #{moduleId})
+    ORDER BY createTime ASC
+  </select>
   <select id="selectById" resultType="com.quickgo.platform.model.Interface" parameterType="java.lang.String">
     select * from INTERFACE  where id=#{id};
   </select>
@@ -43,10 +54,12 @@
         dataType,
         protocol,
         status,
+        putParam,
         inputParam,
         outputParam,
         tableId,
-        tableName
+        tableName,
+        select_type
 		) VALUES (
         #{id},
         #{name},
@@ -66,10 +79,12 @@
         #{dataType},
         #{protocol},
         #{status},
+        #{putParam},
         #{inputParam},
         #{outputParam},
         #{tableId},
-        #{tableName}
+        #{tableName},
+        #{selectType}
 		)
   </insert>
 
@@ -137,6 +152,9 @@
         <if test="inputParam!=null">
             inputParam = #{inputParam},
         </if>
+        <if test="putParam!=null">
+            putParam = #{putParam},
+        </if>
         <if test="outputParam!=null">
             outputParam = #{outputParam},
         </if>
@@ -144,7 +162,10 @@
             tableId = #{tableId},
         </if>
         <if test="tableName!=null">
-            tableName = #{tableName}
+            tableName = #{tableName},
+        </if>
+        <if test="selectType!=null">
+            select_type = #{selectType}
         </if>
 
     </set>

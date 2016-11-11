@@ -38,6 +38,8 @@ public class Project implements Serializable{
     //是否常用项目
     private String commonlyUsed;
 
+    private DataBase dataBase;
+
 
     public interface Status{
         String VALID="VALID";
@@ -177,5 +179,13 @@ public class Project implements Serializable{
 
     public void setTeamId(String teamId) {
         this.teamId = teamId;
+    }
+
+    public DataBase getDataBase() {
+        return dataBase;
+    }
+
+    public void setDataBase(DataBase dataBase) {
+        this.dataBase = dataBase;
     }
 }

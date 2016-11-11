@@ -1,7 +1,6 @@
 package com.quickgo.platform.controller;
 
 
-import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.model.Team;
 import com.quickgo.platform.model.User;
 import com.quickgo.platform.param.Parameter;
@@ -27,7 +26,6 @@ import java.util.Date;
 @RequestMapping("/team")
 public class TeamController {
 
-    @Post
     public Object create(Parameter parameter){
         User user = MemoryUtils.getUser(parameter);
         Team team = BeanCopy.convert(Team.class,parameter.getParamString());
@@ -42,7 +40,6 @@ public class TeamController {
     }
 
 
-    @Post("{id}")
     public Object update(@RequestParam("id") String id, Parameter parameter){
         Team team = BeanCopy.convert(Team.class,parameter.getParamString());
         team.setId(id);
@@ -59,7 +56,6 @@ public class TeamController {
         return rs;
     }
 
-    @Post("save")
     public Object save(Parameter parameter){
         String id = parameter.getParamString().get("id");
         if(org.apache.commons.lang3.StringUtils.isEmpty(id)){

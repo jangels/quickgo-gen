@@ -2,7 +2,6 @@ package com.quickgo.platform.model;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.quickgo.platform.annotation.Alias;
 import com.quickgo.platform.annotation.Ignore;
 
 import java.io.Serializable;
@@ -12,7 +11,6 @@ import java.io.Serializable;
  * @author huangjie
  * @since  2016-07-13
  */
-@Alias("interface")
 public class Interface implements Serializable{
 
     private static final long serialVersionUID = 1L;
@@ -38,9 +36,11 @@ public class Interface implements Serializable{
     private String protocol;
     private String status;
     private String inputParam;
+    private String putParam;
     private String outputParam;
     private String tableName;
     private String tableId;
+    private String selectType;
 
     public interface Status{
         //启用
@@ -204,6 +204,14 @@ public class Interface implements Serializable{
         this.requestHeaders = requestHeaders;
     }
 
+    public String getPutParam() {
+        return putParam;
+    }
+
+    public void setPutParam(String putParam) {
+        this.putParam = putParam;
+    }
+
     public String getInputParam() {
         return inputParam;
     }
@@ -234,5 +242,13 @@ public class Interface implements Serializable{
 
     public void setTableId(String tableId) {
         this.tableId = tableId;
+    }
+
+    public String getSelectType() {
+        return selectType;
+    }
+
+    public void setSelectType(String selectType) {
+        this.selectType = selectType;
     }
 }

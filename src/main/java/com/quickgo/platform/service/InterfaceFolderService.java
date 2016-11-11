@@ -42,6 +42,11 @@ public class InterfaceFolderService implements IInterfaceFolderService {
     }
 
     @Override
+    public InterfaceFolder getByMid(String mid) {
+        return interfaceFolderMapper.getByMid(mid);
+    }
+
+    @Override
     public List<InterfaceFolder> getFoldersByModuleIds(String[] moduleIds) {
         return interfaceFolderMapper.getFoldersByModuleIds(moduleIds);
     }

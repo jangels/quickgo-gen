@@ -3,7 +3,7 @@
 <mapper namespace="com.quickgo.platform.dao.GenSchemeDao">
     
     <sql id="genSchemeColumns">
-		a.`id` id,a.project_id projectId,
+		a.`id` id,
 		a.`name` "name",
 		a.`category` category,
 		a.`package_name` packageName,
@@ -18,7 +18,8 @@
 		a.`update_date` updateDate,
 		a.`remarks` remarks,
 		a.`del_flag` delFlag,
-		a.gen_table_id AS "genTable.id"
+		a.gen_table_id AS "genTable.id",
+		a.`project_id` projectId
 	</sql>
 	
 	<sql id="genSchemeJoins">
@@ -78,7 +79,8 @@
 			update_by, 
 			update_date, 
 			remarks, 
-			del_flag
+			del_flag,
+			project_id
 		) VALUES (
 			#{id}, 
 			#{name}, 
@@ -95,7 +97,8 @@
 			#{updateBy.id}, 
 			#{updateDate}, 
 			#{remarks}, 
-			#{delFlag}
+			#{delFlag},
+			#{projectId}
 		)
 	</insert>
 	
@@ -112,7 +115,8 @@
 			gen_table_id = #{genTable.id},  
 			update_by = #{updateBy.id}, 
 			update_date = #{updateDate}, 
-			remarks = #{remarks}
+			remarks = #{remarks},
+			project_id = #{projectId}
 		WHERE id = #{id}
 	</update>
 	
@@ -121,5 +125,11 @@
 			del_flag = #{DEL_FLAG_DELETE}
 		WHERE id = #{id}
 	</update>
-	
+
+	<select id="getSchemeById" resultType="com.quickgo.platform.model.GenScheme" parameterType="java.util.Map">
+		SELECT
+		<include refid="genSchemeColumns"/>
+		FROM gen_scheme a
+		WHERE a.gen_table_id =#{tableId} AND a.project_id = #{projectId}
+	</select>
 </mapper>

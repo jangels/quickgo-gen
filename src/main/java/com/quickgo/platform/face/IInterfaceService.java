@@ -22,7 +22,11 @@ public interface IInterfaceService {
 
     List<Interface> getInterface(String folderId);
 
+    List<Interface> getInterfaces(String moduleId);
+
     List<Interface> getInterfacesByModuleIds(String[] moduleIds);
+
+    List<Interface> getInterfacesByIds(List<String> ids);
 
 
 

@@ -62,7 +62,11 @@ public class GenSchemeService extends BaseService {
 		}
 		return "";
 	}
-	
+	@Transactional(readOnly = false)
+	public GenScheme getGenScheme(String tableId,String projectId){
+		GenScheme genScheme = genSchemeDao.getSchemeById(tableId,projectId);
+		return genScheme==null?null:genScheme;
+	}
 	@Transactional(readOnly = false)
 	public void delete(GenScheme genScheme) {
 		genSchemeDao.delete(genScheme);

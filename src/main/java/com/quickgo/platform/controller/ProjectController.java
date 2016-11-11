@@ -14,19 +14,21 @@ import com.quickgo.platform.asynctask.Log;
 import com.quickgo.platform.asynctask.message.MessageBus;
 import com.quickgo.platform.exception.Handler;
 import com.quickgo.platform.face.*;
+import com.quickgo.platform.model.*;
 import com.quickgo.platform.param.Message;
 import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.param.Result;
 import com.quickgo.platform.param._HashMap;
 import com.quickgo.platform.utils.*;
 import com.quickgo.platform.view.PdfView;
-import com.quickgo.platform.model.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.dom4j.DocumentException;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,11 +46,12 @@ import static com.quickgo.platform.param.Result.returnInfo;
  *
  * 项目
  *
- * @author huangjie
+ * create by huangjie
  * on 2016-07-20
  */
 @RestController
 @RequestMapping("/project")
+@Transactional(readOnly = true)
 public class ProjectController {
     @Autowired
     private IProjectService projectService;
@@ -64,6 +67,8 @@ public class ProjectController {
     private IShareService shareService;
     @Autowired
     private IUserService userService;
+    @Autowired
+    private IDatadbService datadbService;
 
 
     @RequestMapping("/list")
@@ -92,12 +97,12 @@ public class ProjectController {
         User user = MemoryUtils.getUser(token);
         if (project.getPermission().equals(Project.Permission.PRIVATE)) {
            if(user == null){
-               return  returnInfo("无访问权限");
+               return  Result.fail("无访问权限");
            }
             if (!user.getId().equals(project.getUserId())) {
                 boolean is = projectUserService.checkUserHasProjectPermission(user.getId(), project.getId());
                 if(!is){
-                    return  returnInfo("无访问权限");
+                    return  Result.fail("无访问权限");
                 }
             }
         }
@@ -220,8 +225,14 @@ public class ProjectController {
     }
 
     @RequestMapping("/create")
+    @Transactional(readOnly = false)
     public Object create(String token, Project project) {
+        try {
+            int rs ;
             User user = MemoryUtils.getUser(token);
+            if(user==null){
+                return  Result.fail("用户未登录，无权操作数据");
+            }
             project.setId(Validate.id());
             project.setCreateTime(new Date().getTime());
             project.setUserId(user.getId());
@@ -232,24 +243,38 @@ public class ProjectController {
             projectUser.setProjectId(project.getId());
             projectUser.setId(Validate.uuid());
             if(StringUtils.isEmpty(project.getName())){
-                return  returnInfo("missing name");
+                return  Result.fail("missing name");
             }
             if(StringUtils.isEmpty(project.getUserId())){
-                return  returnInfo("missing userId");
+                return  Result.fail("missing userId");
             }
-            int rs = projectService.createProject(project);
+            rs = projectService.createProject(project);
+            AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
+            DataBase dataBase = project.getDataBase();
+//            if(StringUtils.isEmpty(project.getDataBase())){
+//                throw new IllegalArgumentException("dataBase参数为空");
+//            }
+//            DataBase dataBase  = (DataBase)JsonUtil.json2obj(project.getDataBase(),DataBase.class);
+            rs = datadbService.save(dataBase);
             AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
             int re = projectUserService.createProjectUser(projectUser);
             AssertUtils.isTrue(re > 0, Message.OPER_ERR);
             AsyncTaskBus.instance().push(Log.create(token, Log.CREATE_PROJECT, project.getName(), project.getId()));
-            return returnInfo(new _HashMap<>().add("id",project.getId()));
+        } catch (BeansException e) {
+            LogTemplate.error("项目创建失败",e.getStackTrace());
+        }
+        return returnInfo(new _HashMap<>().add("id",project.getId()));
     }
 
     private void checkUserHasEditPermission(String projectId, String token) {
         User user = MemoryUtils.getUser(token);
-        AssertUtils.notNull(user, "无操作权限");
+        if(user==null){
+            Result.fail("无操作权限");
+        }
         boolean permission = projectUserService.checkUserHasProjectPermission(user.getId(), projectId);
-        AssertUtils.isTrue(permission, "无操作权限");
+        if(!permission){
+            Result.fail("无操作权限");
+        }
     }
 
     private String checkUserHasOperatePermission(String projectId, String token) {
@@ -284,8 +309,14 @@ public class ProjectController {
         project.setUserId(null);
         int rs = projectService.updateProject(project);
         AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
-
+//        if(StringUtils.isEmpty(project.getDataBase())){
+//            throw new IllegalArgumentException("数据无效");
+//        }
+//        DataBase dataBase  = (DataBase)JsonUtil.json2obj(project.getDataBase(),DataBase.class);
+        DataBase dataBase  = project.getDataBase();
+        rs = datadbService.update(dataBase);
         String projectName = projectService.getProjectName(id);
+        AssertUtils.isTrue(rs > 0, Message.OPER_ERR);
         AsyncTaskBus.instance().push(Log.create(token, Log.UPDATE_PROJECT, projectName, id));
         return returnInfo(rs);
     }
@@ -293,7 +324,7 @@ public class ProjectController {
     @RequestMapping("/{id}/transfer")
     public Object transfer(@PathVariable("id") String id, String  userId,String token) {
         if(!StringUtils.isNotBlank(userId)){
-            return returnInfo(null,"missing userId");
+            return  Result.fail("missing userId");
         }
         String result = checkUserHasOperatePermission(id, token);
         if(StringUtils.isNotBlank(result)){
@@ -351,7 +382,9 @@ public class ProjectController {
      */
     @RequestMapping("/{id}/copymove")
     public Object copyMove(@PathVariable("id") String id,String token, CopyFolder copyFolder) {
-        AssertUtils.notNull(copyFolder, "复制对象为空");
+        if(copyFolder==null){
+           return Result.fail("missing userId");
+        }
         //动作
         String action =copyFolder.getAction();
         //类型

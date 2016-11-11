@@ -39,10 +39,12 @@ public class ModuleController {
     @RequestMapping("/{id}")
     public Object id(@PathVariable("id") String id){
         if(StringUtils.isEmpty(id)){
-            return null;
+            return Result.fail("模块id为空");
         }
         Module module = moduleService.getById(id);
-        AssertUtils.notNull(module,"无效id");
+        if(null==module){
+            return Result.fail("module 数据为空");
+        }
         return Result.returnInfo(new _HashMap<>().add("module",module));
     }
 

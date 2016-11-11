@@ -20,6 +20,8 @@ public interface IInterfaceFolderService {
 
     InterfaceFolder getById(String id);
 
+    InterfaceFolder getByMid(String mid);
+
 
 
     List<InterfaceFolder> getFoldersByModuleIds(String[] moduleIds);

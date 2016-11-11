@@ -3,15 +3,15 @@
 	<!-- 生成分类 -->
 	<category>
 		<category value="curd" label="增删改查（单表）">
-			<template>controller.xml</template>
-			<template>service.xml</template>
+			<template>web/controller.xml</template>
+	<!--	<template>service.xml</template>
 			<template>category-ref:dao</template>
 			<template>viewForm.xml</template>
 			<template>viewList.xml</template>
 			<template>moduleJs.xml</template>
 			<template>impl.xml</template>
 			<template>implTest.xml</template>
-			<template>modulejs.xml</template>
+			<template>modulejs.xml</template>-->
 		</category>
 		<category value="dao" label="仅持久层（dao/entity/mapper）">
 			<template>dao.xml</template>

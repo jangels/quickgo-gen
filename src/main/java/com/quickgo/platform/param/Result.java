@@ -1,5 +1,7 @@
 package com.quickgo.platform.param;
 
+import com.alibaba.fastjson.JSONObject;
+import com.quickgo.platform.utils.LogTemplate;
 import com.quickgo.platform.utils.StringUtils;
 
 import java.util.HashMap;
@@ -69,6 +71,15 @@ public class Result<T> {
                 jo.put("result", FAIL_CODE);
             }
         }
+        return jo;
+    }
+
+    public static Object fail(String msg) {
+        LogTemplate.info(msg);
+        JSONObject jo = new JSONObject();
+        jo.put("result", FAIL_CODE);
+        jo.put("operateTime", System.currentTimeMillis());
+        jo.put("msg", msg);
         return jo;
     }
     public int getCode() {
