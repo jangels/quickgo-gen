@@ -22,8 +22,30 @@ import ${packageName}.${moduleName}.bean.${ClassName};
  * Copyright: Copyright (c) 2016 
  * Company:ToB中心
  */
-public interface ${ClassName}Mapper extends BaseDao<${ClassName}> {
-/////////////////////////////////////////////////////////自定义方法////////////////////////////////////////////////////////////
+public interface ${ClassName}Mapper{
+
+	<#list interfaces as m>
+		<#if m.selectType =="A">
+		public int m.{name}(${ClassName} ${className});
+		</#if>
+		<#elseif m.selectType =="U">
+		public int m.{name}(${ClassName} ${className});
+		</#elseif>
+		<#if m.selectType =="D">
+		 public int m.{name}{ClassName}(String id);
+		</#if>
+		<#elseif  m.selectType == "S">
+		 public {ClassName} m.{name}(m.{putParam});
+		 </#elseif>
+		 <#elseif m.selectType == "L">
+		 public List<{ClassName}> m.{name}(m.{putParam});
+		 </#elseif>
+		</#elseif>
+		<#else>
+		 public m.{outputParam} m.{name}${ClassName}(m.{putParam});
+	    </#else>
+	    </#if>
+	</#list>
 }]]>
 	</content>
 </template>

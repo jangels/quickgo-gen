@@ -49,30 +49,14 @@
 		</#assign>
 		${columnField?substring(0, columnField?last_index_of(","))}
 	</sql>
-  	<!-- 增加 单个${functionNameSimple}-->
-	<insert id="insert" parameterType="${ClassName}" >
-		INSERT INTO ${table.name}(
-		<#assign insertField>
-			<#list table.columnList as c>
-				<#if c.isInsert?? && c.isInsert == "1">
-			${c.name},
-				</#if>
-			</#list>
-		</#assign>
-			${insertField?substring(0, insertField?last_index_of(","))}
-		) VALUES (
-		<#assign insertJavaField>
-			<#list table.columnList as c>
-				<#if c.isInsert?? && c.isInsert == "1">
-			${"#"}{${c.javaFieldId}},
-				</#if>
-			</#list>
-		</#assign>
-			${insertJavaField?substring(0, insertJavaField?last_index_of(","))}
-		)
-	</insert>
-	
-	
+
+
+	<#list interfaces as m>
+
+
+
+	<#if m.selectType=="A">
+
 	<!-- 增加 单个${functionNameSimple} 验证属性是否存在-->
 	<insert id="insertSelective" parameterType="${ClassName}" >
 		INSERT INTO ${table.name}
@@ -105,36 +89,27 @@
 			</if>
 		</trim> 
 	</insert>
-	
+
+	</#if>
+	<#elesif m.selectType=="D">
 	<!-- 删除 单个${functionNameSimple}-->
 	<delete id="deleteById"  parameterType="javlang.Long" >
     	delete from ${table.name}
     	where id = ${"#"}{id}
   	</delete>
-  	  	
-  	
+  	</#elesif>
+
+  	<#elesif m.selectType=="S">
   	<!--查找单个${functionNameSimple}对象 -->
-	<select id="selectById" resultType="${ClassName}" parameterType="javlang.Long">
+	<select id="selectById" resultType="${ClassName}" parameterType="java.lang.String">
 		SELECT 
 			<include refid="${className}Columns"/>
 		FROM ${table.name} 
-		WHERE id = ${"#"}{id}
+		WHERE id = ${"#"}{m.putParma}
 	</select>	
-	
-	<!-- 更新${functionNameSimple}-->
-	<update id="updateById" parameterType="${ClassName}" >
-		UPDATE ${table.name} SET 	
-			<#assign updateField>		
-				<#list table.columnList as c>
-					<#if c.isEdit?? && c.isEdit == "1">
-			${c.name} = ${"#"}{${c.javaFieldId}},
-					</#if>
-				</#list>
-			</#assign>
-			${updateField?substring(0, updateField?last_index_of(","))}
-		WHERE id = ${"#"}{id}
-	</update>
-	
+    </#elesif>
+	<#elesif m.selectType=="U">
+
 	<!-- 更新${functionNameSimple} 检查是否存在-->
 	<update id="updateByIdSelective" parameterType="${ClassName}" >
 		UPDATE ${table.name} 
@@ -153,7 +128,8 @@
 			</set>
 		WHERE id = ${"#"}{id}
 	</update>
-	
+	 </#elesif>
+	<#elesif m.selectType=="L">
    <!-- 分页查询${functionNameSimple}集合 -->
    <select id="queryListPage" resultMap="BaseResultMap" parameterType="Page" >
     	select 
@@ -193,24 +169,9 @@
 			</#list>
 		</where>
   	</select>
-  	  		
-	<!-- 查找所有${functionNameSimple} -->
-	<select id="queryAll" resultMap="BaseResultMap">
-    	select 
-    	<include refid="${className}Columns" />
-    	from ${table.name}
-  	</select>
-  	
-  	<!--查找${functionNameSimple}的数量 -->
-  	<select id="getCount" resultType="int" parameterType="javlang.Long">
-   		select count(1) from ${table.name}
-  	</select>
-    
-	<!--检查${functionNameSimple}是否存在 -->
-  	<select id="queryCheck" resultType="int" parameterType="javlang.Long">
-   		select case count(1) when 0 then 0 else 1 end from ${table.name}
-   		WHERE id = ${"#"}{id}
-  	</select>
+	 </#elesif>
+   <#list>
+
 </mapper>]]>
 	</content>
 </template>

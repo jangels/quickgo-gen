@@ -28,79 +28,51 @@ import ${packageName}.core.exception.BusinessException;
  */
 public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 	
-	private static final Logger log = Logger.getLogger(RecruitRequireServiceImpl.class);
+	private static final Logger log = Logger.getLogger(${ClassName}ServiceImpl.class);
 	@Autowired
     ${ClassName}Mapper ${className}Mapper;
- 
- //////////////////公共方法///////////////////////////////////////////////////////////////////////////////////////////////////
- 
-	@Override
+
+	<#list interfaces as m>
+	<#if m.selectType == "A">
 	public int insert(${ClassName} entity) {
-	try{
-		return ${className}Mapper.insert(entity);
-	   }
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-
-	@Override
-	public int  insertSelective(${ClassName} entity) {
 	 try{
-		return ${className}Mapper.insertSelective(entity);
+		return ${className}Mapper.insert(entity);
 		}
 		catch (Exception ex) {
 			log.error(ex.getMessage(),ex);
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-
-	@Override
-	public int deleteById(Long id) {
+	</#if>
+	<#elseif m.selectType == "D">
+	public int delete(String id) {
 		try
 		{
-		return ${className}Mapper.deleteById(id);
+		return ${className}Mapper.delete(id);
 		 }
 		catch (Exception ex) {
 			log.error(ex.getMessage(),ex);
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-
-	@Override
-	public int deleteBatchByIds(String ids) {
+	</#elseif>
+	<#elseif  m.selectType == "S">
+	public ${ClassName} get(Long id) {
 	try{
-		String [] mids=ids.split(",");
-		int count=0;
-		for(String id:mids)
-			{ Long idl=Long.getLong(id);
-			count+=deleteById(idl);
-			}
-		return mids.length!=count?-1:count;
-		   }
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-
-	@Override
-	public ${ClassName} selectById(Long id) {
-	try{
-		return ${className}Mapper.selectById(id);
+		return ${className}Mapper.get(id);
 		}
 		catch (Exception ex) {
 			log.error(ex.getMessage(),ex);
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
+	</#elseif>
+	<#elseif m.selectType == "U">
 
-	@Override
-	public int updateByIdSelective(${ClassName} entity) {
+	public int update(${ClassName} entity) {
 	
 		try{
-		return ${className}Mapper.updateByIdSelective(entity);
+		return ${className}Mapper.update(entity);
 		   }
 		catch (Exception ex) {
 			log.error(ex.getMessage(),ex);
@@ -108,64 +80,20 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 		}
 	}
 
-	@Override
-	public int updateById(${ClassName} entity) {
-	try{
-		return ${className}Mapper.updateByIdSelective(entity);
-		   }
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-
-	@Override
-	public List<${ClassName}> queryListPage(Page page) {
+	</#elseif>
+	<#elseif m.selectType == "L">
+	public List<${ClassName}> ${m.name}(Page page) {
 		try
 		{
-		return ${className}Mapper.queryListPage(page);
+		return ${className}Mapper.${m.name}(page);
 		   }
 		catch (Exception ex) {
 			log.error(ex.getMessage(),ex);
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-
-
-	@Override
-	public int getCount() {
-		try{
-		return ${className}Mapper.getCount();
-		}
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-
-	@Override
-	public boolean queryCheck(Long id) {
-	try{
-		return ${className}Mapper.queryCheck(id)<=0?false:true;
-		}
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-
-	@Override
-	public List<${ClassName}> queryAll() {
-		try{
-			return ${className}Mapper.queryAll();
-		   }
-		catch (Exception ex) {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-		}
-	}
-//////////////////自定义方法///////////////////////////////////////////////////////////////////////////////////////////////////
-	
+	</#elseif>
+</#list>
 }]]>
 	</content>
 </template>
