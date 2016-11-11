@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>dao</name>
-	<filePath>Work/qitoon/app/recruit/interface/src/main/java/${packageName}/${moduleName}/service/${subModuleName}</filePath>
+	<filePath>${packageName}/${moduleName}/service/${subModuleName}</filePath>
 	<fileName>${ClassName}Service.java</fileName>
 	<content><![CDATA[
 /**
@@ -20,26 +20,62 @@ import ${packageName}.${moduleName}.bean.${ClassName};
  * Company:ToB中心
  */
 public interface ${ClassName}Service {
+
 	<#list interfaces as m>
+		<#if m.name??>
 		<#if m.selectType =="A">
-		public int m.{name}(${ClassName} ${className});
+		/**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		public int ${m.name}(${ClassName} ${className});
 		</#if>
+
 		<#elseif m.selectType =="U">
-		public int m.{name}(${ClassName} ${className});
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		public int ${m.name}(${ClassName} ${className});
 		</#elseif>
 		<#if m.selectType =="D">
-		 public int m.{name}{ClassName}(String id);
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public int ${m.name}(String id);
 		</#if>
-		<#elseif  m.selectType == "S">
-		 public {ClassName} m.{name}(m.{putParam});
+
+		<#elseif  m.selectType == "S" && m.putParam??>
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public {ClassName} ${m.name}(${m.putParam});
 		 </#elseif>
-		 <#elseif m.selectType == "L">
-		 public List<{ClassName}> m.{name}(m.{putParam});
+
+		 <#elseif m.selectType == "L"  && m.putParam??>
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public List<{ClassName}> ${m.name}(${m.putParam});
 		 </#elseif>
-		</#elseif>
-		<#else>
-		 public m.{outputParam} m.{name}${ClassName}(m.{putParam});
-	    </#else>
+		<#elseif  &&${m.outputParam} && m.putParam??>
+
+		/**
+		 * ${m.discription}
+		 * @param ${m.putParam}
+		 * @return ${m.outputParam}
+		 */
+		 public ${m.outputParam} ${m.name}(${m.putParam});
+	    </#elseif>
+
 	    </#if>
 	</#list>
 }]]>

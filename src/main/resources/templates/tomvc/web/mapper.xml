@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>mapper</name>
-	<filePath>Work/qitoon/app/recruit/implement/src/main/resources/mapper</filePath>	
+	<filePath>Work/qitoon/app/recruit/implement/src/main/resources/mapper</filePath>
+	<filePath>Work/${packageName}/${moduleName}/src/main/resources/mapper</filePath>
 	<fileName>${ClassName}Mapper.xml</fileName>
 	<content><![CDATA[
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -93,7 +94,7 @@
 	</#if>
 	<#elesif m.selectType=="D">
 	<!-- 删除 单个${functionNameSimple}-->
-	<delete id="deleteById"  parameterType="javlang.Long" >
+	<delete id="delete"  parameterType="java.lang.String" >
     	delete from ${table.name}
     	where id = ${"#"}{id}
   	</delete>
@@ -111,7 +112,7 @@
 	<#elesif m.selectType=="U">
 
 	<!-- 更新${functionNameSimple} 检查是否存在-->
-	<update id="updateByIdSelective" parameterType="${ClassName}" >
+	<update id="update" parameterType="${ClassName}" >
 		UPDATE ${table.name} 
 			<set>	
 			<#assign updateField>		
@@ -129,7 +130,7 @@
 		WHERE id = ${"#"}{id}
 	</update>
 	 </#elesif>
-	<#elesif m.selectType=="L">
+	<#elesif m.selectType == "L">
    <!-- 分页查询${functionNameSimple}集合 -->
    <select id="queryListPage" resultMap="BaseResultMap" parameterType="Page" >
     	select 

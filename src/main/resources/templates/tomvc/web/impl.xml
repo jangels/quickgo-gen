@@ -35,7 +35,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 	<#list interfaces as m>
 
 	<#if m.selectType == "A">
-	public int insert(${ClassName} entity) {
+	public int ${m.name}(${ClassName} entity) {
 	 try{
 		return ${className}Mapper.insert(entity);
 		}
@@ -46,7 +46,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 	}
 	</#if>
 	<#elseif m.selectType == "D">
-	public int delete(String id) {
+	public int ${m.name}(String id) {
 		try
 		{
 		return ${className}Mapper.delete(id);
@@ -70,7 +70,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 	</#elseif>
 	<#elseif m.selectType == "U">
 
-	public int update(${ClassName} entity) {
+	public int ${m.name}(${ClassName} entity) {
 		try{
 		return ${className}Mapper.update(entity);
 		   }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>dao</name>
-	<filePath>Work/qitoon/app/recruit/implement/src/main/java/${packageName}/${moduleName}/dao/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/dao/${subModuleName}</filePath>
 	<fileName>${ClassName}Mapper.java</fileName>
 	<content><![CDATA[
 /**
