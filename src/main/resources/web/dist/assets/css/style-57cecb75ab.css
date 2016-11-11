@@ -3209,7 +3209,7 @@ body.dashboard:before {
 .win-card>li p{
 	line-height:56px ;
 }
-.win-card>li input[type=text]{
+.win-card>li input[type=text],.win-card>li input[type=password]{
 	width: 440px;
 	border: none;
 	display: inline-block;
@@ -3253,7 +3253,7 @@ body.dashboard:before {
 	    height: 62px;
 }
 .db-members  .dbv-chose-users>li p{
-	line-height: 12px;
+	line-height: 20px;
     padding: 0;
     margin: 0;
     text-align: center;

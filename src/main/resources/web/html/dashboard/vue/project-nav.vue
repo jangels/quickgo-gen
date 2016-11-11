@@ -1,8 +1,9 @@
 <template>
-		 <li class="fl db-back db-item" v-if="$parent.projectName" ><a>{{$parent.projectName}}</a></li>
     <li class="fl db-back db-item"  ><a v-link="'/'" v-if="path=='/'"  >控制台</a></li>
     <li class="fl db-back db-item"  ><a v-link="'/'" v-if="path!=='/'" ><i class="iconfont icon-left"></i>返回控制台 </a></li>
-  
+  	<li class="fl db-back db-item" v-if="$parent.projectName" ><a>{{$parent.projectName}}</a></li>
+  	<li class="fl db-back db-item" v-if="$parent.title" ><a>{{$parent.title}}</a></li>
+
     <template v-if="$parent.showProject">
     </template>
     <li class="fr db-item profile">

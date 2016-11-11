@@ -24,7 +24,7 @@ var App = Vue.extend({
     methods:{
     }
 });
-ProjectNav.props=['pageName','welcome','projectId','projectName'];
+ProjectNav.props=['pageName','welcome','projectId','projectName','title'];
 ProjectLeft.props=["reloadProject"];
 router.start({
     created:function(){

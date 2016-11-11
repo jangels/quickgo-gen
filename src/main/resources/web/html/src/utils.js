@@ -86,6 +86,43 @@ var utils = {
             error: error
         });
     },
+    /**
+     * 最新的获取方法
+     * @param conf
+     * url:请求路径
+     * data:传参
+     * success:请求成功回调
+     * complete:请求完成回调
+     */
+    syGet: function (conf) {
+        this.ajax({
+            url: conf.url,
+            data: conf.data,
+            type: 'get',
+            dataType: 'json',
+            success: conf.success,
+            complete: conf.complete
+        });
+    },
+    /**
+     * 最新的获取方法
+     * @param conf
+     * url:请求路径
+     * data:传参
+     * needJson:是否为JSON格式传输
+     * success:请求成功回调
+     * error:请求失败回调
+     */
+    syPost: function (conf) {
+        this.ajax({
+            url: conf.url,
+            data: conf.needJson ? JSON.stringify(conf.data) : conf.data,
+            type: 'post',
+            dataType: 'json',
+            success: conf.success,
+            error: conf.error
+        });
+    },
     "delete": function (url, success, error) {
         this.ajax({
             url: url,
@@ -186,6 +223,9 @@ var utils = {
 $._ajax_ = function(params){
     var complete = params.complete;
     var success = params.success;
+    params.headers= {
+        Accept: "application/json; charset=utf-8"
+    };
     params.complete = function (xhr, result) {
         if (result == 'error') {
             if (xhr.readyState == 0) {

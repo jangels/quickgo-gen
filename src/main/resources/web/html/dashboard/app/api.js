@@ -574,7 +574,7 @@ export default{
             }
         },
         "editing": function (value) {
-        	console.log(value)
+        	
             if (value) {
                 if (!window.editor && this.showGuide) {
                     var desc = this.project.details;
@@ -584,10 +584,10 @@ export default{
                 if( gdata.genTableFormList.length ==  0  ){page.getGenTableForm({projectId:gdata.id});}
                 //如果
                 if(value==2){
-                	var params={
-                		moudId:this.id
-                	}
-                	page.getModuleInterface(params);
+//              	var params={
+//              		moudId:this.id
+//              	}
+//              	page.getModuleInterface(params);
                 }
             } else {
                 renderViewBox(this.project.details);
@@ -620,6 +620,7 @@ export default{
             }
         },
         "currentEnv": function (value) {
+        	console.log(value.name)
             if(value){
                 localStorage.setItem(this.id+'_env', value.id);
             }
@@ -629,6 +630,18 @@ export default{
         return gdata;
     },
     methods: {
+    	creatCodeCheckedAll: function() {
+	//		    var _this = this;
+	//		    console.log(_this.checkboxModel);
+	//		    if (this.checked) {//实现反选
+	//		      _this.checkboxModel = [];
+	//		    }else{//实现全选
+	//		      _this.checkboxModel = [];
+	//		      _this.checkboxData.forEach(function(item) {
+	//		        _this.checkboxModel.push(item.id);
+	//		      });
+	//		    }
+		},
         updateProject: function () {
             this.project.details = window.editor.getMarkdown();
             utils.post('/project/update/'+this.id+'.json',{details:this.project.details},function(){
@@ -696,7 +709,7 @@ export default{
             this.envs = this.envs.map(function(item){
                 return {name:item.name,t:item.t,vars:item.vars}
             });
-            utils.post('/project/'+this.id+'.json',{environments:JSON.stringify(this.envs)},function(rs){
+            utils.post('/project/update/'+this.id+'.json',{environments:JSON.stringify(this.envs)},function(rs){
                toastr.success('保存成功');
                 self.status.envModal = false;
                 if(self.envs.length == 1){
@@ -1171,7 +1184,7 @@ export default{
                 });
             } else {
                 var moduleName = this.moduleName;
-                utils.post('/module.json', {projectId: self.id, name: moduleName}, function (rs) {
+                utils.post('/module/create/', {projectId: self.id, name: moduleName}, function (rs) {
                     if (rs.code == 0 || parseInt(rs.result)==200) {
                         gdata.modules.push({
                             name: moduleName,
