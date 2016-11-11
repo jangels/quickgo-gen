@@ -39,9 +39,7 @@ public class ${ClassName}controller{
     }
 	</#if>
     </#list>
-
 }
-
 }]]>
 	</content>
 </template>

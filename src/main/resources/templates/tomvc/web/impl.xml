@@ -79,11 +79,10 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-
 	</#elseif>
 	<#elseif m.selectType == "L">
 	public List<${ClassName}> ${m.name}(Page page) {
-		try
+	  try
 		{
 		return ${className}Mapper.${m.name}(page);
 		   }
