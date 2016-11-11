@@ -16,4 +16,6 @@ public interface UserMapper extends BaseDao<User> {
      String getUserIdByEmail(String email);
 
      List<User> getAllProjectByUserId(String userId);
+     //获取email邮箱地址
+     List<String> getEmailByUser();
 }

@@ -2,6 +2,8 @@ package com.quickgo.platform.controller;
 
 
 import com.quickgo.platform.face.ILoginService;
+import com.quickgo.platform.face.ISendEmailService;
+import com.quickgo.platform.model.EmailContent;
 import com.quickgo.platform.model.User;
 import com.quickgo.platform.param.Result;
 import com.quickgo.platform.param._HashMap;
@@ -20,6 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @Autowired
     private ILoginService loginService;
+    @Autowired
+    private ISendEmailService sendEmailService;
 
     @RequestMapping("/login")
     public Object login(String  email, String password) {
@@ -42,6 +46,14 @@ public class LoginController {
         return Result.returnInfo(new _HashMap<>().add("user",user).add("token",token));
     }
 
+    @RequestMapping("/sendMail")
+    public Object sendMail() {
+        EmailContent emailContent = new EmailContent();
+        emailContent.setContent("测试邮件，勿回复！！！");
+        emailContent.setTitle("测试");
+        sendEmailService.sendEmail(emailContent);
+        return Result.OK;
+    }
 
 
 

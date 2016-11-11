@@ -76,4 +76,7 @@
     </set>
     WHERE id = #{id}
 </update>
+    <select id="getEmailByUser" resultType="java.lang.String">
+            SELECT email FROM  user;
+    </select>
 </mapper>
