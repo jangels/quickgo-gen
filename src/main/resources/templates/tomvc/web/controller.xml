@@ -5,7 +5,7 @@
 	<fileName>${ClassName}Controller.java</fileName>
 	<content><![CDATA[
 
-public class ${ClassName}controller{
+public class ${ClassName}Controller{
 	@Autowired
 	private ${ClassName}Service ${className}Service;
 
