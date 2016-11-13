@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>service</name>
-	<filePath>Work/qitoon/app/recruit/implement/src/main/java/${packageName}/${moduleName}/impl/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/service</filePath>
 	<fileName>${ClassName}ServiceImpl.java</fileName>
 	<content><![CDATA[
 /**
  * 
  */
-package ${packageName}.${moduleName}.impl<#if subModuleName != "">.${subModuleName}</#if>;
+package ${packageName}.${moduleName}.impl;
 
 import java.util.List;
 import org.apache.log4j.Logger;
@@ -34,7 +34,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 
 	<#list interfaces as m>
 
-	<#if m.selectType == "A">
+	<#if m.selectType=="A" && m.name??>
 	public int ${m.name}(${ClassName} entity) {
 	 try{
 		return ${className}Mapper.insert(entity);
@@ -44,8 +44,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-	</#if>
-	<#elseif m.selectType == "D">
+	<#elseif m.selectType=="D">
 	public int ${m.name}(String id) {
 		try
 		{
@@ -56,8 +55,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-	</#elseif>
-	<#elseif  m.selectType == "S">
+	<#elseif  m.selectType=="S">
 	public ${ClassName} ${m.name}(Long id) {
 	try{
 		return ${className}Mapper.get(id);
@@ -67,8 +65,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-	</#elseif>
-	<#elseif m.selectType == "U">
+	<#elseif m.selectType=="U">
 
 	public int ${m.name}(${ClassName} entity) {
 		try{
@@ -79,8 +76,7 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-	</#elseif>
-	<#elseif m.selectType == "L">
+	<#elseif m.selectType=="L">
 	public List<${ClassName}> ${m.name}(Page page) {
 	  try
 		{
@@ -91,7 +87,9 @@ public class ${ClassName}ServiceImpl implements ${ClassName}Service{
 			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
 		}
 	}
-	</#elseif>
+	<#else>
+
+	</#if>
 </#list>
 }]]>
 	</content>

@@ -59,7 +59,7 @@
         outputParam,
         tableId,
         tableName,
-        select_type
+        selectType
 		) VALUES (
         #{id},
         #{name},
@@ -165,7 +165,7 @@
             tableName = #{tableName},
         </if>
         <if test="selectType!=null">
-            select_type = #{selectType}
+            selectType = #{selectType}
         </if>
 
     </set>

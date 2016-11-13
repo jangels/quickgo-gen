@@ -4,26 +4,28 @@
 	<category>
 		<category value="curd" label="增删改查（单表）">
 			<template>web/controller.xml</template>
-	<!--	<template>service.xml</template>
-			<template>category-ref:dao</template>
-			<template>viewForm.xml</template>
+			<template>web/impl.xml</template>
+			<template>web/service.xml</template>
+			<template>web/dao.xml</template>
+			<template>web/entity.xml</template>
+			<template>web/mapper.xml</template>
+			<template>web/modulejs.xml</template>
+			<!--<template>viewForm.xml</template>
 			<template>viewList.xml</template>
 			<template>moduleJs.xml</template>
-			<template>impl.xml</template>
-			<template>implTest.xml</template>
-			<template>modulejs.xml</template>-->
+			<template>implTest.xml</template>-->
 		</category>
 		<category value="dao" label="仅持久层（dao/entity/mapper）">
-			<template>dao.xml</template>
-			<template>entity.xml</template>
-			<template>mapper.xml</template>
+			<!--<template>web/dao.xml</template>-->
+			<!--<template>web/entity.xml</template>-->
+			<!--<template>web/mapper.xml</template>-->
 		</category>
 
-		<category value="web" label="前端API（js/dto/controller）">
+		<!--<category value="web" label="前端API（js/dto/controller）">
 			<template>modulejs.xml</template>
 			<template>controller.xml</template>
 			<template>dto.xml</template>
-		</category>
+		</category>-->
 	</category>
 	<!-- java类型 -->
 	<javaType>

@@ -4,11 +4,12 @@ import com.quickgo.platform.face.IGenApiCodeService;
 import com.quickgo.platform.model.User;
 import com.quickgo.platform.param.Result;
 import com.quickgo.platform.utils.MemoryUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,18 +24,17 @@ public class GenApiCodeController {
     private IGenApiCodeService genApiCodeService;
 
     @RequestMapping("/generateCode")
-    public Object generateCode(String token,List<String> stringList ) {
+    public Object generateCode(String token, String id) {
         User user = MemoryUtils.getUser(token);
-        if(user==null){
+        if (user == null) {
             return Result.fail("无权限操作");
         }
-//        List<String> stringList = new ArrayList<>();
-//        stringList.add("3YfaaoWha");
-//        stringList.add("3SBdpkoIZ");
-        if(CollectionUtils.isEmpty(stringList)){
-            return Result.fail("数据为空");
+        if (StringUtils.isEmpty(id)) {
+            return Result.fail("参数id为空");
         }
-       String str = genApiCodeService.findList(stringList);
+        String[] ids = id.split(",");
+        List<String> stringList = Arrays.asList(ids);
+        String str = genApiCodeService.findList(stringList);
         return Result.returnInfo(str);
 
     }

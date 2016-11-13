@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>dao</name>
-	<filePath>Work/${packageName}/${moduleName}/dao/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/dao</filePath>
 	<fileName>${ClassName}Mapper.java</fileName>
 	<content><![CDATA[
-/**
- * 
- */
-package ${packageName}.${moduleName}.dao<#if subModuleName != "">.${subModuleName}</#if>;
-
-
 import ${packageName}.${moduleName}.base.BaseDao;
 import ${packageName}.${moduleName}.bean.${ClassName};
 
 
 /**
  * ${functionName}DAO接口
- * @ClassName: ${ClassName}ServiceImpl
+ * @ClassName: ${ClassName}Dao
  * @author ${functionAuthor}
  * @date ${functionVersion}
  * Copyright: Copyright (c) 2016 
@@ -25,61 +19,51 @@ import ${packageName}.${moduleName}.bean.${ClassName};
 public interface ${ClassName}Mapper{
 
 	<#list interfaces as m>
-		<#if m.name??>
-		<#if m.selectType =="A">
+		<#if m.selectType=="A" && m.description ??>
 		/**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		public int insert(${ClassName} ${className});
-		</#if>
 
-
-
-		<#elseif m.selectType =="U">
+		<#elseif m.selectType=="U"  && m.description?? >
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		public int update(${ClassName} ${className});
-		</#elseif>
-		<#if m.selectType =="D">
+		<#elseif m.selectType=="D">
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public int delete(String id);
-		</#if>
-
-		<#elseif  m.selectType == "S" && m.putParam??>
+		<#elseif  m.selectType=="S" && m.putParam??>
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public {ClassName} ${m.name}(${m.putParam});
-		 </#elseif>
 
-		 <#elseif m.selectType == "L"  && m.putParam??>
+		 <#elseif m.selectType=="L"  && m.putParam??>
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public List<{ClassName}> ${m.name}(${m.putParam});
-		 </#elseif>
-		<#elseif  &&${m.outputParam} && m.putParam??>
 
+		<#else>
 		/**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${m.putParam}
 		 * @return ${m.outputParam}
 		 */
 		 public ${m.outputParam} ${m.name}(${m.putParam});
-	    </#elseif>
 
 	    </#if>
 	</#list>
