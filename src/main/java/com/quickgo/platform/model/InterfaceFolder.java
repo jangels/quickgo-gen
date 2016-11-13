@@ -17,6 +17,10 @@ public class InterfaceFolder implements Serializable{
     private String moduleId;
     private String projectId;
 
+    public InterfaceFolder() {
+        super();
+    }
+
     private List<Interface> children = new ArrayList<>();
 
     public String getId() {

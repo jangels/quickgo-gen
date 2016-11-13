@@ -18,6 +18,7 @@ public class CopyFolder implements Serializable {
     private String projectId;
 
     public CopyFolder() {
+        super();
     }
 
     public String getAction() {

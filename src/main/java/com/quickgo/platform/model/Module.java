@@ -30,6 +30,10 @@ public class Module implements Serializable{
 
     private List<InterfaceFolder> folders=new ArrayList<>();
 
+    public Module() {
+        super();
+    }
+
     public String getId() {
         return id;
     }

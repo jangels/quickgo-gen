@@ -15,6 +15,11 @@ public class Thirdparty implements Serializable {
     private String type;
     private String email;
     private String userId;
+
+    public Thirdparty() {
+        super();
+    }
+
     public static class Type{
         public static String QQ="QQ";
         public static String WEIBO="WEIBO";

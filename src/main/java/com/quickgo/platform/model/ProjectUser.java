@@ -32,6 +32,10 @@ public class ProjectUser implements Serializable{
         String NO="NO";
     }
 
+    public ProjectUser() {
+        super();
+    }
+
     public String getEditable() {
         return editable;
     }

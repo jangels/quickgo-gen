@@ -17,6 +17,10 @@ public class RequestResponseArgs implements Serializable{
     private String defaultValue;
     private List<RequestResponseArgs> children = new ArrayList<>();
 
+    public RequestResponseArgs() {
+        super();
+    }
+
     public String getDescription() {
         return description;
     }
