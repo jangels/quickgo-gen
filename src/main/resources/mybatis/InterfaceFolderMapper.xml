@@ -6,7 +6,7 @@
     SELECT * FROM interface_folder WHERE projectId=#{projectId} ORDER BY createTime ASC
   </select>
 
-<select id="getFoldersByModuleIds" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.util.ArrayList">
+  <select id="getFoldersByModuleIds" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.util.ArrayList">
     SELECT * FROM    INTERFACE_FOLDER
      WHERE moduleId IN
         <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
@@ -17,6 +17,10 @@
 
   <select id="selectById" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.lang.String">
     select * from interface_folder  where id=#{id};
+  </select>
+
+  <select id="getByMid" resultType="com.quickgo.platform.model.InterfaceFolder" parameterType="java.lang.String">
+    select * from interface_folder  where moduleId =#{mid};
   </select>
   <insert id="insert" parameterType="com.quickgo.platform.model.InterfaceFolder">
     INSERT INTO interface_folder(

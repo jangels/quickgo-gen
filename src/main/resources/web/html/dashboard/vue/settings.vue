@@ -17,6 +17,27 @@
 	    	 <li>
 		      <textarea rows="10" placeholder="请输入项目描述" maxlength="300" class="text" v-model="project.description">{{project.description}}</textarea>
 		    </li>
+		      <li >
+			      	<input type="text"  v-model="project.dbPath" 
+		                                   initial="off" class="text invalid" placeholder="数据库地址：" /> 
+			    </li>
+			    
+			      <li >
+			      	<input type="text" v-model="project.dbPort" 
+		                                   initial="off" class="text invalid" placeholder="数据库端口号：" /> 
+			    </li>
+			     <li >
+			      	<input type="text"  v-model="project.dbName" 
+		                                   initial="off" class="text invalid" placeholder="数据库名称：" /> 
+			    </li>
+			    <li >
+			      	<input type="text"  v-model="project.dbUser" 
+		                                   initial="off" class="text invalid" placeholder="数据库用户名：" /> 
+			    </li>
+			     <li >
+			      	<input type="password"  v-model="project.dbPassword" 
+		                                   initial="off" class="text invalid" placeholder="数据库密码：" /> 
+			    </li>   
 		    <li >
 	            <p>
 	                              项目属性：
@@ -46,7 +67,16 @@
     import '../../src/vue.ex.js';
     import utils from '../../src/utils.js'
     var data={
-        project:{},
+        project:{
+        	name:'',
+            description: '',
+            permission: 'PUBLIC',
+            dbPath:'',
+            dbPort:'',
+            dbName:'',
+            dbUser:'',
+            dbPassword:''
+        },
         loading:true,
         projectName:null
     };

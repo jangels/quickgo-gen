@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>mapper</name>
+	<filePath>Work/qitoon/app/recruit/implement/src/main/resources/mapper</filePath>
+	<filePath>Work/${packageName}/${moduleName}/src/main/resources/mapper</filePath>
+	<fileName>${ClassName}Mapper.xml</fileName>
+	<content><![CDATA[
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${packageName}.${moduleName}<#if subModuleName != "">.${subModuleName}</#if>.dao.${ClassName}Mapper">
+    
+  <resultMap id="BaseResultMap" type="${ClassName}" >
+    	<#list table.columnList as c>
+			<#if c.isPk == '1'>
+			 <id  column="${c.name}" property="${c.javaFieldId}" jdbcType="BIGINT"  />
+			 </#if>
+			<#if c.isPk == '0'>
+			<result column="${c.name}" property="${c.javaFieldId}" />
+			</#if>
+		</#list>
+  </resultMap>
+  
+    <#-- 输出字段列 -->
+	<sql id="${className}Columns">
+		<#assign columnField>
+			<#list table.columnList as c>
+		${c.name} AS "${c.javaFieldId}",
+			</#list>
+			<#list table.columnList as c>
+				<#if c.showType?? && c.showType == "userselect">
+					<#list c.javaFieldAttrs as a>
+		u${c_index + 1}.${a[1]} AS "${c.simpleJavaField}.${a[0]}",
+					</#list>
+				<#elseif c.showType?? && c.showType == "officeselect">
+					<#list c.javaFieldAttrs as a>
+		o${c_index + 1}.${a[1]} AS "${c.simpleJavaField}.${a[0]}",
+					</#list>
+				<#elseif c.showType?? && c.showType == "areaselect">
+					<#list c.javaFieldAttrs as a>
+		a${c_index + 1}.${a[1]} AS "${c.simpleJavaField}.${a[0]}",
+					</#list>
+				</#if>
+				<#-- 父表关联字段 -->
+				<#if table.parentExists && table.parentTableFk == c.name>
+					<#list c.javaFieldAttrs as a>
+		b.${a[1]} AS "${c.simpleJavaField}.${a[0]}",
+					</#list>
+				</#if>
+			</#list>
+		</#assign>
+		${columnField?substring(0, columnField?last_index_of(","))}
+	</sql>
+
+
+	<#list interfaces as m>
+
+
+
+	<#if m.selectType=="A">
+
+	<!-- 增加 单个${functionNameSimple} 验证属性是否存在-->
+	<insert id="insertSelective" parameterType="${ClassName}" >
+		INSERT INTO ${table.name}
+		<trim prefix="(" suffix=")" suffixOverrides=","> 
+		<#assign insertField>
+			<#list table.columnList as c>
+				<#if c.isInsert?? && c.isInsert == "1">
+			<if test="${c.javaFieldId}!=null">
+   				${c.name},
+    		</if>
+				</#if>
+			</#list>
+		</#assign>
+		
+			${insertField?substring(0, insertField?last_index_of(","))}
+			</if>
+		</trim> 
+		
+		<trim prefix="values(" suffix=")" suffixOverrides=",">
+		<#assign insertJavaField>
+			<#list table.columnList as c>
+				<#if c.isInsert?? && c.isInsert == "1">
+			<if test="${c.javaFieldId}!=null">
+   					${"#"}{${c.javaFieldId}},
+    		</if>
+				</#if>
+			</#list>
+		</#assign>
+			${insertJavaField?substring(0, insertJavaField?last_index_of(","))}
+			</if>
+		</trim> 
+	</insert>
+
+	</#if>
+	<#elesif m.selectType=="D">
+	<!-- 删除 单个${functionNameSimple}-->
+	<delete id="delete"  parameterType="java.lang.String" >
+    	delete from ${table.name}
+    	where id = ${"#"}{id}
+  	</delete>
+  	</#elesif>
+
+  	<#elesif m.selectType=="S">
+  	<!--查找单个${functionNameSimple}对象 -->
+	<select id="selectById" resultType="${ClassName}" parameterType="java.lang.String">
+		SELECT 
+			<include refid="${className}Columns"/>
+		FROM ${table.name} 
+		WHERE id = ${"#"}{m.putParma}
+	</select>	
+    </#elesif>
+	<#elesif m.selectType=="U">
+
+	<!-- 更新${functionNameSimple} 检查是否存在-->
+	<update id="update" parameterType="${ClassName}" >
+		UPDATE ${table.name} 
+			<set>	
+			<#assign updateField>		
+				<#list table.columnList as c>
+					<#if c.isEdit?? && c.isEdit == "1">
+			<if test="${c.javaFieldId}!=null">
+				${c.name} = ${"#"}{${c.javaFieldId}},
+			</if>	
+					</#if>
+				</#list>
+			</#assign>
+			${updateField?substring(0, updateField?last_index_of(","))}
+			</if>
+			</set>
+		WHERE id = ${"#"}{id}
+	</update>
+	 </#elesif>
+	<#elesif m.selectType == "L">
+   <!-- 分页查询${functionNameSimple}集合 -->
+   <select id="queryListPage" resultMap="BaseResultMap" parameterType="Page" >
+    	select 
+    	<include refid="${className}Columns" />
+    	from ${table.name} a		
+		<where>
+			<#if table.delFlagExists>del_flag = ${"#"}{DEL_FLAG_NORMAL}</#if>
+			<#list table.columnList as c>
+				<#if (c.isQuery?? && c.isQuery == "1") || (table.parentExists && table.parentTableFk == c.name)>
+					<#if c.queryType ?? && c.queryType == 'between'>
+			<if test="begin${c.simpleJavaField?cap_first} != null and end${c.simpleJavaField?cap_first} != null <#if c.simpleJavaField != c.javaFieldId>and begin${c.javaFieldId?cap_first} != null and end${c.javaFieldId?cap_first} != null </#if>and begin${c.javaFieldId?cap_first} != '' and end${c.javaFieldId?cap_first} != ''">
+					<#else>
+			<if test="${c.simpleJavaField} != null<#if c.simpleJavaField != c.javaFieldId> and ${c.javaFieldId} != null</#if> and ${c.javaFieldId} != ''">
+					</#if>
+					<#if c.queryType ?? && c.queryType == 'between'>
+				AND ${c.name} BETWEEN ${"#"}{begin${c.simpleJavaField?cap_first}} AND ${"#"}{end${c.simpleJavaField?cap_first}}
+					<#elseif c.queryType ?? && c.queryType == 'like'>
+				AND ${c.name} LIKE 
+					<if test="dbName == 'oracle'">'%'||${"#"}{${c.javaFieldId}}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+${"#"}{${c.javaFieldId}}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',${"#"}{${c.javaFieldId}},'%')</if>
+					<#elseif c.queryType ?? && c.queryType == 'left_like'>
+				AND ${c.name} LIKE 
+					<if test="dbName == 'oracle'">'%'||${"#"}{${c.javaFieldId}}</if>
+					<if test="dbName == 'mssql'">'%'+${"#"}{${c.javaFieldId}}</if>
+					<if test="dbName == 'mysql'">concat('%',${"#"}{${c.javaFieldId}})</if>
+					<#elseif c.queryType ?? && c.queryType == 'right_like'>
+				AND ${c.name} LIKE 
+					<if test="dbName == 'oracle'">${"#"}{${c.javaFieldId}}||'%'</if>
+					<if test="dbName == 'mssql'">${"#"}{${c.javaFieldId}}+'%'</if>
+					<if test="dbName == 'mysql'">concat(${"#"}{${c.javaFieldId}},'%')</if>
+					<#else>
+				AND ${c.name} ${c.queryType} ${"#"}{${c.javaFieldId}}
+					</#if>
+			</if>
+				</#if>
+			</#list>
+		</where>
+  	</select>
+	 </#elesif>
+   <#list>
+
+</mapper>]]>
+	</content>
+</template>

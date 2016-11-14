@@ -56,7 +56,7 @@ public class JsonUtil {
         return null;
     }
 
-    public Object json2obj(String json,Class<?> clz) {
+    public static Object json2obj(String json,Class<?> clz) {
         try {
             mapper = getMapper();
             return mapper.readValue(json,clz);

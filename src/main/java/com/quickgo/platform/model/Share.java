@@ -1,6 +1,5 @@
 package com.quickgo.platform.model;
 
-import com.quickgo.platform.annotation.Alias;
 import com.quickgo.platform.annotation.Ignore;
 import org.apache.commons.lang3.StringUtils;
 
@@ -14,7 +13,6 @@ import java.util.Map;
  * @author huangjie
  * @since  2016-10-20
  */
-@Alias("share")
 public class Share implements Serializable {
     private static final long serialVersionUID = 1L;
     private String id;

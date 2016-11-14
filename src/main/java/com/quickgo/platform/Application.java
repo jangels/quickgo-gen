@@ -1,6 +1,6 @@
 package com.quickgo.platform;
 
-import com.quickgo.platform.config.ConfigClass;
+import com.quickgo.platform.config.ConfigProperties;
 import com.quickgo.platform.converter.AjaxFormMessageConverter;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.Logger;
@@ -21,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.sql.DataSource;
 
-@EnableConfigurationProperties(ConfigClass.class)
+@EnableConfigurationProperties(ConfigProperties.class)
 @EnableAutoConfiguration
 @SpringBootApplication
 @Configuration

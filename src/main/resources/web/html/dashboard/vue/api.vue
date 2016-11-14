@@ -175,12 +175,12 @@
                                     <div class="col-sm-11">
                                         <input type="text" placeholder="如:/api/test" v-model="currentApi.url" class="text"
                                                value="{{currentApi.url}}">
-                                        <template v-if="currentEnv.vars && currentEnv.vars.length>0">
+                                        <!--<template v-if="currentEnv.vars && currentEnv.vars.length>0">
                                             <p class="hint">实际请求地址:{{requestURL}}</p>
                                             <p class="api-env-vars">
                                                 变量：<span v-on:click="apiVarsClick(item.name,$event)" v-for="item in currentEnv.vars">{{item.name}}</span>
                                             </p>
-                                        </template>
+                                        </template>-->
                                     </div>
                                 </div>
                                <!-- <div class="item">
@@ -270,8 +270,21 @@
                                               v-model="currentApi.description">{{currentApi.description}}</textarea>
                                     </div>
                                 </div>
-                                
-                                <div class="item">
+                                <div class="item"  >
+                                    <div class="col-sm-1 label">方法类型</div>
+                                    <div class="col-sm-11" style="line-height: 40px;">
+                                    	<input type="radio" v-model="currentApi.selectType" value="1" id="dvnr-add"><label for="dvnr-add">增加</label>
+                                    	<input type="radio" v-model="currentApi.selectType" value="2" id="dvnr-del"><label for="dvnr-del">删除</label>
+                                    	<input type="radio" v-model="currentApi.selectType" value="3" id="dvnr-modify"><label for="dvnr-modify">修改</label>
+                                    	<input type="radio" v-model="currentApi.selectType" v-show="!(currentApi.selectType==5)" value="4" id="dvnr-select"><input type="radio" v-model="currentApi.selectType" v-show="currentApi.selectType==5" value="5" id="dvnr-select"><label for="dvnr-select">查询
+                                    		<select  v-show="currentApi.selectType==4 || currentApi.selectType==5" v-model="currentApi.selectType" style="padding:0 ;margin: 0 ;border: none;">
+                                    			<option value="4" >（返回单条数据）</option>
+                                    			<option  value="5" >（返回列表）</option>
+                                    		</select>
+                                    	</label>
+                                    </div>
+                                </div>
+                                <div class="item" v-if="genTableFormList.length>0">
                                     <div class="col-sm-1 label">操作表</div>
                                     <div class="col-sm-11">
                                     <select id="name" name="name" class="input-xxlarge select2-offscreen" tabindex="-1" v-model="selectGenTable.id" >
@@ -638,7 +651,8 @@
                                         <div class="item">
                                             <div class="col-sm-2 label second">请求地址</div>
                                             <div class="col-sm-8">
-                                                <input type="text" style="width: 500px" class="text" value="{{requestURL}}" id="requestURL">
+                                                <input type="text" style="width: 500px" class="text" v-if="currentEnv.vars.length>0" value="{{currentEnv.vars[0].value}}{{requestURL}}" id="requestURL">
+                                                <input type="text" style="width: 500px" class="text" v-else value="{{requestURL}}" id="requestURL">
                                             </div>
                                             <div class="col-sm-2" style="text-align: right">
                                                 <div class="xyj-dropdown">
@@ -839,7 +853,7 @@
 				<thead>
 					<tr>
 						<th>分类</th>
-						<th>选择</th>
+						<th><input type="checkbox" />全选</th>
 						<th>接口名称</th>
 						<th>接口地址</th>
 					</tr>
@@ -855,10 +869,10 @@
 					</tbody>
 				</tbody>
 			</table>
+			<div class="">
+				<a class="btn btn-primary" @click="">提交</a>
+			</div>
 		</div>
-		
-		
-		
 	
         <div class="modal env-modal" v-cloak v-if="status.envModal">
             <div class="modal-header">
@@ -866,35 +880,36 @@
             </div>
             <div class="modal-content">
                 <div class="modal-layout1 form" style="width: 500px">
-                    <p class="title" style="margin-bottom: 20px">添加新环境</p>
-                    <div class="hint">
-                        环境变量运行在URL中,你可以配置多个(线上、灰度、开发)环境变量。在URL中使用方式{{flag.varname}},例：<br/>
-                        线上环境：prefix => http://www.xiaoyaoji.com.cn<br/>
-                        则<br/>
-                        请求URL：{{flag.prefix}}/say => http://www.xiaoyaoji.com.cn/say
-                    </div>
-                    <p class="title"></p>
-                    <div class="item">
-                        <div class="col-sm-12">
-                            <input type="text" class="text" v-model="flag.tempEnv.name" placeholder="请输入环境名称">
-                        </div>
-                    </div>
-                    <div class="item" v-for="(index,item) in flag.tempEnv.vars">
-                        <div class="col-sm-5"><input type="text" v-model=item.name class="text" v-on:focus="envNewLine(index)" placeholder="变量名称" value="{{item.name}}"></div>
-                        <div class="col-sm-6">
-                            <input type="text" class="text" v-model="item.value" placeholder="变量值" value="{{item.value}}">
-                        </div>
-                        <div class="col-sm-1 full-text">
-                            <i class="iconfont icon-close" v-on:click="flag.tempEnv.vars.$remove(item)"></i>
-                        </div>
-                    </div>
-
-                    <div class="ta-c actions">
-                        <button class="btn btn-default-box middle" tabindex="3"
-                                v-on:click="status.envModal=false"> 取消 </button>
+                	
+                	<ul class="win-card">
+			    	  <li class="tit">
+				      	<p ><i class="icon icon-set"></i> 添加新环境 </p>
+				      </li>
+				      <li  class="hint">
+				      	  <div>
+					                        环境变量运行在URL中,你可以配置多个(线上、灰度、开发)环境变量。在URL中使用方式{{flag.varname}},例：<br/>
+					                        线上环境：prefix => http://www.xiaoyaoji.com.cn<br/>
+					                        则<br/>
+					                        请求URL：{{flag.prefix}}/say => http://www.xiaoyaoji.com.cn/say
+				           </div>
+				      </li>
+				       <li >
+				      	 <input type="text" class="text" v-model="flag.tempEnv.name" placeholder="请输入环境名称">
+				      </li>
+				      <li >
+	                     <input type="hidden" v-model="flag.tempEnv.vars[0]['name']=flag.tempEnv.name" class="text" placeholder="变量名称">
+	                     <input type="text" class="text" v-model="flag.tempEnv.vars[0]['value']" placeholder="环境地址" value="{{flag.tempEnv.vars[0]['value']}}">
+				      </li>
+				      <li>
+				      	<button class="btn btn-default-box middle" tabindex="3"
+                                v-on:click="status.envModal=false"  > 取消 </button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-primary middle" v-on:click="envSave" tabindex="2">确定</button>
-                    </div>
+				      	
+				      </li>
+				    </ul>  
+                	
+                
                 </div>
             </div>
         </div>

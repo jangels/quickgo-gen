@@ -1,6 +1,5 @@
 package com.quickgo.platform.controller;
 
-import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.utils.HttpUtils;
 import org.apache.commons.httpclient.NameValuePair;
@@ -24,7 +23,6 @@ public class ProxyController {
         return HttpUtils.get(url);
     }
 
-    @Post
     public Object post(Parameter parameter){
         String url= parameter.getParamString().get("url");
         List<NameValuePair> nvp = new ArrayList<>();

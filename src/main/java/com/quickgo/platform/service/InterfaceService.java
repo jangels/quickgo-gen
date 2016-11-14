@@ -65,7 +65,17 @@ public class InterfaceService implements IInterfaceService {
     }
 
     @Override
+    public List<Interface> getInterfaces(String moduleId) {
+        return interfaceMapper.getInterfaces(moduleId);
+    }
+
+    @Override
     public List<Interface> getInterfacesByModuleIds(String[] moduleIds) {
         return interfaceMapper.getInterfacesByModuleIds(moduleIds);
+    }
+
+    @Override
+    public List<Interface> getInterfacesByIds(List<String> ids) {
+        return interfaceMapper.getInterfacesByIds(ids);
     }
 }

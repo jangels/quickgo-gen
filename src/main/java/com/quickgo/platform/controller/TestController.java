@@ -1,7 +1,6 @@
 package com.quickgo.platform.controller;
 
 
-import com.quickgo.platform.annotation.Post;
 import com.quickgo.platform.param.Parameter;
 import com.quickgo.platform.param._HashMap;
 import org.apache.commons.io.IOUtils;
@@ -21,7 +20,6 @@ import java.util.Map;
 @RequestMapping("/test")
 public class TestController {
 
-    @Post("/raw")
     public Object testRaw(Parameter parameter) throws IOException {
         Enumeration<String> names = parameter.getRequest().getHeaderNames();
         Map<String,String> headerMap = new HashMap<>();

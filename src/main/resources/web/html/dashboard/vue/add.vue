@@ -7,15 +7,36 @@
 			    	  <li class="tit">
 				      	<p ><i class="icon icon-set"></i> 创建项目</p>
 				      </li>
-			    		
 			    	  <li >
 				      	<input type="text" v-validate:project-name="{required:true,maxlength:20}" v-model="projectName" maxlength="20"
-			                                   initial="off" class="text invalid" placeholder="项目名称" /> 
+			                                   initial="off" class="text invalid" placeholder="项目名称：" /> 
 				      	<span class="tip" v-if="$af.projectName.invalid">{{$af.projectName.errors[0].message}}</span>
 				      </li>
 			    	 <li>
-				      <textarea rows="10" v-model="project.description" placeholder="请输入项目描述" class="text" maxlength="300"></textarea>
+				      <textarea rows="10" v-model="project.description" placeholder="请输入项目描述：" class="text" maxlength="300"></textarea>
 				    </li>
+				    
+				    <li >
+				      	<input type="text"  v-model="project.dbPath" 
+			                                   initial="off" class="text invalid" placeholder="数据库地址：" /> 
+				    </li>
+				    
+				      <li >
+				      	<input type="text" v-model="project.dbPort" 
+			                                   initial="off" class="text invalid" placeholder="数据库端口号：" /> 
+				    </li>
+				     <li >
+				      	<input type="text"  v-model="project.dbName" 
+			                                   initial="off" class="text invalid" placeholder="数据库名称：" /> 
+				    </li>
+				    <li >
+				      	<input type="text"  v-model="project.dbUser" 
+			                                   initial="off" class="text invalid" placeholder="数据库用户名：" /> 
+				    </li>
+				     <li >
+				      	<input type="password"  v-model="project.dbPassword" 
+			                                   initial="off" class="text invalid" placeholder="数据库密码：" /> 
+				    </li>   
 				    <li >
 			            <p>
 			                              项目属性：
@@ -76,7 +97,7 @@
                     <div class="item">
                         <div class="col-sm-2 label"></div>
                         <div class="col-sm-10">
-                            <a v-link="{path:'/project/'+id,query:{'n':'y'}}" class="btn btn-primary">进入项目</a>
+                            <a v-link="{path:'/' }" class="btn btn-primary">进入项目</a>
                         </div>
                     </div>
 
@@ -101,7 +122,13 @@
                 project: {
                     name:'',
                     description: '',
-                    permission: 'PUBLIC'
+                    permission: 'PUBLIC',
+                    dbPath:'',
+                    dbPort:'',
+                    dbName:'',
+                    dbUser:'',
+                    dbPassword:'',
+                    delFlag:"n"
                 },
                 email:'',
                 invites: invites,
@@ -126,6 +153,7 @@
         },
         created: function () {
 	         this.$parent.showProject=true;
+	         this.$parent.title="创建项目";
 	    },
         watch: {
             "success": function (value) {
@@ -150,9 +178,14 @@
                 this.project.name = this.projectName;
                 var self = this;
                 utils.post('/project/create.json', this.project, function (rs) {
-                    self.success = true;
-                    self.id = rs.data;
-                    self.$parent.reloadProject=true;
+                	
+                	location.href = utils.config.ctx + '/dashboard';
+                	return ;
+//              	//项目创建完成直接进入项目列表
+//                  self.success = true;
+//                  self.id = rs.data.id;
+//                  self.$parent.reloadProject=true;
+//                  self.$parent.projectId=rs.data.id;
                 });
             },
             ok: function () {

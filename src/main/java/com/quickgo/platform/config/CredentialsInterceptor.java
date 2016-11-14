@@ -26,7 +26,11 @@ public class CredentialsInterceptor implements HandlerInterceptor {
 	    response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setHeader("Access-Control-Allow-Methods","GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH");
 		response.setHeader("Access-Control-Allow-Headers","*");
-
+		String email =request.getParameter("email");
+		String token =request.getParameter("token");
+//		if(StringUtils.isEmpty(email)){
+//			return false;
+//		}
 		logger.info("请求方法："+request.getMethod());
 		logger.info("请求contextPath："+request.getContextPath());
 		logger.info("请求URL地址："+request.getRequestURL());

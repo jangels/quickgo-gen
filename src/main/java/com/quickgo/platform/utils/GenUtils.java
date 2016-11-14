@@ -1,16 +1,7 @@
-/**
- * 
- */
 package com.quickgo.platform.utils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.List;
-import java.util.Map;
-
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.quickgo.platform.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +9,14 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import java.io.*;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 代码生成工具类
  * 
- * @version 2013-11-16
+ * on 2016-11-10
  */
 public class GenUtils {
 
@@ -32,7 +24,7 @@ public class GenUtils {
 
 	/**
 	 * 初始化列属性字段
-	 * @param genTable
+	 * @param genTable genTable
 	 */
 	public static void initColumnField(GenTable genTable){
 		for (GenTableColumn column : genTable.getColumnList()){
@@ -155,7 +147,7 @@ public class GenUtils {
 	
 	/**
 	 * 获取模板路径
-	 * @return
+	 * @return String
 	 */
 	public static String getTemplatePath(){
 		try{
@@ -173,9 +165,9 @@ public class GenUtils {
 	
 	/**
 	 * XML文件转换为对象
-	 * @param fileName
-	 * @param clazz
-	 * @return
+	 * @param fileName fileName
+	 * @param clazz clazz
+	 * @return T
 	 */
 	public static <T> T fileToObject(String fileName, Class<?> clazz){
 		try {
@@ -218,7 +210,7 @@ public class GenUtils {
 	
 	/**
 	 * 获取代码生成配置对象
-	 * @return
+	 * @return GenConfig
 	 */
 	public static GenConfig getConfig(){
 		return fileToObject("config.xml", GenConfig.class);
@@ -226,10 +218,10 @@ public class GenUtils {
 
 	/**
 	 * 根据分类获取模板列表
-	 * @param config
-	 * @param
+	 * @param config config
+	 * @param category category
 	 * @param isChildTable 是否是子表
-	 * @return
+	 * @return List
 	 */
 	public static List<GenTemplate> getTemplateList(GenConfig config, String category, boolean isChildTable){
 		List<GenTemplate> templateList = Lists.newArrayList();
@@ -263,9 +255,8 @@ public class GenUtils {
 	
 	/**
 	 * 获取数据模型
-	 * @param genScheme
-	 * @param
-	 * @return
+	 * @param genScheme genScheme
+	 * @return Map
 	 */
 	public static Map<String, Object> getDataModel(GenScheme genScheme){
 		Map<String, Object> model = Maps.newHashMap();
@@ -292,16 +283,20 @@ public class GenUtils {
 		model.put("dbType", Global.getConfig("jdbc.type"));
 
 		model.put("table", genScheme.getGenTable());
-		
+
+		model.put("interfaces",genScheme.getInterfaces());
+		model.put("apiName",genScheme.getInterfaces().get(0).getName());
+		model.put("apiDiscription",genScheme.getInterfaces().get(0).getDescription());
+		model.put("inputParam",genScheme.getInterfaces().get(0).getInputParam());
+
 		return model;
 	}
 	
 	/**
 	 * 生成到文件
-	 * @param tpl
-	 * @param model
-	 * @param
-	 * @return
+	 * @param tpl tpl
+	 * @param model model
+	 * @return String
 	 */
 	public static String generateToFile(GenTemplate tpl, Map<String, Object> model, boolean isReplaceFile){
 		// 获取生成文件

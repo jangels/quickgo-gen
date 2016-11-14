@@ -3,20 +3,18 @@
  */
 package com.quickgo.platform.utils;
 
-import java.io.UnsupportedEncodingException;
-import java.util.List;
-import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.LocaleResolver;
 
-import com.google.common.collect.Lists;
+import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 字符串工具类, 继承org.apache.commons.lang3.StringUtils类
@@ -30,11 +28,11 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     
     /**
      * 转换为字节数组
-     * @param str
-     * @return
+     * @param str str
+     * @return byte
      */
     public static byte[] getBytes(String str){
-    	if (str != null){
+    	if (str != null || !"".equals(str)){
     		try {
 				return str.getBytes(CHARSET_NAME);
 			} catch (UnsupportedEncodingException e) {
@@ -47,8 +45,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     
     /**
      * 转换为字节数组
-     * @param
-     * @return
+     * @param bytes bytes
+     * @return String
      */
     public static String toString(byte[] bytes){
     	try {
@@ -103,8 +101,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	
 	/**
 	 * 替换为手机识别的HTML，去掉样式及属性，保留回车。
-	 * @param txt
-	 * @return
+	 * @param txt txt
+	 * @return String
 	 */
 	public static String toHtml(String txt){
 		if (txt == null){
@@ -120,10 +118,10 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * 缩略字符串（不区分中英文字符）
 	 * @param str 目标字符串
 	 * @param length 截取长度
-	 * @return
+	 * @return String
 	 */
 	public static String abbr(String str, int length) {
-		if (str == null) {
+		if (str == null || "".equals(str)) {
 			return "";
 		}
 		try {
@@ -276,9 +274,9 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * 		toUnderScoreCase("helloWorld") = "hello_world"
 	 */
     public static String toCamelCase(String s) {
-        if (s == null) {
-            return null;
-        }
+		if (s == null || "".equals(s)) {
+			return null;
+		}
 
         s = s.toLowerCase();
 
@@ -308,7 +306,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * 		toUnderScoreCase("helloWorld") = "hello_world"
 	 */
     public static String toCapitalizeCamelCase(String s) {
-        if (s == null) {
+        if (s == null || "".equals(s)) {
             return null;
         }
         s = toCamelCase(s);
@@ -323,9 +321,9 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * 		toUnderScoreCase("helloWorld") = "hello_world"
 	 */
     public static String toUnderScoreCase(String s) {
-        if (s == null) {
-            return null;
-        }
+		if (s == null || "".equals(s)) {
+			return null;
+		}
 
         StringBuilder sb = new StringBuilder();
         boolean upperCase = false;
@@ -381,5 +379,29 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     	result.append(val.substring(1));
     	return result.toString();
     }
+
+	/**
+	 * 首字母转小写
+	 * @param str str
+	 * @return String
+	 */
+	public static String toLowerCaseFirstOne(String str){
+		if(Character.isLowerCase(str.charAt(0)))
+			return str;
+		else
+			return (new StringBuilder()).append(Character.toLowerCase(str.charAt(0))).append(str.substring(1)).toString();
+	}
+
+	/**
+	 * 首字母转大写
+	 * @param str str
+	 * @return String
+	 */
+	public static String toUpperCaseFirstOne(String str){
+		if(Character.isUpperCase(str.charAt(0)))
+			return str;
+		else
+			return (new StringBuilder()).append(Character.toUpperCase(str.charAt(0))).append(str.substring(1)).toString();
+	}
     
 }

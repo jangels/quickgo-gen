@@ -1,5 +1,6 @@
 #Maven Project File
 target/
+quickgo-gen/src/main/resources/web/node_module/
 node_module/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -66,6 +67,6 @@ doc/
 
 #打包文件
 node_modules/
-resources/web/built/
-resources/web/dist/
+web/built/
+web/dist/
 

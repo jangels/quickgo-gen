@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>dao</name>
+	<filePath>${packageName}/${moduleName}/service/${subModuleName}</filePath>
+	<fileName>${ClassName}Service.java</fileName>
+	<content><![CDATA[
+/**
+ * 
+ */
+package ${packageName}.${moduleName}.service<#if subModuleName != "">.${subModuleName}</#if>;
+
+import ${packageName}.${moduleName}.base.BaseService;
+import ${packageName}.${moduleName}.bean.${ClassName};
+
+/**
+ * ${functionName}Service接口
+ * @author ${functionAuthor}
+ * @version ${functionVersion}
+ * Copyright: Copyright (c) 2016 
+ * Company:ToB中心
+ */
+public interface ${ClassName}Service {
+
+	<#list interfaces as m>
+		<#if m.name??>
+		<#if m.selectType =="A">
+		/**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		public int ${m.name}(${ClassName} ${className});
+		</#if>
+
+		<#elseif m.selectType =="U">
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		public int ${m.name}(${ClassName} ${className});
+		</#elseif>
+		<#if m.selectType =="D">
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public int ${m.name}(String id);
+		</#if>
+
+		<#elseif  m.selectType == "S" && m.putParam??>
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public {ClassName} ${m.name}(${m.putParam});
+		 </#elseif>
+
+		 <#elseif m.selectType == "L"  && m.putParam??>
+		 /**
+		 * ${m.discription}
+		 * @param ${className}
+		 * @return
+		 */
+		 public List<{ClassName}> ${m.name}(${m.putParam});
+		 </#elseif>
+		<#elseif  &&${m.outputParam} && m.putParam??>
+
+		/**
+		 * ${m.discription}
+		 * @param ${m.putParam}
+		 * @return ${m.outputParam}
+		 */
+		 public ${m.outputParam} ${m.name}(${m.putParam});
+	    </#elseif>
+
+	    </#if>
+	</#list>
+}]]>
+	</content>
+</template>

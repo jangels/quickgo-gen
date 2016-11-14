@@ -1,135 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>controller</name>
-	<filePath>${packageName}/${moduleName}/controller/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/controller/${subModuleName}</filePath>
 	<fileName>${ClassName}Controller.java</fileName>
 	<content><![CDATA[
+
+public class ${ClassName}Controller{
 	@Autowired
 	private ${ClassName}Service ${className}Service;
-	
-	//////////////////API定义方法//////////////
-	##############################################Controller#####################################################################
 
-	/**
-	 * ${apiDiscription}
+	  <#list interfaces as m>
+		<#if m.description??>
+     /**
+	 *  ${m.description}
 	 * @param ${className}Dto
 	 * @return Object
 	 */
-	@ResponseBody
-	@RequestMapping(value = "/${apiName}")
-    public Object ${apiName}(${inputParam}) {
+	 </#if>
+	 <#if m.name?? && m.inputParam??>
+	@RequestMapping(value = "/${m.name}")
+    public Object ${m.name}(${m.inputParam}) {
+
 		try {
-			Object o = ${className}Service.${apiName}(${inputParam});
+		<#if secoendType.putParam??>
+			Object o = ${className}Service.${m.name}(${m.putParam});
+		<#/if>
 			if(o!=null)
             {
             	return JsonResponse.success(o);
             }
             else
             {
-            	return JsonResponse.fail(${ClassName}的${apiName}方法fail.);
+            	return JsonResponse.fail("${ClassName}的${apiName}()方法fail");
             }
         }catch(Exception e){
-            return JsonResponse.error("${ClassName}的${apiName}方法error.", e);
+            return JsonResponse.error("${ClassName}的${m.name}()方法error", e);
         }
     }
-
-
-
-
-
-    @ResponseBody
-	@RequestMapping(value = "/insert")
-    public Object insert(UserDto userDto) {
-		try {
-			Object o = userService.insert(userDto);
-			if(o!=null)
-            {
-            	return JsonResponse.success(o);
-            }
-            else
-            {
-            	return JsonResponse.fail(UserDto的insert方法fail.);
-            }
-        }catch(Exception e){
-            return JsonResponse.error("UserDto的insert方法error.", e);
-        }
-    }
-
-##############################################Controller#####################################################################
-
-##############################################Service###########################################################################
-
-     /**
-	 * ${apiDiscription}
-	 * @param ${className}Dto
-	 * @return ${ClassName}Dto
-	 */
-    public ${ClassName}Dto ${apiName}(${ClassName}Dto ${className}Dto) {
-		try {
-			    ${ClassName}Dto dto = ${className}Mapper.${apiName}(${className}Dto);
-			    if(dto!=null)
-			    {
-			   		return dto;
-			    }
-			    else
-			    {
-			    	throw new Exception();
-			    }
-			}
-        catch(Exception e)
-        {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-        }
-    }
-
-     /**
-	 * ${apiDiscription}
-	 * @param ${className}Dto
-	 * @return List<${ClassName}Dto>
-	 */
-    public List<${ClassName}Dto> ${apiName}(${ClassName}Dto ${className}Dto) {
-		try {
-			  List<${ClassName}Dto> dtolist = ${className}Mapper.${apiName}(${className}Dto);
-			  if(dtolist!=null)
-			    {
-			   		return dto;
-			    }
-			    else
-			    {
-			    	throw new Exception();
-			    }
-			}
-        catch(Exception e)
-        {
-			log.error(ex.getMessage(),ex);
-			throw new BusinessException(ex.getMessage(),ex,Constants.FAILURE);
-        }
-    }
-
-    ##############################################Service###########################################################################
-
-    ##############################################Dao#####################################################################
-     /**
-	 * ${apiDiscription}
-	 * @param ${className}Dto
-	 * @return List<${ClassName}Dto>
-	 */
-    List<${ClassName}Dto> ${apiName}(${ClassName}Dto ${className}Dto);
-
-
- 	/**
-	 * ${apiDiscription}
-	 * @param ${className}Dto
-	 * @return ${ClassName}Dto
-	 */
-    ${ClassName}Dto ${apiName}(${ClassName}Dto ${className}Dto)
-	##############################################Dao#####################################################################
-
-
-
-
-   //////////////////API定义方法/////////////
+	</#if>
+    </#list>
+}
 }]]>
 	</content>
 </template>

@@ -11,5 +11,6 @@ public interface InterfaceFolderMapper extends BaseDao<InterfaceFolder> {
 
      List<InterfaceFolder> getFoldersByModuleIds(String[] moduleIds);
 
+     InterfaceFolder getByMid(String mid);
 
 }

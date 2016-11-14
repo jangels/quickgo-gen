@@ -1,15 +1,12 @@
 package com.quickgo.platform.model;
 
 
-import com.quickgo.platform.annotation.Alias;
-
 import java.io.Serializable;
 
 /**
  * @author huangjie
  * @since  2016-07-20
  */
-@Alias("project_user")
 public class ProjectUser implements Serializable{
     private static final long serialVersionUID = 1L;
     private String id;

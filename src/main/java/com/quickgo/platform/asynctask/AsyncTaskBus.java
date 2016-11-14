@@ -1,8 +1,8 @@
 package com.quickgo.platform.asynctask;
 
 
-import com.quickgo.platform.exception.ProjectMessage;
 import com.quickgo.platform.model.ProjectLog;
+import com.quickgo.platform.websocket.ProjectMessage;
 import com.quickgo.platform.websocket.WsUtils;
 import org.apache.log4j.Logger;
 
@@ -38,8 +38,7 @@ public class AsyncTaskBus {
                     try {
                         Object data = queue.take();
                         if(data instanceof ProjectMessage){
-                            //TODO
-                            WsUtils.pushMessage(null);
+                            WsUtils.pushMessage((ProjectMessage)data);
                         }else if(data instanceof ProjectLog){
                             log.push((ProjectLog) data);
                         }
