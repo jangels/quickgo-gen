@@ -20,7 +20,7 @@ import java.util.Properties;
  * on 2016/11/10.
  */
 public class SendMailUtils {
-    private static Logger logger = Logger.getLogger(SendMailUtils.class)
+    private static Logger logger = Logger.getLogger(SendMailUtils.class);
     public  static boolean sendEmail(EmailContent emailContent, Address[] to) {
         //定义Properties对象,设置环境信息
         Properties props = new Properties();
