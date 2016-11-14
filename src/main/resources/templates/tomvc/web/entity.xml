@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>entity</name>
-	<filePath>Work/${packageName}/${moduleName}/bean/${subModuleName}</filePath>
+	<filePath>>Work/${packageName}/${moduleName}/bean</filePath>
 	<fileName>${ClassName}.java</fileName>
 	<content><![CDATA[
 /**
  * 
  */
-package ${packageName}.${moduleName}.bean<#if subModuleName != "">.${subModuleName}</#if>;
+package ${packageName}.${moduleName}.bean;
 
 import java.io.Serializable;
 <#list table.importList as i>

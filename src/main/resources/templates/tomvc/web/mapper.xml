@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>mapper</name>
-	<filePath>Work/qitoon/app/recruit/implement/src/main/resources/mapper</filePath>
-	<filePath>Work/${packageName}/${moduleName}/src/main/resources/mapper</filePath>
+	<filePath>Work/${packageName}/${moduleName}/mapper</filePath>
 	<fileName>${ClassName}Mapper.xml</fileName>
 	<content><![CDATA[
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="${packageName}.${moduleName}<#if subModuleName != "">.${subModuleName}</#if>.dao.${ClassName}Mapper">
+<mapper namespace="${packageName}.${moduleName}.dao.${ClassName}Mapper">
     
   <resultMap id="BaseResultMap" type="${ClassName}" >
     	<#list table.columnList as c>
@@ -56,7 +55,7 @@
 
 
 
-	<#if m.selectType=="A">
+	<#if m.selectType=='A'>
 
 	<!-- 增加 单个${functionNameSimple} 验证属性是否存在-->
 	<insert id="insertSelective" parameterType="${ClassName}" >
@@ -91,16 +90,14 @@
 		</trim> 
 	</insert>
 
-	</#if>
-	<#elesif m.selectType=="D">
+	<#elseif m.selectType=="D">
 	<!-- 删除 单个${functionNameSimple}-->
 	<delete id="delete"  parameterType="java.lang.String" >
     	delete from ${table.name}
     	where id = ${"#"}{id}
   	</delete>
-  	</#elesif>
 
-  	<#elesif m.selectType=="S">
+  	<#elseif m.selectType=='S'>
   	<!--查找单个${functionNameSimple}对象 -->
 	<select id="selectById" resultType="${ClassName}" parameterType="java.lang.String">
 		SELECT 
@@ -108,8 +105,7 @@
 		FROM ${table.name} 
 		WHERE id = ${"#"}{m.putParma}
 	</select>	
-    </#elesif>
-	<#elesif m.selectType=="U">
+	<#elseif m.selectType=='U'>
 
 	<!-- 更新${functionNameSimple} 检查是否存在-->
 	<update id="update" parameterType="${ClassName}" >
@@ -129,8 +125,7 @@
 			</set>
 		WHERE id = ${"#"}{id}
 	</update>
-	 </#elesif>
-	<#elesif m.selectType == "L">
+	<#elseif m.selectType == 'L'>
    <!-- 分页查询${functionNameSimple}集合 -->
    <select id="queryListPage" resultMap="BaseResultMap" parameterType="Page" >
     	select 
@@ -170,8 +165,11 @@
 			</#list>
 		</where>
   	</select>
-	 </#elesif>
-   <#list>
+
+  	<#else>
+
+  	</#if>
+   </#list>
 
 </mapper>]]>
 	</content>

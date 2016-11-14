@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>controller</name>
-	<filePath>Work/${packageName}/${moduleName}/controller/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/controller</filePath>
 	<fileName>${ClassName}Controller.java</fileName>
 	<content><![CDATA[
 
-public class ${ClassName}Controller{
+public class ${ClassName}controller{
 	@Autowired
 	private ${ClassName}Service ${className}Service;
 
-	  <#list interfaces as m>
-		<#if m.description??>
-     /**
-	 *  ${m.description}
-	 * @param ${className}Dto
-	 * @return Object
-	 */
-	 </#if>
-	 <#if m.name?? && m.inputParam??>
-	@RequestMapping(value = "/${m.name}")
-    public Object ${m.name}(${m.inputParam}) {
+	  <#list interfaces as secoendType>
+		<#if secoendType.description??>
+		 /**
+		 *  ${secoendType.description}
+		 * @param ${className}Dto
+		 * @return Object
+		 */
+		 </#if>
+		 <#if secoendType.name?? && secoendType.inputParam?? && secoendType.putParam?? >
+		@RequestMapping(value = "/${secoendType.name}")
+		public Object ${secoendType.name}(${secoendType.inputParam}) {
 
-		try {
-		<#if secoendType.putParam??>
-			Object o = ${className}Service.${m.name}(${m.putParam});
-		<#/if>
-			if(o!=null)
-            {
-            	return JsonResponse.success(o);
-            }
-            else
-            {
-            	return JsonResponse.fail("${ClassName}的${apiName}()方法fail");
-            }
-        }catch(Exception e){
-            return JsonResponse.error("${ClassName}的${m.name}()方法error", e);
-        }
-    }
-	</#if>
+			try {
+				Object o = ${className}Service.${secoendType.name}(${secoendType.putParam});
+				if(o!=null)
+				{
+					return JsonResponse.success(o);
+				}
+				else
+				{
+					return JsonResponse.fail("${ClassName}的${secoendType.name}()方法fail");
+				}
+			}catch(Exception e){
+				return JsonResponse.error("${ClassName}的${secoendType.name}()方法error", e);
+			}
+		}
+		</#if>
     </#list>
+
 }
+
 }]]>
 	</content>
 </template>

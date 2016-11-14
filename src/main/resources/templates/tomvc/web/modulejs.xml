@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>module</name>
-	<filePath>src/main/m/js/module</filePath>
+	<filePath>Work/${packageName}/${moduleName}/js</filePath>
 	<fileName>${className}Module.js</fileName>
 	<content><![CDATA[
 var ${className}Module = (function () {
@@ -19,7 +19,7 @@ define([
                 * @param callBack 回调函数
                 */
             </#if>
-            <#if m.selectType =="A">
+            <#if m.selectType =='A'>
                 ${m.name}${ClassName}: function (para, callBack) {
                   utilModule.post({
                     url: "${className}/${m.name}",
@@ -27,7 +27,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result=='200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -35,8 +35,7 @@ define([
                     }
                   });
                 },
-            </#if>
-            <#elseif m.selectType =="U">
+            <#elseif m.selectType =='U'>
                 ${m.name}${ClassName}: function (para, callBack) {
                   utilModule.post({
                     url: "${className}/${m.name}",
@@ -44,7 +43,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result=='200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -52,8 +51,7 @@ define([
                     }
                   });
                 },
-            </#elseif>
-            <#elseif m.selectType =="D">
+            <#elseif m.selectType =='D'>
                 ${m.name}${ClassName}: function (para, callBack) {
                   utilModule.post({
                     url: "${className}/${m.name}",
@@ -61,7 +59,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result=='200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -69,8 +67,7 @@ define([
                     }
                   });
                 },
-            </#elseif>
-            <#elseif m.selectType =="S">
+            <#elseif m.selectType =='S'>
                 ${m.name}${ClassName}Info: function (para, callBack) {
                   utilModule.post({
                     url: "${className}/${m.name}",
@@ -78,7 +75,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result=='200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -86,8 +83,7 @@ define([
                     }
                   });
                 },
-            </#elseif>
-            <#elseif m.selectType =="L">
+            <#elseif m.selectType=='L'>
                 ${m.name}${ClassName}: function (para, callBack) {
                   utilModule.post({
                     url: "${className}/${m.name}",
@@ -95,7 +91,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result== '200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -103,7 +99,6 @@ define([
                     }
                   });
                 },
-            </#elseif>
             <#else>
                 ${m.name}: function (para, callBack) {
                   utilModule.post({
@@ -112,7 +107,7 @@ define([
                     needJson: true,//表单格式  默认true json格式
                     async: true,
                     success: function (response) {
-                        if (response.result == '200') {
+                        if (response.result=='200') {
                             callBack(response.data);
                         } else {
                             utilModule.errorPage("icon-ajaxerror" ,(response.msg+"").substring(0,30));
@@ -120,7 +115,8 @@ define([
                     }
                   });
                 },
-            </#else>
+
+            </#if>
 
           </#if>
         </#list>

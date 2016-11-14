@@ -17,6 +17,7 @@ public class ProjectLog implements Serializable{
     private String projectId;
 
     public ProjectLog() {
+        super();
     }
 
 

@@ -27,6 +27,11 @@ public class Share implements Serializable {
     private String projectId;
     @Ignore
     private List<Map<String,Object>> shareModules = new ArrayList<>();
+
+    public Share() {
+        super();
+    }
+
     public interface ShareAll{
         String YES="YES";
         String NO="NO";

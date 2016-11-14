@@ -42,6 +42,10 @@ public class Interface implements Serializable{
     private String tableId;
     private String selectType;
 
+    public Interface() {
+        super();
+    }
+
     public interface Status{
         //启用
         String ENABLE = "ENABLE";

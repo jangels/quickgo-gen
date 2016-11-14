@@ -40,9 +40,11 @@ public class GenApiCodeService implements IGenApiCodeService {
             throw  new InvalidArgumentException("参数无效");
         }
         // 获取gen_scheme表数据
-        String tableId = interfaceList.get(0).getTableId();
-        String projectId = interfaceList.get(0).getProjectId();
-        GenScheme genScheme = genSchemeService.getGenScheme(tableId,projectId);
+        Interface ints = interfaceList.get(0);
+        GenScheme genScheme = genSchemeService.getGenScheme(ints.getTableId(),ints.getProjectId());
+        if(null == genScheme){
+            return "genScheme 数据为空";
+        }
         // 整合数据
         List<Interface> interfaces = new ArrayList<>();
         for (Interface in: interfaceList){

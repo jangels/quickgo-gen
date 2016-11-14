@@ -76,6 +76,10 @@ public class Project implements Serializable{
         String DELETE_MODULE="module.delete";
     }
 
+    public Project() {
+        super();
+    }
+
     public String getId() {
         return id;
     }

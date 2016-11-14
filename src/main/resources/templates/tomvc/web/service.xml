@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
 	<name>dao</name>
-	<filePath>${packageName}/${moduleName}/service/${subModuleName}</filePath>
+	<filePath>Work/${packageName}/${moduleName}/service</filePath>
 	<fileName>${ClassName}Service.java</fileName>
 	<content><![CDATA[
 /**
  * 
  */
-package ${packageName}.${moduleName}.service<#if subModuleName != "">.${subModuleName}</#if>;
+package ${packageName}.${moduleName}.service;
 
 import ${packageName}.${moduleName}.base.BaseService;
 import ${packageName}.${moduleName}.bean.${ClassName};
@@ -22,61 +22,53 @@ import ${packageName}.${moduleName}.bean.${ClassName};
 public interface ${ClassName}Service {
 
 	<#list interfaces as m>
-		<#if m.name??>
-		<#if m.selectType =="A">
+		<#if m.selectType=="A" && m.description?? && m.name??>
 		/**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		public int ${m.name}(${ClassName} ${className});
-		</#if>
 
-		<#elseif m.selectType =="U">
+		<#elseif m.selectType=="U">
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		public int ${m.name}(${ClassName} ${className});
-		</#elseif>
-		<#if m.selectType =="D">
+		<#elseif m.selectType=="D">
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public int ${m.name}(String id);
-		</#if>
 
-		<#elseif  m.selectType == "S" && m.putParam??>
+		<#elseif  m.selectType=="S" && m.putParam??>
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public {ClassName} ${m.name}(${m.putParam});
-		 </#elseif>
 
-		 <#elseif m.selectType == "L"  && m.putParam??>
+		 <#elseif m.selectType=="L">
 		 /**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${className}
 		 * @return
 		 */
 		 public List<{ClassName}> ${m.name}(${m.putParam});
-		 </#elseif>
-		<#elseif  &&${m.outputParam} && m.putParam??>
-
+		<#else>
 		/**
-		 * ${m.discription}
+		 * ${m.description}
 		 * @param ${m.putParam}
 		 * @return ${m.outputParam}
 		 */
 		 public ${m.outputParam} ${m.name}(${m.putParam});
-	    </#elseif>
 
-	    </#if>
+  	</#if>
 	</#list>
 }]]>
 	</content>

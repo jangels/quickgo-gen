@@ -21,6 +21,9 @@ public class Team implements Serializable{
         String INVALID="INVALID";
     }
 
+    public Team() {
+        super();
+    }
 
     public String getId() {
         return id;
